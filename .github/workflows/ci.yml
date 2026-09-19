@@ -1,0 +1,201 @@
+name: CI
+
+on:
+  push:
+    branches: [main, Phase02]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  backend:
+    name: Backend (Python ${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # pyproject pins requires-python to >=3.11,<3.14 (bcrypt 4.0.1 has no
+        # 3.14 resolution yet). Cover both ends of that range.
+        python-version: ["3.11", "3.13"]
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          version: "0.12.6"
+          enable-cache: true
+          cache-dependency-glob: backend/uv.lock
+
+      - name: Set up Python
+        run: uv python install ${{ matrix.python-version }}
+
+      - name: Sync dependencies
+        run: uv sync --frozen --all-groups
+
+      - name: Byte-compile
+        run: uv run python -m compileall -q app
+
+      - name: Run tests
+        # No provider keys in CI: every agent must fall back deterministically.
+        env:
+          DATABASE_URL: sqlite:////tmp/smart-exam-ci.sqlite
+          USE_POSTGRES: "false"
+          ENV: test
+          SECRET_KEY: ci-only-not-a-real-secret-${{ github.run_id }}
+        run: uv run python -m pytest tests -q
+
+  frontend:
+    name: Frontend
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24.21.0"
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Unit tests
+        run: npm run test:run
+
+      - name: Type-check and build
+        run: npm run build
+
+      - name: Audit runtime and development dependencies
+        run: npm audit --audit-level=moderate
+
+  compose:
+    name: Docker Compose config
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate compose file
+        # Compose refuses to render without these; they are throwaway CI values.
+        env:
+          POSTGRES_PASSWORD: ci-only-password
+          SECRET_KEY: ci-only-not-a-real-secret
+        run: docker compose config --quiet
+
+      - name: Validate standalone production network
+        run: |
+          cp deploy/backend.staging.env.example /tmp/audit-backend.env
+          BACKEND_ENV_FILE=/tmp/audit-backend.env docker compose --env-file deploy/production.env.example -f docker-compose.production.yml config --format json | python3 scripts/operations/check-compose.py
+
+
+  postgres:
+    name: PostgreSQL migration and accounting concurrency
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_PASSWORD: ci-only-password
+          POSTGRES_DB: audit_test
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U postgres -d audit_test"
+          --health-interval 5s --health-timeout 5s --health-retries 20
+    defaults:
+      run:
+        working-directory: backend
+    env:
+      ENV: test
+      SECRET_KEY: ci-only-not-a-real-secret-32-characters
+      DATABASE_URL: postgresql://postgres:ci-only-password@localhost:5432/audit_test
+      USE_POSTGRES: "true"
+      AI_TEST_POSTGRES: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          version: "0.12.6"
+      - run: uv sync --frozen --all-groups
+      - run: uv run python -m pytest tests/test_ai_postgres.py tests/test_release_postgres.py -q
+
+  images:
+    name: Build release images and smoke test backend
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t smart-exam-backend:ci backend
+      - run: docker build --build-arg VITE_ENABLE_DEMO_LOGIN=false -t smart-exam-frontend:ci frontend
+      - name: Smoke image with isolated SQLite and no provider credentials
+        run: >-
+          docker run --rm --network none -e ENV=test -e DATABASE_URL=sqlite:////tmp/smoke.sqlite
+          smart-exam-backend:ci python -c
+          'from fastapi.testclient import TestClient; from app.main import app; c=TestClient(app); assert c.get("/health").status_code == 200; assert c.get("/ready").status_code == 200'
+      - name: Build patched infrastructure images
+        run: |
+          docker build -f deploy/Dockerfile.proxy -t smart-exam-proxy:ready-184 deploy
+          docker build -f deploy/Dockerfile.postgres -t smart-exam-postgres:ready-184 deploy
+      - name: Scan every release image and verify conditional advisory review
+        run: scripts/operations/scan-images.sh smart-exam-backend:ci smart-exam-frontend:ci /tmp/release-security
+      - name: Check negative release gates
+        run: python3 -m unittest discover -s scripts/operations -p 'test_*.py' -v
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24.21.0"
+      - name: Browser HTTPS SMTP and MFA rehearsal
+        env:
+          AUDIT_BACKEND_IMAGE: smart-exam-backend:ci
+          AUDIT_FRONTEND_IMAGE: smart-exam-frontend:ci
+        run: |
+          npm install --prefix /tmp/audit-184-browser --no-audit --no-fund playwright-core@1.63.0
+          scripts/operations/browser-rehearsal.sh --apply
+      - name: Backup and restore rehearsal
+        env:
+          AUDIT_BACKEND_IMAGE: smart-exam-backend:ci
+          AUDIT_FRONTEND_IMAGE: smart-exam-frontend:ci
+        run: scripts/operations/rehearse.sh --apply
+      - name: Scan image layers for secrets
+        run: |
+          python3 scripts/operations/scan-image-secrets.py --image smart-exam-backend:ci --output /tmp/release-security/secrets-backend
+          python3 scripts/operations/scan-image-secrets.py --image smart-exam-frontend:ci --output /tmp/release-security/secrets-frontend
+          python3 scripts/operations/scan-image-secrets.py --image smart-exam-proxy:ready-184 --output /tmp/release-security/secrets-proxy
+          python3 scripts/operations/scan-image-secrets.py --image smart-exam-postgres:ready-184 --output /tmp/release-security/secrets-postgres
+      - name: Retain raw security evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-security
+          path: /tmp/release-security
+
+  security:
+    name: Secrets and Python dependency audit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: astral-sh/setup-uv@v5
+        with:
+          version: "0.12.6"
+      - name: Scan Git history with redacted findings
+        run: docker run --rm -v "$PWD:/repo:ro" zricethezav/gitleaks:v8.30.1 git /repo --log-opts=--all --redact
+      - name: Audit locked Python environment
+        working-directory: backend
+        run: |
+          uv python install 3.13
+          uv sync --frozen --all-groups --python 3.13
+          uvx pip-audit --path .venv/lib/python3.13/site-packages

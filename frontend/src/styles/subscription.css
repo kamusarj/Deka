@@ -1,0 +1,43 @@
+.subscription-panel { border: 1px solid var(--border); border-radius: 16px; background: var(--surface); padding: 26px; }
+.subscription-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.subscription-heading h2 { margin: 0; font: 500 1.5rem/1.2 var(--font-display); }
+.subscription-panel .subscription-refresh { display: grid; place-items: center; padding: 8px; border-radius: 50%; background: transparent; color: var(--text-muted); border: 1px solid var(--border); box-shadow: none; }
+.subscription-panel .subscription-refresh:hover { color: var(--primary); background: var(--surface-hover); transform: none; }
+.subscription-overview { margin-top: 23px; }
+.subscription-plan { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.subscription-plan > strong { font-size: .85rem; color: var(--primary); letter-spacing: .03em; }
+.subscription-status { font-size: .68rem; padding: 4px 8px; border-radius: 5px; background: var(--surface-2); color: var(--text-muted); }
+.subscription-status.is-active { background: var(--primary-soft); color: var(--on-primary-soft); }
+.subscription-balance { padding: 24px 0; }
+.subscription-label { color: var(--text-muted); font-size: .78rem; }
+.subscription-balance > div { display: flex; align-items: baseline; gap: 10px; margin-top: 6px; }
+.subscription-balance strong { font: 500 clamp(3.2rem, 5vw, 4rem)/1 var(--font-display); color: var(--primary); font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.subscription-balance > div > span { color: var(--text-muted); font-size: .78rem; }
+.subscription-balance p { margin: 12px 0 0; color: var(--text-muted); font-size: .76rem; }
+.subscription-period { display: grid; gap: 16px; padding-top: 19px; margin: 0; border-top: 1px solid var(--border); font-size: .76rem; line-height: 1.7; }
+.subscription-period dt { color: var(--text-muted); margin-bottom: 3px; }
+.subscription-period dd { color: var(--text); margin: 0; }
+.subscription-note { margin: 22px 0 18px; color: var(--text-muted); font-size: .74rem; line-height: 1.8; }
+.subscription-report-link { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 12px 14px; border: 1px solid var(--border-strong); border-radius: 9px; color: var(--primary); font-size: .8rem; font-weight: 500; text-decoration: none; }
+.subscription-report-link:hover { background: var(--primary-soft); }
+.subscription-ledger { border-top: 1px solid var(--border); margin-top: 22px; padding-top: 6px; }
+.subscription-ledger summary { display: flex; align-items: center; justify-content: space-between; padding: 14px 0 4px; font-size: .8rem; cursor: pointer; list-style: none; }
+.subscription-ledger summary::-webkit-details-marker { display: none; }
+.subscription-ledger[open] summary > span:last-child { transform: rotate(180deg); }
+.subscription-history-caption { color: var(--text-muted); font-size: .7rem; margin: 12px 0; }
+.subscription-history { list-style: none; padding: 0; margin: 0; max-height: 340px; overflow-y: auto; }
+.subscription-history li { display: flex; justify-content: space-between; align-items: start; gap: 10px; padding: 13px 0; border-top: 1px solid var(--border-subtle); }
+.subscription-history li > div { display: grid; gap: 5px; }
+.subscription-history li strong { font-size: .75rem; font-weight: 500; }
+.subscription-history time { font-size: .68rem; color: var(--text-muted); }
+.subscription-delta { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.subscription-delta span { font-size: .65rem; font-weight: 400; color: var(--text-muted); }
+.subscription-delta.is-positive { color: var(--primary); }
+.subscription-empty, .subscription-loading { color: var(--text-muted); font-size: .8rem; padding: 18px 0 0; line-height: 1.8; }
+.subscription-empty strong { font-weight: 500; color: var(--text); }
+.subscription-empty p { margin: 6px 0 0; }
+.subscription-zero { padding: 12px; background: var(--warning-soft); color: var(--on-warning-soft); border-radius: 8px; font-size: .78rem; line-height: 1.7; }
+.subscription-error { padding-top: 20px; color: var(--on-danger-soft); font-size: .82rem; line-height: 1.8; }
+.subscription-error p { font-size: .76rem; margin: 6px 0 0; }
+@media (max-width: 900px) { .subscription-panel { padding: 24px; } }
+@media (max-width: 700px) { .subscription-panel { padding: 23px 20px; } }

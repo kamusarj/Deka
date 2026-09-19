@@ -1,0 +1,917 @@
+{
+  "metadata": {
+    "subject": "Khoa học tự nhiên",
+    "grade": 7,
+    "curriculum_version": "GDPT 2018",
+    "school_year": "2025-2026",
+    "source_type": "local_json",
+    "source_name": "Local curriculum seed data",
+    "status": "draft",
+    "requires_teacher_review": true,
+    "last_updated": "2026-06-02"
+  },
+  "cognitive_levels": {
+    "recognition": "Nhận biết",
+    "understanding": "Thông hiểu",
+    "application": "Vận dụng",
+    "high_application": "Vận dụng cao"
+  },
+  "question_types": {
+    "multiple_choice": "Trắc nghiệm nhiều lựa chọn",
+    "true_false": "Đúng/Sai",
+    "short_answer": "Trả lời ngắn",
+    "essay": "Tự luận"
+  },
+  "exam_scopes": [
+    {
+      "exam_type": "fifteen_minutes",
+      "display_name": "Kiểm tra 15 phút",
+      "included_topic_ids": [
+        "khtn7_topic_01",
+        "khtn7_topic_02"
+      ],
+      "default_duration_minutes": 15,
+      "default_total_score": 10,
+      "suggested_distribution": {
+        "recognition": 50,
+        "understanding": 30,
+        "application": 20,
+        "high_application": 0
+      },
+      "requires_teacher_review": true
+    },
+    {
+      "exam_type": "midterm_1",
+      "display_name": "Giữa học kì I",
+      "included_topic_ids": [
+        "khtn7_topic_01",
+        "khtn7_topic_02",
+        "khtn7_topic_03",
+        "khtn7_topic_04",
+        "khtn7_topic_05"
+      ],
+      "default_duration_minutes": 45,
+      "default_total_score": 10,
+      "suggested_distribution": {
+        "recognition": 40,
+        "understanding": 30,
+        "application": 20,
+        "high_application": 10
+      },
+      "requires_teacher_review": true
+    },
+    {
+      "exam_type": "final_1",
+      "display_name": "Cuối học kì I",
+      "included_topic_ids": [
+        "khtn7_topic_01",
+        "khtn7_topic_02",
+        "khtn7_topic_03",
+        "khtn7_topic_04",
+        "khtn7_topic_05",
+        "khtn7_topic_06"
+      ],
+      "default_duration_minutes": 45,
+      "default_total_score": 10,
+      "suggested_distribution": {
+        "recognition": 35,
+        "understanding": 35,
+        "application": 20,
+        "high_application": 10
+      },
+      "requires_teacher_review": true
+    },
+    {
+      "exam_type": "midterm_2",
+      "display_name": "Giữa học kì II",
+      "included_topic_ids": [
+        "khtn7_topic_07",
+        "khtn7_topic_08",
+        "khtn7_topic_09",
+        "khtn7_topic_10"
+      ],
+      "default_duration_minutes": 45,
+      "default_total_score": 10,
+      "suggested_distribution": {
+        "recognition": 40,
+        "understanding": 30,
+        "application": 20,
+        "high_application": 10
+      },
+      "requires_teacher_review": true
+    },
+    {
+      "exam_type": "final_2",
+      "display_name": "Cuối học kì II",
+      "included_topic_ids": [
+        "khtn7_topic_07",
+        "khtn7_topic_08",
+        "khtn7_topic_09",
+        "khtn7_topic_10",
+        "khtn7_topic_11",
+        "khtn7_topic_12"
+      ],
+      "default_duration_minutes": 45,
+      "default_total_score": 10,
+      "suggested_distribution": {
+        "recognition": 35,
+        "understanding": 35,
+        "application": 20,
+        "high_application": 10
+      },
+      "requires_teacher_review": true
+    }
+  ],
+  "topics": [
+    {
+      "id": "khtn7_topic_01",
+      "name": "Nguyên tử, nguyên tố hóa học",
+      "unit": "Chủ đề 1",
+      "periods": 10,
+      "summary": "Tìm hiểu về nguyên tử, cấu tạo nguyên tử và bảng tuần hoàn các nguyên tố hóa học.",
+      "learning_objectives": [
+        {
+          "id": "khtn7_obj_001",
+          "text": "Trình bày được cấu tạo của nguyên tử gồm hạt nhân và electron.",
+          "level": "recognition",
+          "keywords": ["nguyên tử", "hạt nhân", "electron", "cấu tạo"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn7_obj_002",
+          "text": "Nêu được khái niệm nguyên tố hóa học và ký hiệu nguyên tố.",
+          "level": "recognition",
+          "keywords": ["nguyên tố", "ký hiệu", "hóa học"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn7_obj_003",
+          "text": "Sử dụng được bảng tuần hoàn để tìm thông tin về nguyên tố.",
+          "level": "application",
+          "keywords": ["bảng tuần hoàn", "số hiệu nguyên tử", "nguyên tố"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn7_obj_004",
+          "text": "Phân biệt được nguyên tử, phân tử và nguyên tố.",
+          "level": "understanding",
+          "keywords": ["nguyên tử", "phân tử", "nguyên tố", "phân biệt"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn7_obj_005",
+          "text": "Nêu được một số nguyên tố hóa học phổ biến và ứng dụng.",
+          "level": "understanding",
+          "keywords": ["nguyên tố", "phổ biến", "ứng dụng"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "essay"
+      ]
+    },
+    {
+      "id": "khtn7_topic_02",
+      "name": "Phân tử và liên kết hóa học",
+      "unit": "Chủ đề 1",
+      "periods": 10,
+      "summary": "Tìm hiểu về phân tử, liên kết hóa học và hóa trị.",
+      "learning_objectives": [
+        {
+          "id": "khtn7_obj_006",
+          "text": "Trình bày được khái niệm phân tử và tính chất của phân tử.",
+          "level": "recognition",
+          "keywords": ["phân tử", "tính chất", "chuyển động"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn7_obj_007",
+          "text": "Giải thích được liên kết hóa học và hóa trị.",
+          "level": "understanding",
+          "keywords": ["liên kết", "hóa trị", "electron"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn7_obj_008",
+          "text": "Viết được công thức hóa học của một số chất đơn giản.",
+          "level": "application",
+          "keywords": ["công thức", "hóa học", "viết"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn7_obj_009",
+          "text": "Tính được khối lượng phân tử tương đối.",
+          "level": "application",
+          "keywords": ["khối lượng phân tử", "tính toán"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "essay"
+      ]
+    },
+    {
+      "id": "khtn7_topic_03",
+      "name": "Tốc độ chuyển động",
+      "unit": "Chủ đề 2",
+      "periods": 8,
+      "summary": "Tìm hiểu về chuyển động, tốc độ và tính toán tốc độ.",
+      "learning_objectives": [
+        {
+          "id": "khtn7_obj_010",
+          "text": "Trình bày được khái niệm chuyển động và quỹ đạo.",
+          "level": "recognition",
+          "keywords": ["chuyển động", "quỹ đạo", "vật"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn7_obj_011",
+          "text": "Nêu được khái niệm tốc độ và đơn vị đo tốc độ.",
+          "level": "recognition",
+          "keywords": ["tốc độ", "đơn vị", "m/s", "km/h"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn7_obj_012",
+          "text": "Tính được tốc độ, quãng đường, thời gian.",
+          "level": "application",
+          "keywords": ["tính toán", "công thức", "tốc độ"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn7_obj_013",
+          "text": "So sánh được tốc độ của các vật chuyển động.",
+          "level": "understanding",
+          "keywords": ["so sánh", "tốc độ", "chuyển động"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "essay"
+      ]
+    },
+    {
+      "id": "khtn7_topic_04",
+      "name": "Âm thanh",
+      "unit": "Chủ đề 2",
+      "periods": 8,
+      "summary": "Tìm hiểu về âm thanh, sự lan truyền của âm thanh và ứng dụng.",
+      "learning_objectives": [
+        {
+          "id": "khtn7_obj_014",
+          "text": "Trình bày được nguyên nhân phát sinh âm thanh.",
+          "level": "recognition",
+          "keywords": ["âm thanh", "rung động", "nguồn âm"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn7_obj_015",
+          "text": "Mô tả được quá trình lan truyền của âm thanh.",
+          "level": "understanding",
+          "keywords": ["lan truyền", "âm thanh", "tốc độ"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn7_obj_016",
+          "text": "Phân biệt được âm thanh nghe được và siêu âm.",
+          "level": "understanding",
+          "keywords": ["âm thanh", "siêu âm", "tần số"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn7_obj_017",
+          "text": "Nêu được ứng dụng của âm thanh trong đời sống.",
+          "level": "application",
+          "keywords": ["ứng dụng", "âm thanh", "đời sống"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "essay"
+      ]
+    },
+    {
+      "id": "khtn7_topic_05",
+      "name": "Ánh sáng",
+      "unit": "Chủ đề 2",
+      "periods": 10,
+      "summary": "Tìm hiểu về ánh sáng, sự phản xạ, khúc xạ và tán sắc ánh sáng.",
+      "learning_objectives": [
+        {
+          "id": "khtn7_obj_018",
+          "text": "Trình bày được bản chất của ánh sáng và nguồn sáng.",
+          "level": "recognition",
+          "keywords": ["ánh sáng", "nguồn sáng", "bản chất"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn7_obj_019",
+          "text": "Giải thích được hiện tượng phản xạ ánh sáng và định luật phản xạ.",
+          "level": "understanding",
+          "keywords": ["phản xạ", "định luật", "gương"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn7_obj_020",
+          "text": "Giải thích được hiện tượng khúc xạ ánh sáng.",
+          "level": "understanding",
+          "keywords": ["khúc xạ", "chiết suất", "tia sáng"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn7_obj_021",
+          "text": "Mô tả được hiện tượng tán sắc ánh sáng qua lăng kính.",
+          "level": "understanding",
+          "keywords": ["tán sắc", "lăng kính", "cầu vồng"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn7_obj_022",
+          "text": "Nêu được ứng dụng của ánh sáng trong đời sống.",
+          "level": "application",
+          "keywords": ["ứng dụng", "ánh sáng", "đời sống"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "essay"
+      ]
+    },
+    {
+      "id": "khtn7_topic_06",
+      "name": "Từ trường",
+      "unit": "Chủ đề 2",
+      "periods": 7,
+      "summary": "Tìm hiểu về từ trường, nam châm và ứng dụng của từ trường.",
+      "learning_objectives": [
+        {
+          "id": "khtn7_obj_023",
+          "text": "Trình bày được khái niệm từ trường và từ trường Trái Đất.",
+          "level": "recognition",
+          "keywords": ["từ trường", "Trái Đất", "nam châm"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn7_obj_024",
+          "text": "Vẽ được đường sức từ của nam châm.",
+          "level": "application",
+          "keywords": ["đường sức từ", "nam châm", "vẽ"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn7_obj_025",
+          "text": "Giải thích được tương tác giữa các nam châm.",
+          "level": "understanding",
+          "keywords": ["tương tác", "cực nam", "cực bắc"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn7_obj_026",
+          "text": "Nêu được ứng dụng của từ trường trong đời sống.",
+          "level": "application",
+          "keywords": ["ứng dụng", "từ trường", "la bàn"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer"
+      ]
+    },
+    {
+      "id": "khtn7_topic_07",
+      "name": "Trao đổi chất và chuyển hóa năng lượng ở sinh vật",
+      "unit": "Chủ đề 3",
+      "periods": 8,
+      "summary": "Tìm hiểu về trao đổi chất, chuyển hóa năng lượng ở sinh vật.",
+      "learning_objectives": [
+        {
+          "id": "khtn7_obj_027",
+          "text": "Trình bày được khái niệm trao đổi chất và chuyển hóa năng lượng.",
+          "level": "recognition",
+          "keywords": ["trao đổi chất", "chuyển hóa", "năng lượng"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn7_obj_028",
+          "text": "Phân biệt được đồng hóa và dị hóa.",
+          "level": "understanding",
+          "keywords": ["đồng hóa", "dị hóa", "phân biệt"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn7_obj_029",
+          "text": "Nêu được vai trò của ATP trong trao đổi chất.",
+          "level": "understanding",
+          "keywords": ["ATP", "vai trò", "năng lượng"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn7_obj_030",
+          "text": "Giải thích được ảnh hưởng của hoạt động thể lực đến trao đổi chất.",
+          "level": "application",
+          "keywords": ["hoạt động thể lực", "trao đổi chất", "ảnh hưởng"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "essay"
+      ]
+    },
+    {
+      "id": "khtn7_topic_08",
+      "name": "Quang hợp ở thực vật",
+      "unit": "Chủ đề 3",
+      "periods": 10,
+      "summary": "Tìm hiểu về quá trình quang hợp ở thực vật và vai trò của quang hợp.",
+      "learning_objectives": [
+        {
+          "id": "khtn7_obj_031",
+          "text": "Trình bày được khái niệm quang hợp và điều kiện quang hợp.",
+          "level": "recognition",
+          "keywords": ["quang hợp", "điều kiện", "ánh sáng", "CO2"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn7_obj_032",
+          "text": "Viết được phương trình quang hợp ở mức đơn giản.",
+          "level": "application",
+          "keywords": ["phương trình", "quang hợp", "viết"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn7_obj_033",
+          "text": "Giải thích được vai trò của quang hợp đối với sự sống trên Trái Đất.",
+          "level": "understanding",
+          "keywords": ["vai trò", "quang hợp", "sự sống"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn7_obj_034",
+          "text": "Thiết kế được thí nghiệm chứng minh quang hợp cần ánh sáng và CO2.",
+          "level": "high_application",
+          "keywords": ["thí nghiệm", "chứng minh", "quang hợp"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "essay"
+      ]
+    },
+    {
+      "id": "khtn7_topic_09",
+      "name": "Hô hấp tế bào",
+      "unit": "Chủ đề 3",
+      "periods": 8,
+      "summary": "Tìm hiểu về hô hấp tế bào và vai trò của hô hấp trong cơ thể.",
+      "learning_objectives": [
+        {
+          "id": "khtn7_obj_035",
+          "text": "Trình bày được khái niệm hô hấp tế bào.",
+          "level": "recognition",
+          "keywords": ["hô hấp tế bào", "khái niệm", "oxygen"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn7_obj_036",
+          "text": "So sánh được quang hợp và hô hấp tế bào.",
+          "level": "understanding",
+          "keywords": ["so sánh", "quang hợp", "hô hấp"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn7_obj_037",
+          "text": "Giải thích được vai trò của hô hấp tế bào đối với cơ thể.",
+          "level": "understanding",
+          "keywords": ["vai trò", "hô hấp", "năng lượng"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn7_obj_038",
+          "text": "Nêu được mối quan hệ giữa quang hợp và hô hấp trong tự nhiên.",
+          "level": "application",
+          "keywords": ["mối quan hệ", "quang hợp", "hô hấp", "tự nhiên"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "essay"
+      ]
+    },
+    {
+      "id": "khtn7_topic_10",
+      "name": "Sinh trưởng và phát triển ở sinh vật",
+      "unit": "Chủ đề 3",
+      "periods": 8,
+      "summary": "Tìm hiểu về sinh trưởng và phát triển ở sinh vật.",
+      "learning_objectives": [
+        {
+          "id": "khtn7_obj_039",
+          "text": "Trình bày được khái niệm sinh trưởng và phát triển.",
+          "level": "recognition",
+          "keywords": ["sinh trưởng", "phát triển", "khái niệm"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn7_obj_040",
+          "text": "Nêu được các giai đoạn phát triển của sinh vật.",
+          "level": "recognition",
+          "keywords": ["giai đoạn", "phát triển", "vòng đời"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn7_obj_041",
+          "text": "Phân biệt được sinh trưởng ở thực vật và động vật.",
+          "level": "understanding",
+          "keywords": ["sinh trưởng", "thực vật", "động vật", "phân biệt"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn7_obj_042",
+          "text": "Giải thích được ảnh hưởng của các yếu tố môi trường đến sinh trưởng.",
+          "level": "application",
+          "keywords": ["yếu tố môi trường", "sinh trưởng", "ảnh hưởng"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "essay"
+      ]
+    },
+    {
+      "id": "khtn7_topic_11",
+      "name": "Sinh sản ở sinh vật",
+      "unit": "Chủ đề 4",
+      "periods": 10,
+      "summary": "Tìm hiểu về sinh sản ở sinh vật: sinh sản vô tính và sinh sản hữu tính.",
+      "learning_objectives": [
+        {
+          "id": "khtn7_obj_043",
+          "text": "Trình bày được khái niệm sinh sản và vai trò của sinh sản.",
+          "level": "recognition",
+          "keywords": ["sinh sản", "khái niệm", "vai trò"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn7_obj_044",
+          "text": "Phân biệt được sinh sản vô tính và sinh sản hữu tính.",
+          "level": "understanding",
+          "keywords": ["sinh sản vô tính", "sinh sản hữu tính", "phân biệt"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn7_obj_045",
+          "text": "Cho được ví dụ về các hình thức sinh sản vô tính.",
+          "level": "application",
+          "keywords": ["ví dụ", "sinh sản vô tính", "hình thức"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn7_obj_046",
+          "text": "Mô tả được quá trình thụ phấn và thụ tinh ở thực vật.",
+          "level": "understanding",
+          "keywords": ["thụ phấn", "thụ tinh", "thực vật"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn7_obj_047",
+          "text": "Nêu được ưu nhược điểm của sinh sản vô tính và hữu tính.",
+          "level": "understanding",
+          "keywords": ["ưu điểm", "nhược điểm", "sinh sản"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "essay"
+      ]
+    },
+    {
+      "id": "khtn7_topic_12",
+      "name": "Cảm ứng ở sinh vật",
+      "unit": "Chủ đề 4",
+      "periods": 7,
+      "summary": "Tìm về cảm ứng ở sinh vật và hệ thần kinh.",
+      "learning_objectives": [
+        {
+          "id": "khtn7_obj_048",
+          "text": "Trình bày được khái niệm cảm ứng ở sinh vật.",
+          "level": "recognition",
+          "keywords": ["cảm ứng", "kích thích", "phản ứng"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn7_obj_049",
+          "text": "Nêu được các dạng cảm ứng ở thực vật: hướng sáng, hướng đất.",
+          "level": "recognition",
+          "keywords": ["hướng sáng", "hướng đất", "thực vật"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn7_obj_050",
+          "text": "Giải thích được vai trò của hệ thần kinh ở động vật.",
+          "level": "understanding",
+          "keywords": ["hệ thần kinh", "vai trò", "động vật"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn7_obj_051",
+          "text": "So sánh được cảm ứng ở thực vật và động vật.",
+          "level": "understanding",
+          "keywords": ["so sánh", "cảm ứng", "thực vật", "động vật"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer"
+      ]
+    }
+  ]
+}

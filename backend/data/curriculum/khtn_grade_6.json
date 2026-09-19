@@ -1,0 +1,925 @@
+{
+  "metadata": {
+    "subject": "Khoa học tự nhiên",
+    "grade": 6,
+    "curriculum_version": "GDPT 2018",
+    "school_year": "2025-2026",
+    "source_type": "local_json",
+    "source_name": "Local curriculum seed data",
+    "status": "draft",
+    "requires_teacher_review": true,
+    "last_updated": "2026-06-02"
+  },
+  "cognitive_levels": {
+    "recognition": "Nhận biết",
+    "understanding": "Thông hiểu",
+    "application": "Vận dụng",
+    "high_application": "Vận dụng cao"
+  },
+  "question_types": {
+    "multiple_choice": "Trắc nghiệm nhiều lựa chọn",
+    "true_false": "Đúng/Sai",
+    "short_answer": "Trả lời ngắn",
+    "essay": "Tự luận"
+  },
+  "exam_scopes": [
+    {
+      "exam_type": "fifteen_minutes",
+      "display_name": "Kiểm tra 15 phút",
+      "included_topic_ids": [
+        "khtn6_topic_01",
+        "khtn6_topic_02"
+      ],
+      "default_duration_minutes": 15,
+      "default_total_score": 10,
+      "suggested_distribution": {
+        "recognition": 50,
+        "understanding": 30,
+        "application": 20,
+        "high_application": 0
+      },
+      "requires_teacher_review": true
+    },
+    {
+      "exam_type": "midterm_1",
+      "display_name": "Giữa học kì I",
+      "included_topic_ids": [
+        "khtn6_topic_01",
+        "khtn6_topic_02",
+        "khtn6_topic_03",
+        "khtn6_topic_04",
+        "khtn6_topic_05"
+      ],
+      "default_duration_minutes": 45,
+      "default_total_score": 10,
+      "suggested_distribution": {
+        "recognition": 40,
+        "understanding": 30,
+        "application": 20,
+        "high_application": 10
+      },
+      "requires_teacher_review": true
+    },
+    {
+      "exam_type": "final_1",
+      "display_name": "Cuối học kì I",
+      "included_topic_ids": [
+        "khtn6_topic_01",
+        "khtn6_topic_02",
+        "khtn6_topic_03",
+        "khtn6_topic_04",
+        "khtn6_topic_05",
+        "khtn6_topic_06"
+      ],
+      "default_duration_minutes": 45,
+      "default_total_score": 10,
+      "suggested_distribution": {
+        "recognition": 35,
+        "understanding": 35,
+        "application": 20,
+        "high_application": 10
+      },
+      "requires_teacher_review": true
+    },
+    {
+      "exam_type": "midterm_2",
+      "display_name": "Giữa học kì II",
+      "included_topic_ids": [
+        "khtn6_topic_06",
+        "khtn6_topic_07",
+        "khtn6_topic_08",
+        "khtn6_topic_09"
+      ],
+      "default_duration_minutes": 45,
+      "default_total_score": 10,
+      "suggested_distribution": {
+        "recognition": 40,
+        "understanding": 30,
+        "application": 20,
+        "high_application": 10
+      },
+      "requires_teacher_review": true
+    },
+    {
+      "exam_type": "final_2",
+      "display_name": "Cuối học kì II",
+      "included_topic_ids": [
+        "khtn6_topic_06",
+        "khtn6_topic_07",
+        "khtn6_topic_08",
+        "khtn6_topic_09",
+        "khtn6_topic_10",
+        "khtn6_topic_11"
+      ],
+      "default_duration_minutes": 45,
+      "default_total_score": 10,
+      "suggested_distribution": {
+        "recognition": 35,
+        "understanding": 35,
+        "application": 20,
+        "high_application": 10
+      },
+      "requires_teacher_review": true
+    }
+  ],
+  "topics": [
+    {
+      "id": "khtn6_topic_01",
+      "name": "Mở đầu về Khoa học tự nhiên",
+      "unit": "Chủ đề 1",
+      "periods": 5,
+      "summary": "Giới thiệu về khoa học tự nhiên, phương pháp nghiên cứu khoa học và mối quan hệ giữa khoa học với đời sống.",
+      "learning_objectives": [
+        {
+          "id": "khtn6_obj_001",
+          "text": "Trình bày được khái niệm khoa học tự nhiên và các ngành khoa học tự nhiên cơ bản.",
+          "level": "recognition",
+          "keywords": ["khoa học tự nhiên", "ngành khoa học", "khái niệm"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn6_obj_002",
+          "text": "Nêu được các bước cơ bản của phương pháp nghiên cứu khoa học.",
+          "level": "recognition",
+          "keywords": ["phương pháp", "nghiên cứu", "quan sát", "thí nghiệm"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn6_obj_003",
+          "text": "Phân biệt được quan sát và thí nghiệm.",
+          "level": "understanding",
+          "keywords": ["quan sát", "thí nghiệm", "phân biệt"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn6_obj_004",
+          "text": "Nêu được vai trò của khoa học tự nhiên trong đời sống.",
+          "level": "understanding",
+          "keywords": ["vai trò", "đời sống", "ứng dụng"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer"
+      ]
+    },
+    {
+      "id": "khtn6_topic_02",
+      "name": "Các phép đo trong Khoa học tự nhiên",
+      "unit": "Chủ đề 1",
+      "periods": 8,
+      "summary": "Giới thiệu về đo lường, các đại lượng đo lường cơ bản và cách sử dụng dụng cụ đo.",
+      "learning_objectives": [
+        {
+          "id": "khtn6_obj_005",
+          "text": "Trình bày được khái niệm đo lường và vai trò của đo lường trong khoa học.",
+          "level": "recognition",
+          "keywords": ["đo lường", "đại lượng", "đơn vị"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn6_obj_006",
+          "text": "Nhận biết được các đại lượng đo lường cơ bản: độ dài, khối lượng, thời gian, nhiệt độ.",
+          "level": "recognition",
+          "keywords": ["độ dài", "khối lượng", "thời gian", "nhiệt độ"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn6_obj_007",
+          "text": "Sử dụng được các dụng cụ đo lường cơ bản: thước, cân, nhiệt kế.",
+          "level": "application",
+          "keywords": ["thước", "cân", "nhiệt kế", "sử dụng"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn6_obj_008",
+          "text": "Đọc được kết quả đo từ các dụng cụ đo lường.",
+          "level": "application",
+          "keywords": ["đọc kết quả", "vạch chia", "đơn vị"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn6_obj_009",
+          "text": "Nêu được sai số trong đo lường và cách giảm sai số.",
+          "level": "understanding",
+          "keywords": ["sai số", "đo lường", "chính xác"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "essay"
+      ]
+    },
+    {
+      "id": "khtn6_topic_03",
+      "name": "Chất và sự biến đổi của chất",
+      "unit": "Chủ đề 2",
+      "periods": 10,
+      "summary": "Tìm hiểu về chất, tính chất của chất, sự biến đổi vật lý và biến đổi hóa học của chất.",
+      "learning_objectives": [
+        {
+          "id": "khtn6_obj_010",
+          "text": "Trình bày được khái niệm chất và phân biệt chất rắn, lỏng, khí.",
+          "level": "recognition",
+          "keywords": ["chất", "rắn", "lỏng", "khí"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn6_obj_011",
+          "text": "Nêu được các tính chất chung của chất: màu sắc, mùi, vị, nhiệt độ nóng chảy, nhiệt độ sôi.",
+          "level": "recognition",
+          "keywords": ["tính chất", "màu sắc", "nóng chảy", "sôi"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn6_obj_012",
+          "text": "Phân biệt được biến đổi vật lý và biến đổi hóa học của chất.",
+          "level": "understanding",
+          "keywords": ["biến đổi vật lý", "biến đổi hóa học", "phân biệt"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn6_obj_013",
+          "text": "Cho được ví dụ về biến đổi vật lý và biến đổi hóa học trong đời sống.",
+          "level": "application",
+          "keywords": ["ví dụ", "đời sống", "biến đổi"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn6_obj_014",
+          "text": "Giải thích được tại sao nước là chất rất quan trọng đối với sự sống.",
+          "level": "understanding",
+          "keywords": ["nước", "sự sống", "quan trọng"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "essay"
+      ]
+    },
+    {
+      "id": "khtn6_topic_04",
+      "name": "Oxygen và không khí",
+      "unit": "Chủ đề 2",
+      "periods": 8,
+      "summary": "Tìm hiểu về oxygen, không khí và vai trò của chúng trong đời sống và tự nhiên.",
+      "learning_objectives": [
+        {
+          "id": "khtn6_obj_015",
+          "text": "Nêu được thành phần của không khí.",
+          "level": "recognition",
+          "keywords": ["không khí", "thành phần", "nitơ", "oxygen"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn6_obj_016",
+          "text": "Trình bày được tính chất vật lý và hóa học của oxygen.",
+          "level": "recognition",
+          "keywords": ["oxygen", "tính chất", "vật lý", "hóa học"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn6_obj_017",
+          "text": "Mô tả được quá trình oxy hóa và cháy.",
+          "level": "understanding",
+          "keywords": ["oxy hóa", "cháy", "điều kiện"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn6_obj_018",
+          "text": "Nêu được vai trò của oxygen trong hô hấp và đốt cháy.",
+          "level": "understanding",
+          "keywords": ["hô hấp", "đốt cháy", "vai trò"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn6_obj_019",
+          "text": "Phân biệt được quá trình cháy và quá trình oxy hóa chậm.",
+          "level": "application",
+          "keywords": ["cháy", "oxy hóa chậm", "phân biệt"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "essay"
+      ]
+    },
+    {
+      "id": "khtn6_topic_05",
+      "name": "Một số vật liệu, nhiên liệu, nguyên liệu, lương thực - thực phẩm",
+      "unit": "Chủ đề 2",
+      "periods": 7,
+      "summary": "Tìm hiểu về các loại vật liệu, nhiên liệu, nguyên liệu và lương thực thực phẩm quan trọng.",
+      "learning_objectives": [
+        {
+          "id": "khtn6_obj_020",
+          "text": "Phân loại được các loại vật liệu: kim loại, phi kim, hợp chất.",
+          "level": "recognition",
+          "keywords": ["vật liệu", "kim loại", "phi kim", "hợp chất"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn6_obj_021",
+          "text": "Nêu được đặc điểm và ứng dụng của một số vật liệu thông dụng.",
+          "level": "understanding",
+          "keywords": ["đặc điểm", "ứng dụng", "vật liệu"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn6_obj_022",
+          "text": "Nêu được các loại nhiên liệu phổ biến và vai trò của chúng.",
+          "level": "recognition",
+          "keywords": ["nhiên liệu", "xăng", "dầu", "khí đốt"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn6_obj_023",
+          "text": "Trình bày được tầm quan trọng của lương thực thực phẩm đối với đời sống.",
+          "level": "understanding",
+          "keywords": ["lương thực", "thực phẩm", "tầm quan trọng"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn6_obj_024",
+          "text": "Đề xuất được cách sử dụng tiết kiệm và hiệu quả các nguồn tài nguyên.",
+          "level": "application",
+          "keywords": ["tiết kiệm", "tài nguyên", "hiệu quả"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer"
+      ]
+    },
+    {
+      "id": "khtn6_topic_06",
+      "name": "Tế bào",
+      "unit": "Chủ đề 3",
+      "periods": 10,
+      "summary": "Tìm hiểu về tế bào, cấu trúc tế bào thực vật và động vật, vai trò của tế bào.",
+      "learning_objectives": [
+        {
+          "id": "khtn6_obj_025",
+          "text": "Trình bày được khái niệm tế bào và vai trò của tế bào trong cơ thể sống.",
+          "level": "recognition",
+          "keywords": ["tế bào", "khái niệm", "vai trò"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn6_obj_026",
+          "text": "Mô tả được cấu trúc cơ bản của tế bào: màng tế bào, chất tế bào, nhân.",
+          "level": "recognition",
+          "keywords": ["màng tế bào", "chất tế bào", "nhân"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn6_obj_027",
+          "text": "So sánh được tế bào thực vật và tế bào động vật.",
+          "level": "understanding",
+          "keywords": ["tế bào thực vật", "tế bào động vật", "so sánh"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn6_obj_028",
+          "text": "Nêu được chức năng của một số bào quan: ty thể, lục lạp, không bào.",
+          "level": "understanding",
+          "keywords": ["ty thể", "lục lạp", "không bào", "chức năng"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn6_obj_029",
+          "text": "Sử dụng kính hiển vi để quan sát tế bào.",
+          "level": "application",
+          "keywords": ["kính hiển vi", "quan sát", "tế bào"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "essay"
+      ]
+    },
+    {
+      "id": "khtn6_topic_07",
+      "name": "Từ tế bào đến cơ thể",
+      "unit": "Chủ đề 3",
+      "periods": 8,
+      "summary": "Tìm hiểu về sự tổ chức cơ thể từ tế bào đến mô, cơ quan và hệ cơ quan.",
+      "learning_objectives": [
+        {
+          "id": "khtn6_obj_030",
+          "text": "Trình bày được các cấp độ tổ chức cơ thể: tế bào, mô, cơ quan, hệ cơ quan.",
+          "level": "recognition",
+          "keywords": ["tế bào", "mô", "cơ quan", "hệ cơ quan"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn6_obj_031",
+          "text": "Giải thích được khái niệm mô và các loại mô cơ bản ở động vật.",
+          "level": "understanding",
+          "keywords": ["mô", "mô biểu bì", "mô liên kết", "mô cơ"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn6_obj_032",
+          "text": "Nêu được chức năng của một số cơ quan trong cơ thể người.",
+          "level": "understanding",
+          "keywords": ["cơ quan", "chức năng", "cơ thể người"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn6_obj_033",
+          "text": "Mô tả được sự phối hợp giữa các hệ cơ quan trong cơ thể.",
+          "level": "application",
+          "keywords": ["phối hợp", "hệ cơ quan", "hoạt động sống"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "essay"
+      ]
+    },
+    {
+      "id": "khtn6_topic_08",
+      "name": "Đa dạng thế giới sống",
+      "unit": "Chủ đề 3",
+      "periods": 7,
+      "summary": "Tìm hiểu về sự đa dạng của thế giới sống, phân loại sinh vật.",
+      "learning_objectives": [
+        {
+          "id": "khtn6_obj_034",
+          "text": "Nêu được sự đa dạng của thế giới sống.",
+          "level": "recognition",
+          "keywords": ["đa dạng", "thế giới sống", "sinh vật"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn6_obj_035",
+          "text": "Phân loại được sinh vật thành các nhóm: động vật, thực vật, nấm, vi khuẩn.",
+          "level": "understanding",
+          "keywords": ["phân loại", "động vật", "thực vật", "nấm", "vi khuẩn"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn6_obj_036",
+          "text": "Cho được ví dụ về các nhóm sinh vật phổ biến.",
+          "level": "application",
+          "keywords": ["ví dụ", "nhóm sinh vật"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn6_obj_037",
+          "text": "Nêu được vai trò của đa dạng sinh học đối với đời sống.",
+          "level": "understanding",
+          "keywords": ["đa dạng sinh học", "vai trò", "đời sống"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer"
+      ]
+    },
+    {
+      "id": "khtn6_topic_09",
+      "name": "Lực trong đời sống",
+      "unit": "Chủ đề 4",
+      "periods": 10,
+      "summary": "Tìm hiểu về lực, các loại lực và tác dụng của lực trong đời sống.",
+      "learning_objectives": [
+        {
+          "id": "khtn6_obj_038",
+          "text": "Trình bày được khái niệm lực và đơn vị đo lực.",
+          "level": "recognition",
+          "keywords": ["lực", "khái niệm", "niutơn", "đơn vị"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn6_obj_039",
+          "text": "Nêu được các yếu tố của lực: phương, chiều, độ lớn, điểm đặt.",
+          "level": "recognition",
+          "keywords": ["phương", "chiều", "độ lớn", "điểm đặt"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn6_obj_040",
+          "text": "Phân biệt được các loại lực: lực hấp dẫn, lực đàn hồi, lực ma sát.",
+          "level": "understanding",
+          "keywords": ["lực hấp dẫn", "lực đàn hồi", "lực ma sát"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn6_obj_041",
+          "text": "Giải thích được hiện tượng rơi tự do và trọng lượng.",
+          "level": "understanding",
+          "keywords": ["rơi tự do", "trọng lượng", "gia tốc"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn6_obj_042",
+          "text": "Vẽ được lực tác dụng lên một vật.",
+          "level": "application",
+          "keywords": ["vẽ lực", "vector lực"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn6_obj_043",
+          "text": "Cho được ví dụ về tác dụng của lực trong đời sống hàng ngày.",
+          "level": "application",
+          "keywords": ["ví dụ", "đời sống", "tác dụng lực"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "essay"
+      ]
+    },
+    {
+      "id": "khtn6_topic_10",
+      "name": "Năng lượng và sự chuyển hóa năng lượng",
+      "unit": "Chủ đề 4",
+      "periods": 8,
+      "summary": "Tìm hiểu về năng lượng, các dạng năng lượng và sự chuyển hóa năng lượng.",
+      "learning_objectives": [
+        {
+          "id": "khtn6_obj_044",
+          "text": "Trình bày được khái niệm năng lượng và các dạng năng lượng cơ bản.",
+          "level": "recognition",
+          "keywords": ["năng lượng", "động năng", "thế năng", "nhiệt năng"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn6_obj_045",
+          "text": "Nêu được đơn vị đo năng lượng.",
+          "level": "recognition",
+          "keywords": ["jun", "kalori", "đơn vị"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn6_obj_046",
+          "text": "Cho được ví dụ về sự chuyển hóa năng lượng trong đời sống.",
+          "level": "application",
+          "keywords": ["chuyển hóa", "ví dụ", "đời sống"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn6_obj_047",
+          "text": "Giải thích được định luật bảo toàn năng lượng ở mức đơn giản.",
+          "level": "understanding",
+          "keywords": ["bảo toàn", "năng lượng", "định luật"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn6_obj_048",
+          "text": "Nêu được tầm quan trọng của việc tiết kiệm năng lượng.",
+          "level": "understanding",
+          "keywords": ["tiết kiệm", "năng lượng", "tầm quan trọng"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "essay"
+      ]
+    },
+    {
+      "id": "khtn6_topic_11",
+      "name": "Trái Đất và bầu trời",
+      "unit": "Chủ đề 4",
+      "periods": 7,
+      "summary": "Tìm hiểu về Trái Đất, hệ Mặt Trời và các hiện tượng tự nhiên.",
+      "learning_objectives": [
+        {
+          "id": "khtn6_obj_049",
+          "text": "Mô tả được hình dạng và cấu trúc của Trái Đất.",
+          "level": "recognition",
+          "keywords": ["Trái Đất", "hình dạng", "cấu trúc"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn6_obj_050",
+          "text": "Nêu được các thành viên trong hệ Mặt Trời.",
+          "level": "recognition",
+          "keywords": ["hệ Mặt Trời", "hành tinh", "Mặt Trời"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn6_obj_051",
+          "text": "Giải thích được nguyên nhân gây ra ngày đêm và các mùa trong năm.",
+          "level": "understanding",
+          "keywords": ["ngày đêm", "các mùa", "tự quay", "quỹ đạo"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn6_obj_052",
+          "text": "Nêu được các hiện tượng tự nhiên: nhật thực, nguyệt thực, thủy triều.",
+          "level": "understanding",
+          "keywords": ["nhật thực", "nguyệt thực", "thủy triều"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn6_obj_053",
+          "text": "Trình bày được mối quan hệ giữa Trái Đất, Mặt Trời và Mặt Trăng.",
+          "level": "application",
+          "keywords": ["mối quan hệ", "Trái Đất", "Mặt Trời", "Mặt Trăng"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "essay"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "templates": [
+    {
+      "id": "khtn_15m_default",
+      "name": "Đề kiểm tra 15 phút mặc định",
+      "subject": "Khoa học tự nhiên",
+      "duration_minutes": 15,
+      "total_score": 10,
+      "sections": [
+        {
+          "id": "part_1",
+          "name": "Trắc nghiệm nhiều lựa chọn",
+          "question_type": "multiple_choice",
+          "suggested_question_count": 10,
+          "score_per_question": 1.0
+        }
+      ]
+    },
+    {
+      "id": "khtn_15m_tf",
+      "name": "Đề kiểm tra 15 phút (Đúng/Sai)",
+      "subject": "Khoa học tự nhiên",
+      "duration_minutes": 15,
+      "total_score": 10,
+      "sections": [
+        {
+          "id": "part_1",
+          "name": "Đúng/Sai",
+          "question_type": "true_false",
+          "suggested_question_count": 5,
+          "score_per_question": 2.0,
+          "statements_per_question": 4
+        }
+      ]
+    },
+    {
+      "id": "khtn_midterm_45m_default",
+      "name": "Đề giữa kì 45 phút mặc định",
+      "subject": "Khoa học tự nhiên",
+      "duration_minutes": 45,
+      "total_score": 10,
+      "sections": [
+        {
+          "id": "part_1",
+          "name": "Trắc nghiệm nhiều lựa chọn",
+          "question_type": "multiple_choice",
+          "suggested_question_count": 16,
+          "score_per_question": 0.25
+        },
+        {
+          "id": "part_2",
+          "name": "Đúng/Sai",
+          "question_type": "true_false",
+          "suggested_question_count": 4,
+          "score_per_question": 0.5,
+          "statements_per_question": 4
+        },
+        {
+          "id": "part_3",
+          "name": "Trả lời ngắn",
+          "question_type": "short_answer",
+          "suggested_question_count": 2,
+          "score_per_question": 0.5
+        },
+        {
+          "id": "part_4",
+          "name": "Tự luận",
+          "question_type": "essay",
+          "suggested_question_count": 2,
+          "total_score": 3.0
+        }
+      ]
+    },
+    {
+      "id": "khtn_final_45m_default",
+      "name": "Đề cuối kì 45 phút mặc định",
+      "subject": "Khoa học tự nhiên",
+      "duration_minutes": 45,
+      "total_score": 10,
+      "sections": [
+        {
+          "id": "part_1",
+          "name": "Trắc nghiệm nhiều lựa chọn",
+          "question_type": "multiple_choice",
+          "suggested_question_count": 16,
+          "score_per_question": 0.25
+        },
+        {
+          "id": "part_2",
+          "name": "Đúng/Sai",
+          "question_type": "true_false",
+          "suggested_question_count": 4,
+          "score_per_question": 0.5,
+          "statements_per_question": 4
+        },
+        {
+          "id": "part_3",
+          "name": "Trả lời ngắn",
+          "question_type": "short_answer",
+          "suggested_question_count": 2,
+          "score_per_question": 0.5
+        },
+        {
+          "id": "part_4",
+          "name": "Tự luận",
+          "question_type": "essay",
+          "suggested_question_count": 2,
+          "total_score": 3.0
+        }
+      ]
+    },
+    {
+      "id": "khtn_final_60m_default",
+      "name": "Đề cuối kì 60 phút mặc định",
+      "subject": "Khoa học tự nhiên",
+      "duration_minutes": 60,
+      "total_score": 10,
+      "sections": [
+        {
+          "id": "part_1",
+          "name": "Trắc nghiệm nhiều lựa chọn",
+          "question_type": "multiple_choice",
+          "suggested_question_count": 20,
+          "score_per_question": 0.25
+        },
+        {
+          "id": "part_2",
+          "name": "Đúng/Sai",
+          "question_type": "true_false",
+          "suggested_question_count": 4,
+          "score_per_question": 0.5,
+          "statements_per_question": 4
+        },
+        {
+          "id": "part_3",
+          "name": "Trả lời ngắn",
+          "question_type": "short_answer",
+          "suggested_question_count": 2,
+          "score_per_question": 0.5
+        },
+        {
+          "id": "part_4",
+          "name": "Tự luận",
+          "question_type": "essay",
+          "suggested_question_count": 3,
+          "total_score": 4.0
+        }
+      ]
+    }
+  ]
+}

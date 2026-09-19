@@ -1,0 +1,11 @@
+{
+  "images": {},
+  "checks": {
+    "external_https_oauth_smtp": {"passed": false, "operator": "", "checked_at": "", "evidence": ""},
+    "provider_smoke_and_pricing": {"passed": false, "operator": "", "checked_at": "", "evidence": ""},
+    "offhost_backup_and_alerts": {"passed": false, "operator": "", "checked_at": "", "evidence": ""},
+    "teacher_quality_review": {"passed": false, "operator": "", "checked_at": "", "evidence": ""},
+    "pilot_owner_and_budget": {"passed": false, "operator": "", "checked_at": "", "evidence": ""},
+    "restore_and_rollback": {"passed": false, "operator": "", "checked_at": "", "evidence": ""}
+  }
+}

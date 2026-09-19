@@ -1,0 +1,53 @@
+[project]
+name = "smart-exam-ai"
+version = "0.1.0"
+description = "Smart Exam Matrix AI - Backend"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.30.0",
+    "python-dotenv>=1.0.0",
+    "pydantic>=2.0.0",
+    "pydantic-settings>=2.0.0",
+    "sqlalchemy>=2.0.0",
+    "psycopg2-binary>=2.9.0",
+    "alembic>=1.13.0",
+    "google-genai>=1.0.0",
+    "mistralai>=1.0.0",
+    "openai>=1.0.0",
+    "python-docx>=1.1.0",
+    "reportlab>=4.0.0",
+    "python-multipart>=0.0.9",
+    "pypdf>=4.0.0",
+    "defusedxml>=0.7.1",
+    "openpyxl>=3.1.0",
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.25.0",
+    # Runtime dependencies used by authentication and OAuth routes.  Keep this
+    # list in sync with requirements.txt so `uv sync` produces a runnable app.
+    "PyJWT>=2.14.0",
+    "passlib>=1.7.4",
+    "bcrypt==4.0.1",
+    "authlib>=1.3.0",
+    "httpx>=0.27.0",
+    "itsdangerous>=2.1.0",
+    "email-validator>=2.0.0",
+    "latex2mathml>=3.77,<4",
+    "mathml2omml>=0.0.2,<0.1",
+    "matplotlib>=3.10,<4",
+    "pillow>=11,<13",
+    "pypdfium2>=4.30,<5",
+]
+
+[project.optional-dependencies]
+vector-cache = ["chromadb>=1.5.9"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["app"]

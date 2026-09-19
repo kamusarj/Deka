@@ -1,0 +1,87 @@
+{
+  "templates": [
+    {
+      "id": "default_mc_rubric",
+      "name": "Rubric trắc nghiệm nhiều lựa chọn",
+      "question_type": "multiple_choice",
+      "criteria": [
+        {
+          "name": "Đáp án đúng",
+          "weight_percent": 100
+        }
+      ]
+    },
+    {
+      "id": "default_tf_rubric",
+      "name": "Rubric đúng/sai",
+      "question_type": "true_false",
+      "criteria": [
+        {
+          "name": "Đáp án đúng cho mỗi phát biểu",
+          "weight_percent": 100
+        }
+      ]
+    },
+    {
+      "id": "default_short_answer_rubric",
+      "name": "Rubric trả lời ngắn mặc định",
+      "question_type": "short_answer",
+      "criteria": [
+        {
+          "name": "Đúng ý chính",
+          "weight_percent": 70
+        },
+        {
+          "name": "Diễn đạt rõ ràng",
+          "weight_percent": 20
+        },
+        {
+          "name": "Trình bày đúng yêu cầu",
+          "weight_percent": 10
+        }
+      ]
+    },
+    {
+      "id": "default_essay_rubric",
+      "name": "Rubric tự luận mặc định",
+      "question_type": "essay",
+      "criteria": [
+        {
+          "name": "Đúng kiến thức",
+          "weight_percent": 60
+        },
+        {
+          "name": "Giải thích/lập luận rõ ràng",
+          "weight_percent": 25
+        },
+        {
+          "name": "Trình bày hợp lý",
+          "weight_percent": 15
+        }
+      ]
+    },
+    {
+      "id": "default_essay_rubric_detailed",
+      "name": "Rubric tự luận chi tiết",
+      "question_type": "essay",
+      "criteria": [
+        {
+          "name": "Nội dung kiến thức",
+          "weight_percent": 50
+        },
+        {
+          "name": "Phân tích/giải thích",
+          "weight_percent": 25
+        },
+        {
+          "name": "Ví dụ minh họa",
+          "weight_percent": 15
+        },
+        {
+          "name": "Trình bày và diễn đạt",
+          "weight_percent": 10
+        }
+      ]
+    }
+  ]
+}

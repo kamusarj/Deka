@@ -1,0 +1,967 @@
+{
+  "metadata": {
+    "subject": "Khoa học tự nhiên",
+    "grade": 8,
+    "curriculum_version": "GDPT 2018",
+    "school_year": "2025-2026",
+    "source_type": "local_json",
+    "source_name": "Local curriculum seed data",
+    "status": "draft",
+    "requires_teacher_review": true,
+    "last_updated": "2026-06-02"
+  },
+  "cognitive_levels": {
+    "recognition": "Nhận biết",
+    "understanding": "Thông hiểu",
+    "application": "Vận dụng",
+    "high_application": "Vận dụng cao"
+  },
+  "question_types": {
+    "multiple_choice": "Trắc nghiệm nhiều lựa chọn",
+    "true_false": "Đúng/Sai",
+    "short_answer": "Trả lời ngắn",
+    "essay": "Tự luận"
+  },
+  "exam_scopes": [
+    {
+      "exam_type": "fifteen_minutes",
+      "display_name": "Kiểm tra 15 phút",
+      "included_topic_ids": [
+        "khtn8_topic_01",
+        "khtn8_topic_02"
+      ],
+      "default_duration_minutes": 15,
+      "default_total_score": 10,
+      "suggested_distribution": {
+        "recognition": 50,
+        "understanding": 30,
+        "application": 20,
+        "high_application": 0
+      },
+      "requires_teacher_review": true
+    },
+    {
+      "exam_type": "midterm_1",
+      "display_name": "Giữa học kì I",
+      "included_topic_ids": [
+        "khtn8_topic_01",
+        "khtn8_topic_02",
+        "khtn8_topic_03",
+        "khtn8_topic_04",
+        "khtn8_topic_05"
+      ],
+      "default_duration_minutes": 45,
+      "default_total_score": 10,
+      "suggested_distribution": {
+        "recognition": 40,
+        "understanding": 30,
+        "application": 20,
+        "high_application": 10
+      },
+      "requires_teacher_review": true
+    },
+    {
+      "exam_type": "final_1",
+      "display_name": "Cuối học kì I",
+      "included_topic_ids": [
+        "khtn8_topic_01",
+        "khtn8_topic_02",
+        "khtn8_topic_03",
+        "khtn8_topic_04",
+        "khtn8_topic_05",
+        "khtn8_topic_06"
+      ],
+      "default_duration_minutes": 45,
+      "default_total_score": 10,
+      "suggested_distribution": {
+        "recognition": 35,
+        "understanding": 35,
+        "application": 20,
+        "high_application": 10
+      },
+      "requires_teacher_review": true
+    },
+    {
+      "exam_type": "midterm_2",
+      "display_name": "Giữa học kì II",
+      "included_topic_ids": [
+        "khtn8_topic_07",
+        "khtn8_topic_08",
+        "khtn8_topic_09",
+        "khtn8_topic_10"
+      ],
+      "default_duration_minutes": 45,
+      "default_total_score": 10,
+      "suggested_distribution": {
+        "recognition": 40,
+        "understanding": 30,
+        "application": 20,
+        "high_application": 10
+      },
+      "requires_teacher_review": true
+    },
+    {
+      "exam_type": "final_2",
+      "display_name": "Cuối học kì II",
+      "included_topic_ids": [
+        "khtn8_topic_07",
+        "khtn8_topic_08",
+        "khtn8_topic_09",
+        "khtn8_topic_10",
+        "khtn8_topic_11",
+        "khtn8_topic_12"
+      ],
+      "default_duration_minutes": 45,
+      "default_total_score": 10,
+      "suggested_distribution": {
+        "recognition": 35,
+        "understanding": 35,
+        "application": 20,
+        "high_application": 10
+      },
+      "requires_teacher_review": true
+    }
+  ],
+  "topics": [
+    {
+      "id": "khtn8_topic_01",
+      "name": "Phản ứng hóa học",
+      "unit": "Chủ đề 1",
+      "periods": 10,
+      "summary": "Tìm hiểu về phản ứng hóa học, dấu hiệu nhận biết và phương trình hóa học.",
+      "learning_objectives": [
+        {
+          "id": "khtn8_obj_001",
+          "text": "Trình bày được khái niệm phản ứng hóa học và dấu hiệu nhận biết.",
+          "level": "recognition",
+          "keywords": ["phản ứng hóa học", "dấu hiệu", "biến đổi"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn8_obj_002",
+          "text": "Viết được phương trình hóa học đơn giản.",
+          "level": "application",
+          "keywords": ["phương trình", "hóa học", "viết"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn8_obj_003",
+          "text": "Cân bằng được phương trình hóa học.",
+          "level": "application",
+          "keywords": ["cân bằng", "phương trình", "hệ số"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn8_obj_004",
+          "text": "Phân loại được các loại phản ứng hóa học cơ bản.",
+          "level": "understanding",
+          "keywords": ["phân loại", "phản ứng", "hợp", "phân hủy"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn8_obj_005",
+          "text": "Nêu được điều kiện để xảy ra phản ứng hóa học.",
+          "level": "understanding",
+          "keywords": ["điều kiện", "phản ứng", "nhiệt độ", "xúc tác"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "essay"
+      ]
+    },
+    {
+      "id": "khtn8_topic_02",
+      "name": "Mol và tỉ khối chất khí",
+      "unit": "Chủ đề 1",
+      "periods": 12,
+      "summary": "Tìm hiểu về mol, khối lượng mol, thể tích mol và tỉ khối chất khí.",
+      "learning_objectives": [
+        {
+          "id": "khtn8_obj_006",
+          "text": "Trình bày được khái niệm mol và hằng số Avogadro.",
+          "level": "recognition",
+          "keywords": ["mol", "hằng số Avogadro", "số Avogadro"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn8_obj_007",
+          "text": "Tính được khối lượng mol từ công thức hóa học.",
+          "level": "application",
+          "keywords": ["khối lượng mol", "tính toán", "công thức"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn8_obj_008",
+          "text": "Nêu được thể tích mol của chất khí ở điều kiện chuẩn.",
+          "level": "recognition",
+          "keywords": ["thể tích mol", "điều kiện chuẩn", "22.4 lít"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn8_obj_009",
+          "text": "Tính được tỉ khối chất khí so với hidro.",
+          "level": "application",
+          "keywords": ["tỉ khối", "chất khí", "hidro", "tính toán"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn8_obj_010",
+          "text": "Sử dụng được mol trong tính toán hóa học.",
+          "level": "application",
+          "keywords": ["sử dụng", "mol", "tính toán", "hóa học"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "essay"
+      ]
+    },
+    {
+      "id": "khtn8_topic_03",
+      "name": "Dung dịch và nồng độ dung dịch",
+      "unit": "Chủ đề 1",
+      "periods": 10,
+      "summary": "Tìm hiểu về dung dịch, nồng độ phần trăm và pha dung dịch.",
+      "learning_objectives": [
+        {
+          "id": "khtn8_obj_011",
+          "text": "Trình bày được khái niệm dung dịch, chất tan, dung môi.",
+          "level": "recognition",
+          "keywords": ["dung dịch", "chất tan", "dung môi"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn8_obj_012",
+          "text": "Nêu được khái niệm nồng độ phần trăm và cách tính.",
+          "level": "understanding",
+          "keywords": ["nồng độ", "phần trăm", "cách tính"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn8_obj_013",
+          "text": "Tính được nồng độ phần trăm của dung dịch.",
+          "level": "application",
+          "keywords": ["tính toán", "nồng độ", "phần trăm"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn8_obj_014",
+          "text": "Pha được dung dịch theo nồng độ yêu cầu.",
+          "level": "application",
+          "keywords": ["pha", "dung dịch", "nồng độ"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn8_obj_015",
+          "text": "Giải thích được hiện tượng tan và kết tinh.",
+          "level": "understanding",
+          "keywords": ["tan", "kết tinh", "hiện tượng"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "essay"
+      ]
+    },
+    {
+      "id": "khtn8_topic_04",
+      "name": "Khối lượng riêng và áp suất",
+      "unit": "Chủ đề 2",
+      "periods": 10,
+      "summary": "Tìm hiểu về khối lượng riêng, áp suất chất rắn và chất lỏng.",
+      "learning_objectives": [
+        {
+          "id": "khtn8_obj_016",
+          "text": "Trình bày được khái niệm khối lượng riêng và công thức tính.",
+          "level": "recognition",
+          "keywords": ["khối lượng riêng", "công thức", "m/V"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn8_obj_017",
+          "text": "Tính được khối lượng riêng của chất.",
+          "level": "application",
+          "keywords": ["tính toán", "khối lượng riêng"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn8_obj_018",
+          "text": "Trình bày được khái niệm áp suất và đơn vị đo áp suất.",
+          "level": "recognition",
+          "keywords": ["áp suất", "đơn vị", "Pascal"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn8_obj_019",
+          "text": "Giải thích được áp suất chất rắn lên bề mặt.",
+          "level": "understanding",
+          "keywords": ["áp suất", "chất rắn", "diện tích"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn8_obj_020",
+          "text": "Giải thích được áp suất chất lỏng và nguyên tắc Pascal.",
+          "level": "understanding",
+          "keywords": ["áp suất", "chất lỏng", "nguyên tắc Pascal"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "essay"
+      ]
+    },
+    {
+      "id": "khtn8_topic_05",
+      "name": "Tác dụng làm quay của lực",
+      "unit": "Chủ đề 2",
+      "periods": 8,
+      "summary": "Tìm hiểu về moment lực và cân bằng của vật chịu nhiều lực.",
+      "learning_objectives": [
+        {
+          "id": "khtn8_obj_021",
+          "text": "Trình bày được khái niệm moment lực và cánh tay đòn.",
+          "level": "recognition",
+          "keywords": ["moment lực", "cánh tay đòn", "trục quay"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn8_obj_022",
+          "text": "Tính được moment lực.",
+          "level": "application",
+          "keywords": ["tính toán", "moment lực", "công thức"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn8_obj_023",
+          "text": "Nêu được điều kiện cân bằng của vật chịu nhiều lực.",
+          "level": "understanding",
+          "keywords": ["cân bằng", "điều kiện", "nhiều lực"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn8_obj_024",
+          "text": "Giải thích được nguyên lý đòn bẩy và ứng dụng.",
+          "level": "understanding",
+          "keywords": ["đòn bẩy", "nguyên lý", "ứng dụng"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "essay"
+      ]
+    },
+    {
+      "id": "khtn8_topic_06",
+      "name": "Điện",
+      "unit": "Chủ đề 2",
+      "periods": 12,
+      "summary": "Tìm hiểu về dòng điện, cường độ dòng điện, điện áp và điện trở.",
+      "learning_objectives": [
+        {
+          "id": "khtn8_obj_025",
+          "text": "Trình bày được khái niệm dòng điện và hướng dòng điện.",
+          "level": "recognition",
+          "keywords": ["dòng điện", "hướng", "electron"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn8_obj_026",
+          "text": "Nêu được đơn vị đo cường độ dòng điện và cách đo.",
+          "level": "recognition",
+          "keywords": ["cường độ", "Ampe", "ampe kế"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn8_obj_027",
+          "text": "Trình bày được khái niệm điện áp và cách đo điện áp.",
+          "level": "recognition",
+          "keywords": ["điện áp", "Vôn", "vôn kế"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn8_obj_028",
+          "text": "Nêu được định luật Ohm và áp dụng tính toán.",
+          "level": "application",
+          "keywords": ["định luật Ohm", "công thức", "tính toán"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn8_obj_029",
+          "text": "Đo được cường độ dòng điện và điện áp trong mạch điện.",
+          "level": "application",
+          "keywords": ["đo", "cường độ", "điện áp", "mạch điện"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "essay"
+      ]
+    },
+    {
+      "id": "khtn8_topic_07",
+      "name": "Nhiệt",
+      "unit": "Chủ đề 3",
+      "periods": 10,
+      "summary": "Tìm về nhiệt lượng, nhiệt dung riêng và sự truyền nhiệt.",
+      "learning_objectives": [
+        {
+          "id": "khtn8_obj_030",
+          "text": "Trình bày được khái niệm nhiệt lượng và đơn vị đo.",
+          "level": "recognition",
+          "keywords": ["nhiệt lượng", "kalori", "jun"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn8_obj_031",
+          "text": "Nêu được nhiệt dung riêng và ý nghĩa.",
+          "level": "understanding",
+          "keywords": ["nhiệt dung riêng", "ý nghĩa"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn8_obj_032",
+          "text": "Tính được nhiệt lượng cần thiết để đun nóng chất.",
+          "level": "application",
+          "keywords": ["tính toán", "nhiệt lượng", "đun nóng"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn8_obj_033",
+          "text": "Giải thích được các cách truyền nhiệt: dẫn, đối流, bức xạ.",
+          "level": "understanding",
+          "keywords": ["truyền nhiệt", "dẫn", "đối流", "bức xạ"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "essay"
+      ]
+    },
+    {
+      "id": "khtn8_topic_08",
+      "name": "Hệ tuần hoàn ở người",
+      "unit": "Chủ đề 4",
+      "periods": 10,
+      "summary": "Tìm hiểu về hệ tuần hoàn ở người: tim, mạch máu và máu.",
+      "learning_objectives": [
+        {
+          "id": "khtn8_obj_034",
+          "text": "Mô tả được cấu tạo và chức năng của tim người.",
+          "level": "recognition",
+          "keywords": ["tim", "cấu tạo", "chức năng", "ngăn tim"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn8_obj_035",
+          "text": "Trình bày được đường đi của máu qua tim.",
+          "level": "understanding",
+          "keywords": ["đường đi", "máu", "tuần hoàn"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn8_obj_036",
+          "text": "Phân biệt được động mạch, tĩnh mạch và mao mạch.",
+          "level": "understanding",
+          "keywords": ["động mạch", "tĩnh mạch", "mao mạch"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn8_obj_037",
+          "text": "Nêu được chức năng của máu trong cơ thể.",
+          "level": "understanding",
+          "keywords": ["máu", "chức năng", "hồng cầu", "bạch cầu"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn8_obj_038",
+          "text": "Giải thích được vai trò của hệ tuần hoàn trong cơ thể.",
+          "level": "application",
+          "keywords": ["vai trò", "hệ tuần hoàn", "cơ thể"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "essay"
+      ]
+    },
+    {
+      "id": "khtn8_topic_09",
+      "name": "Hô hấp ở người",
+      "unit": "Chủ đề 4",
+      "periods": 8,
+      "summary": "Tìm hiểu về hệ hô hấp ở người và quá trình hô hấp.",
+      "learning_objectives": [
+        {
+          "id": "khtn8_obj_039",
+          "text": "Mô tả được cấu tạo của hệ hô hấp ở người.",
+          "level": "recognition",
+          "keywords": ["hệ hô hấp", "cấu tạo", "phế quản", "phổi"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn8_obj_040",
+          "text": "Trình bày được quá trình trao đổi khí ở phổi.",
+          "level": "understanding",
+          "keywords": ["trao đổi khí", "phổi", "nang phổi"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn8_obj_041",
+          "text": "Giải thích được cơ chế thở ở người.",
+          "level": "understanding",
+          "keywords": ["cơ chế", "thở", "hoành", "ngực"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn8_obj_042",
+          "text": "Nêu được tầm quan trọng của hô hấp đối với cơ thể.",
+          "level": "understanding",
+          "keywords": ["tầm quan trọng", "hô hấp", "cơ thể"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "essay"
+      ]
+    },
+    {
+      "id": "khtn8_topic_10",
+      "name": "Dinh dưỡng và tiêu hóa ở người",
+      "unit": "Chủ đề 4",
+      "periods": 10,
+      "summary": "Tìm hiểu về dinh dưỡng, hệ tiêu hóa và quá trình tiêu hóa ở người.",
+      "learning_objectives": [
+        {
+          "id": "khtn8_obj_043",
+          "text": "Nêu được các chất dinh dưỡng cần thiết cho cơ thể.",
+          "level": "recognition",
+          "keywords": ["chất dinh dưỡng", "gluxit", "lipit", "protein"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn8_obj_044",
+          "text": "Mô tả được cấu tạo của hệ tiêu hóa.",
+          "level": "recognition",
+          "keywords": ["hệ tiêu hóa", "cấu tạo", "dạ dày", "ruột"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn8_obj_045",
+          "text": "Trình bày được quá trình tiêu hóa thức ăn.",
+          "level": "understanding",
+          "keywords": ["quá trình", "tiêu hóa", "enzym"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn8_obj_046",
+          "text": "Giải thích được vai trò của các cơ quan tiêu hóa.",
+          "level": "understanding",
+          "keywords": ["vai trò", "cơ quan", "tiêu hóa"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn8_obj_047",
+          "text": "Xây dựng được chế độ dinh dưỡng hợp lý.",
+          "level": "application",
+          "keywords": ["chế độ", "dinh dưỡng", "hợp lý"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "essay"
+      ]
+    },
+    {
+      "id": "khtn8_topic_11",
+      "name": "Bài tiết và cân bằng môi trường trong cơ thể",
+      "unit": "Chủ đề 5",
+      "periods": 8,
+      "summary": "Tìm hiểu về hệ bài tiết và vai trò của thận trong cân bằng môi trường trong.",
+      "learning_objectives": [
+        {
+          "id": "khtn8_obj_048",
+          "text": "Mô tả được cấu tạo của thận.",
+          "level": "recognition",
+          "keywords": ["thận", "cấu tạo", "nephron"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn8_obj_049",
+          "text": "Trình bày được quá trình tạo nước tiểu.",
+          "level": "understanding",
+          "keywords": ["tạo nước tiểu", "lọc", "tái hấp thu"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn8_obj_050",
+          "text": "Giải thích được vai trò của thận trong cân bằng môi trường trong.",
+          "level": "understanding",
+          "keywords": ["vai trò", "thận", "cân bằng", "môi trường trong"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn8_obj_051",
+          "text": "Nêu được các biện pháp bảo vệ hệ bài tiết.",
+          "level": "application",
+          "keywords": ["bảo vệ", "hệ bài tiết", "biện pháp"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "essay"
+      ]
+    },
+    {
+      "id": "khtn8_topic_12",
+      "name": "Sinh sản ở người",
+      "unit": "Chủ đề 5",
+      "periods": 10,
+      "summary": "Tìm hiểu về hệ sinh sản ở người, quá trình sinh sản và phát triển thai nhi.",
+      "learning_objectives": [
+        {
+          "id": "khtn8_obj_052",
+          "text": "Mô tả được cấu tạo của hệ sinh sản nam và nữ.",
+          "level": "recognition",
+          "keywords": ["hệ sinh sản", "nam", "nữ", "cấu tạo"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn8_obj_053",
+          "text": "Trình bày được quá trình thụ tinh và phát triển thai nhi.",
+          "level": "understanding",
+          "keywords": ["thụ tinh", "phát triển", "thai nhi"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn8_obj_054",
+          "text": "Nêu được sự thay đổi ở tuổi dậy thì.",
+          "level": "understanding",
+          "keywords": ["dậy thì", "thay đổi", "sinh lý"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn8_obj_055",
+          "text": "Nêu được cách chăm sóc sức khỏe sinh sản.",
+          "level": "application",
+          "keywords": ["chăm sóc", "sức khỏe", "sinh sản"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "essay"
+      ]
+    }
+  ]
+}

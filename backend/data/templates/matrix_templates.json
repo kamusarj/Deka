@@ -1,0 +1,84 @@
+{
+  "templates": [
+    {
+      "id": "default_15m_matrix",
+      "name": "Ma trận kiểm tra 15 phút mặc định",
+      "total_score": 10,
+      "cognitive_distribution": {
+        "recognition": 50,
+        "understanding": 30,
+        "application": 20,
+        "high_application": 0
+      },
+      "rules": [
+        "Tổng điểm phải bằng 10",
+        "Mỗi câu hỏi phải map với một learning_objective",
+        "Không bắt buộc có vận dụng cao trong bài kiểm tra 15 phút"
+      ]
+    },
+    {
+      "id": "default_midterm_matrix",
+      "name": "Ma trận giữa kì mặc định",
+      "total_score": 10,
+      "cognitive_distribution": {
+        "recognition": 40,
+        "understanding": 30,
+        "application": 20,
+        "high_application": 10
+      },
+      "rules": [
+        "Tổng điểm phải bằng 10",
+        "Mỗi câu hỏi phải map với một learning_objective",
+        "Tỉ lệ mức độ có thể được giáo viên chỉnh sửa"
+      ]
+    },
+    {
+      "id": "default_final_matrix",
+      "name": "Ma trận cuối kì mặc định",
+      "total_score": 10,
+      "cognitive_distribution": {
+        "recognition": 35,
+        "understanding": 35,
+        "application": 20,
+        "high_application": 10
+      },
+      "rules": [
+        "Tổng điểm phải bằng 10",
+        "Đề cuối kì cần bao phủ nhiều topic hơn giữa kì",
+        "Mỗi câu hỏi phải map với một learning_objective"
+      ]
+    },
+    {
+      "id": "default_15m_tf_matrix",
+      "name": "Ma trận kiểm tra 15 phút (Đúng/Sai)",
+      "total_score": 10,
+      "cognitive_distribution": {
+        "recognition": 40,
+        "understanding": 40,
+        "application": 20,
+        "high_application": 0
+      },
+      "rules": [
+        "Tổng điểm phải bằng 10",
+        "Mỗi câu có 4 phát biểu Đúng/Sai",
+        "Phân bổ đều giữa các mức độ nhận biết và thông hiểu"
+      ]
+    },
+    {
+      "id": "default_60m_final_matrix",
+      "name": "Ma trận cuối kì 60 phút mặc định",
+      "total_score": 10,
+      "cognitive_distribution": {
+        "recognition": 30,
+        "understanding": 35,
+        "application": 25,
+        "high_application": 10
+      },
+      "rules": [
+        "Tổng điểm phải bằng 10",
+        "Đề 60 phút cần bao phủ nhiều topic và mức độ hơn",
+        "Cần có câu vận dụng cao để phân loại học sinh"
+      ]
+    }
+  ]
+}

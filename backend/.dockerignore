@@ -1,0 +1,29 @@
+# Ẩn / môi trường local
+.venv/
+.env
+.git/
+
+# Cache & build artifacts
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Runtime data (không đóng gói vào image)
+data/exams.json
+app/data/smart_exam.db
+app/data/uploads/
+
+
+
+.env.*
+*.env
+*.pem
+*.key
+*.p12
+*.pfx
+*.db
+*.sqlite*
+app/data/chroma/

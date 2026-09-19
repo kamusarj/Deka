@@ -1,0 +1,18 @@
+# Node & build artifacts
+node_modules/
+dist/
+
+# Ẩn / môi trường local (tránh leak secret + không đè VITE_API_BASE_URL)
+.env
+.env.local
+.env.*.local
+.env.*
+*.env
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Git & cache
+.git/
+.cache/

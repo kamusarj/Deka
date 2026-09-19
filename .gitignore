@@ -1,0 +1,81 @@
+.codex/
+.opencode/
+opencode.json
+/.env
+# Credentials, environment variants and runtime exports at any depth.
+.env
+.env.*
+*.env
+!.env.example
+!*.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+*.sql.gz
+*.log
+.agents/
+backend/data/exams.json
+backend/app/data/
+
+# Harness durable layer
+harness.db
+harness.db-wal
+harness.db-shm
+scripts/bin/harness-cli
+scripts/bin/harness-cli.exe
+
+# Dedicated deployment credentials and backup material
+/deploy/*.env
+/deploy/backups/
+
+# Local AI / agent runtime data
+.ai-log/
+.harness/
+
+# Generated test / validation artifacts
+artifacts/
+
+# Local source documents used for development/testing
+source/
+
+# Python generated files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local agent / Harness development workflow
+AGENTS.md
+CHANGELOG_CODEX.md
+CODEX_AUDIT.md
+plan.md
+
+docs/README.md
+docs/HARNESS*.md
+docs/CONTEXT_RULES.md
+docs/FEATURE_INTAKE.md
+docs/IMPROVEMENT_PROTOCOL.md
+docs/TOOL_REGISTRY.md
+docs/TRACE_SPEC.md
+
+scripts/README.md
+scripts/bootstrap-harness.sh
+scripts/bootstrap-harness.ps1
+scripts/agent-harness-block.md
+scripts/claude-harness-block.md
+scripts/harness-cli-release-tag
+scripts/schema/
+
+# Internal engineering workflow / generated evidence
+docs/stories/
+docs/validation/
+docs/templates/
+docs/decisions/
+docs/contracts/

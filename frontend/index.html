@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Smart Exam Matrix AI — Tạo đề kiểm tra bằng AI: ma trận, bản đặc tả, câu hỏi, đáp án và rubric trong vài phút." />
+    <meta name="theme-color" content="#f8f5eb" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#181b16" media="(prefers-color-scheme: dark)" />
+    <title>Smart Exam Matrix AI — Tạo đề bằng AI</title>
+    <script>
+      /* Paint the stored theme before first render so the page never flashes
+         the wrong palette. Mirrors contexts/themeStorage.ts. */
+      (function () {
+        try {
+          var stored = localStorage.getItem("smart-exam-theme");
+          var pref =
+            stored === "light" || stored === "dark" || stored === "system"
+              ? stored
+              : "system";
+          var dark =
+            pref === "dark" ||
+            (pref === "system" &&
+              window.matchMedia("(prefers-color-scheme: dark)").matches);
+          document.documentElement.setAttribute("data-theme", pref);
+          document.documentElement.style.colorScheme = dark ? "dark" : "light";
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "system");
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

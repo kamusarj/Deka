@@ -1,0 +1,331 @@
+/* ============================================================
+   Smart Exam Matrix AI — Design System v4
+   Paper canvas · Olive brand · Light + Dark themes
+
+   Layer order:
+     1. Theme-invariant tokens (radius, spacing, type, motion)
+     2. Light palette      -> :root, :root[data-theme="light"]
+     3. Dark palette       -> :root[data-theme="dark"], and
+                              @media (prefers-color-scheme: dark) when the
+                              user has not made an explicit choice
+   Every surface/text/border colour must come from a token so both themes
+   stay in sync. Do not hardcode hex values below this block.
+   ============================================================ */
+
+/* ── Google Fonts ──────────────────────────────────── */
+@import url("./fonts.css");
+
+/* ── Theme-invariant tokens ─────────────────────────── */
+:root {
+  /* ─ Radius ─ */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+
+  /* ─ Spacing scale (4px base) ─ */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+
+  /* ─ Type scale ─ */
+  --text-xs: 0.75rem;
+  --text-sm: 0.85rem;
+  --text-base: 1rem;
+  --text-lg: 1.15rem;
+  --text-xl: 1.4rem;
+  --text-2xl: 1.8rem;
+  --text-3xl: 2.4rem;
+  --text-4xl: 3.2rem;
+
+  /* ─ Elevation geometry (colour comes from --shadow-tint) ─ */
+  --glass-blur: 16px;
+
+  /* ─ Motion ─ */
+  --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-fast: 0.15s;
+  --dur: 0.22s;
+  --dur-slow: 0.4s;
+
+  /* ─ Base ─ */
+  color: var(--text);
+  background: var(--bg);
+  --font-display: 'Newsreader', Georgia, serif;
+  --font-body: 'Be Vietnam Pro', ui-sans-serif, system-ui, sans-serif;
+  font-family: 'Be Vietnam Pro', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  color-scheme: light;
+}
+
+/* ── Light palette ──────────────────────────────────── */
+:root,
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  /* ─ Canvas & Surfaces ─ */
+  --bg: #f8f5eb;
+  --bg-bone: #f0eedf;
+  --surface: #fffdf7;
+  --surface-2: #f0eedf;
+  --surface-hover: #eaeada;
+  --surface-sunken: #f6f3e9;
+  --surface-raised: #fffdf7;
+  --surface-dark: #302a20;
+  --surface-deep: #111110;
+
+  /* ─ Text ─ */
+  --text: #302a20;
+  --text-body: #514e43;
+  --text-muted: #716d5f;
+  --text-subtle: #817c6c;
+  --text-on-primary: #fffdf7;
+  --text-on-dark: #f0eedf;
+  --text-on-dark-muted: #a9a49b;
+
+  /* ─ Brand — Olive ─ */
+  --primary: #59683b;
+  --primary-deep: #45542e;
+  --primary-hover: #4b5b31;
+  --primary-active: #3d492a;
+  --primary-soft: #eef0e3;
+  --primary-soft-2: #dfe5cf;
+  --primary-ring: rgba(89, 104, 59, 0.25);
+  --on-primary-soft: #41522a;
+
+  /* Difficulty ratio controls — olive shades */
+  --ratio-recognition: #45542e;
+  --ratio-understanding: #657348;
+  --ratio-application: #7a815b;
+
+  /* ─ Accent — Amber ─ */
+  --accent: #8a7443;
+  --accent-soft: #f4efd9;
+  --accent-deep: #806132;
+
+  /* ─ Violet — secondary accent ─ */
+  --violet: #7c5cd0;
+  --violet-soft: #f3f0ff;
+  --violet-deep: #6344b8;
+
+  /* ─ Status ─ */
+  --success: #2d8659;
+  --success-soft: #ecf8f1;
+  --success-border: #b8e0c8;
+  --on-success-soft: #1a7a42;
+  --warning: #806132;
+  --warning-soft: #f4efd9;
+  --warning-border: #f0d888;
+  --on-warning-soft: #8a6000;
+  --danger: #c83020;
+  --danger-soft: #fef0ee;
+  --danger-border: #f5c0b8;
+  --on-danger-soft: #a82818;
+
+  /* ─ Borders ─ */
+  --border: #dfdfd0;
+  --border-strong: #c9c9b7;
+  --border-subtle: #eaeada;
+  --border-hairline: rgba(0, 0, 0, 0.06);
+
+  /* ─ Shadows ─ */
+  --shadow-xs: 0 1px 2px rgba(26, 24, 20, 0.04);
+  --shadow-sm: 0 2px 8px rgba(26, 24, 20, 0.06);
+  --shadow: 0 8px 24px rgba(26, 24, 20, 0.08);
+  --shadow-lg: 0 20px 48px rgba(26, 24, 20, 0.12);
+  --shadow-primary: 0 8px 20px rgba(89, 104, 59, 0.2);
+  --shadow-lift: 0 12px 32px rgba(26, 24, 20, 0.1);
+
+  /* ─ Glassmorphism ─ */
+  --glass-bg: rgba(255, 253, 247, 0.9);
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --glass-nav: rgba(250, 250, 248, 0.85);
+
+  /* ─ Overlays on tinted/dark backgrounds ─ */
+  --overlay-weak: rgba(255, 255, 255, 0.18);
+  --overlay-border: rgba(255, 255, 255, 0.3);
+  --overlay-text: rgba(255, 255, 255, 0.75);
+  --sheen: rgba(255, 255, 255, 0.3);
+  --scrim: rgba(26, 24, 20, 0.45);
+  --overlay-hairline: rgba(255, 255, 255, 0.08);
+  --success-hover: #257a4d;
+}
+
+/* ── Dark palette ───────────────────────────────────── */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --text-on-primary: #202718;
+
+  --bg: #181b16;
+  --bg-bone: #1e221b;
+  --surface: #22261e;
+  --surface-2: #292e24;
+  --surface-hover: #33392b;
+  --surface-sunken: #1c2019;
+  --surface-raised: #30362a;
+  --surface-dark: #0e0c0b;
+  --surface-deep: #080706;
+
+  --text: #efeddf;
+  --text-body: #d7d8c9;
+  --text-muted: #b1b5a4;
+  --text-subtle: #8f9684;
+  --text-on-primary: #202718;
+  --text-on-dark: #efeddf;
+  --text-on-dark-muted: #b1b5a4;
+
+  --primary: #b2c48c;
+  --primary-deep: #59683b;
+  --primary-hover: #c5d3a6;
+  --primary-active: #d3dfbb;
+  --primary-soft: rgba(178, 196, 140, 0.14);
+  --primary-soft-2: rgba(178, 196, 140, 0.26);
+  --primary-ring: rgba(178, 196, 140, 0.35);
+  --on-primary-soft: #c5d3a6;
+
+  --ratio-recognition: #c5d3a6;
+  --ratio-understanding: #a3b47c;
+  --ratio-application: #85945e;
+
+  --accent: #f0ad3c;
+  --accent-soft: rgba(240, 173, 60, 0.14);
+  --accent-deep: #8a7443;
+
+  --violet: #a58cf0;
+  --violet-soft: rgba(165, 140, 240, 0.16);
+  --violet-deep: #8d70e0;
+
+  --success: #4fbe86;
+  --success-soft: rgba(79, 190, 134, 0.14);
+  --success-border: rgba(79, 190, 134, 0.34);
+  --on-success-soft: #6ed3a0;
+  --warning: #e8a33a;
+  --warning-soft: rgba(232, 163, 58, 0.14);
+  --warning-border: rgba(232, 163, 58, 0.34);
+  --on-warning-soft: #f2bc63;
+  --danger: #f4705c;
+  --danger-soft: rgba(244, 112, 92, 0.14);
+  --danger-border: rgba(244, 112, 92, 0.34);
+  --on-danger-soft: #ff9382;
+
+  --border: #3b4132;
+  --border-strong: #515a43;
+  --border-subtle: #30362a;
+  --border-hairline: rgba(255, 255, 255, 0.08);
+
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.45);
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 20px 48px rgba(0, 0, 0, 0.6);
+  --shadow-primary: 0 8px 20px rgba(178, 196, 140, 0.28);
+  --shadow-lift: 0 12px 32px rgba(0, 0, 0, 0.55);
+
+  --glass-bg: rgba(34, 38, 30, 0.82);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-nav: rgba(24, 27, 22, 0.85);
+
+  --overlay-weak: rgba(255, 255, 255, 0.1);
+  --overlay-border: rgba(255, 255, 255, 0.16);
+  --overlay-text: rgba(255, 255, 255, 0.7);
+  --sheen: rgba(255, 255, 255, 0.16);
+  --scrim: rgba(0, 0, 0, 0.6);
+  --overlay-hairline: rgba(255, 255, 255, 0.08);
+  --success-hover: #6ed3a0;
+}
+
+/* System preference wins only when the user has not chosen explicitly.
+   `data-theme` is always set by the app once a choice exists, so this
+   block is the first-paint default for `data-theme="system"`. */
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="system"] {
+    color-scheme: dark;
+  --text-on-primary: #202718;
+
+    --bg: #181b16;
+    --bg-bone: #1e221b;
+    --surface: #22261e;
+    --surface-2: #292e24;
+    --surface-hover: #33392b;
+    --surface-sunken: #1c2019;
+    --surface-raised: #30362a;
+    --surface-dark: #0e0c0b;
+    --surface-deep: #080706;
+
+    --text: #efeddf;
+    --text-body: #d7d8c9;
+    --text-muted: #b1b5a4;
+    --text-subtle: #8f9684;
+    --text-on-dark: #efeddf;
+    --text-on-dark-muted: #b1b5a4;
+
+    --primary: #b2c48c;
+    --primary-deep: #59683b;
+    --primary-hover: #c5d3a6;
+    --primary-active: #d3dfbb;
+    --primary-soft: rgba(178, 196, 140, 0.14);
+    --primary-soft-2: rgba(178, 196, 140, 0.26);
+    --primary-ring: rgba(178, 196, 140, 0.35);
+    --on-primary-soft: #c5d3a6;
+
+    --ratio-recognition: #c5d3a6;
+    --ratio-understanding: #a3b47c;
+    --ratio-application: #85945e;
+
+    --accent: #f0ad3c;
+    --accent-soft: rgba(240, 173, 60, 0.14);
+    --accent-deep: #8a7443;
+
+    --violet: #a58cf0;
+    --violet-soft: rgba(165, 140, 240, 0.16);
+    --violet-deep: #8d70e0;
+
+    --success: #4fbe86;
+    --success-soft: rgba(79, 190, 134, 0.14);
+    --success-border: rgba(79, 190, 134, 0.34);
+    --on-success-soft: #6ed3a0;
+    --warning: #e8a33a;
+    --warning-soft: rgba(232, 163, 58, 0.14);
+    --warning-border: rgba(232, 163, 58, 0.34);
+    --on-warning-soft: #f2bc63;
+    --danger: #f4705c;
+    --danger-soft: rgba(244, 112, 92, 0.14);
+    --danger-border: rgba(244, 112, 92, 0.34);
+    --on-danger-soft: #ff9382;
+
+    --border: #3b4132;
+    --border-strong: #515a43;
+    --border-subtle: #30362a;
+    --border-hairline: rgba(255, 255, 255, 0.08);
+
+    --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.45);
+    --shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 20px 48px rgba(0, 0, 0, 0.6);
+    --shadow-primary: 0 8px 20px rgba(178, 196, 140, 0.28);
+    --shadow-lift: 0 12px 32px rgba(0, 0, 0, 0.55);
+
+    --glass-bg: rgba(34, 38, 30, 0.82);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-nav: rgba(24, 27, 22, 0.85);
+
+    --overlay-weak: rgba(255, 255, 255, 0.1);
+    --overlay-border: rgba(255, 255, 255, 0.16);
+    --overlay-text: rgba(255, 255, 255, 0.7);
+    --sheen: rgba(255, 255, 255, 0.16);
+    --scrim: rgba(0, 0, 0, 0.6);
+    --overlay-hairline: rgba(255, 255, 255, 0.08);
+    --success-hover: #6ed3a0;
+  }
+}

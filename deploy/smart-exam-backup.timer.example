@@ -1,0 +1,7 @@
+[Unit]
+Description=Daily Smart Exam backup (pilot RPO target)
+[Timer]
+OnCalendar=daily
+Persistent=true
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,108 @@
+# Standalone release configuration. Do not merge with docker-compose.yml.
+name: ${COMPOSE_PROJECT_NAME:?Set a distinct staging or production project name}
+x-logging: &logging
+  driver: json-file
+  options: {max-size: "10m", max-file: "5"}
+x-backend: &backend
+  image: ${BACKEND_IMAGE:?Set the tested backend image tag or digest}
+  env_file: ${BACKEND_ENV_FILE:?Set a dedicated backend environment file}
+  environment: &environment
+    ENV: production
+    USE_POSTGRES: "true"
+    DATABASE_URL: postgresql://smart_exam:${POSTGRES_PASSWORD:?Set URL-safe database password}@postgres:5432/smart_exam_db
+    SECRET_KEY: ${SECRET_KEY:?Set random secret of at least 32 characters}
+    MFA_ENCRYPTION_KEY: ${MFA_ENCRYPTION_KEY:?Set separate MFA encryption key}
+    FRONTEND_URL: https://${PUBLIC_DOMAIN:?Set public domain}
+    CORS_ORIGINS: '["https://${PUBLIC_DOMAIN}"]'
+    TRUSTED_HOSTS: '["${PUBLIC_DOMAIN}","localhost","backend"]'
+    RAG_CHROMA_MODE: http
+    CHROMA_HOST: chromadb
+    CHROMA_PORT: "8000"
+    UPLOAD_DIR: /app/app/data/uploads
+    MPLCONFIGDIR: /tmp/matplotlib
+  networks: [internal, outbound]
+  volumes: [uploads_data:/app/app/data/uploads]
+  logging: *logging
+  security_opt: [no-new-privileges:true]
+  cap_drop: [ALL]
+  read_only: true
+  tmpfs: ["/tmp:rw,nosuid,nodev,noexec,size=256m,mode=1777"]
+  pids_limit: 256
+  mem_limit: 2g
+services:
+  postgres:
+    image: ${POSTGRES_IMAGE:-smart-exam-postgres:ready-184}
+    environment:
+      POSTGRES_USER: smart_exam
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: smart_exam_db
+    volumes: [postgres_data:/var/lib/postgresql/data]
+    networks: [internal]
+    healthcheck:
+      test: [CMD-SHELL, pg_isready -U smart_exam -d smart_exam_db]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    restart: unless-stopped
+    logging: *logging
+  chromadb:
+    profiles: [vector-cache]
+    image: chromadb/chroma:1.5.9
+    volumes: [chroma_data:/data]
+    networks: [internal]
+    restart: unless-stopped
+    logging: *logging
+  migrate:
+    <<: *backend
+    command: [python, -m, app.core.migrations]
+    restart: "no"
+    depends_on:
+      postgres: {condition: service_healthy}
+  backend:
+    <<: *backend
+    command: [uvicorn, app.main:app, --host, 0.0.0.0, --port, "8000", --workers, "1", --proxy-headers, --forwarded-allow-ips, "${PROXY_INTERNAL_IP:-172.30.184.10}"]
+    restart: unless-stopped
+    depends_on:
+      migrate: {condition: service_completed_successfully}
+  frontend:
+    image: ${FRONTEND_IMAGE:?Set tested frontend image built with demo login disabled}
+    networks: [internal]
+    depends_on:
+      backend: {condition: service_healthy}
+    healthcheck:
+      test: [CMD, wget, -q, --spider, http://127.0.0.1/]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+    restart: unless-stopped
+    logging: *logging
+  proxy:
+    image: ${PROXY_IMAGE:-smart-exam-proxy:ready-184}
+    environment:
+      PUBLIC_DOMAIN: ${PUBLIC_DOMAIN}
+      ACME_EMAIL: ${ACME_EMAIL:?Set certificate contact email}
+    ports: ["80:80", "443:443", "443:443/udp"]
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    networks:
+      internal: {ipv4_address: "${PROXY_INTERNAL_IP:-172.30.184.10}"}
+      outbound: {}
+    depends_on:
+      backend: {condition: service_healthy}
+      frontend: {condition: service_healthy}
+    restart: unless-stopped
+    logging: *logging
+volumes:
+  postgres_data:
+  chroma_data:
+  uploads_data:
+  caddy_data:
+  caddy_config:
+networks:
+  internal:
+    internal: true
+    ipam:
+      config: [{subnet: "${INTERNAL_SUBNET:-172.30.184.0/24}"}]
+  outbound: {}

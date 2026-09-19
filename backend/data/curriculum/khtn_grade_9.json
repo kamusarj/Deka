@@ -1,0 +1,955 @@
+{
+  "metadata": {
+    "subject": "Khoa học tự nhiên",
+    "grade": 9,
+    "curriculum_version": "GDPT 2018",
+    "school_year": "2025-2026",
+    "source_type": "local_json",
+    "source_name": "Local curriculum seed data",
+    "status": "draft",
+    "requires_teacher_review": true,
+    "last_updated": "2026-06-02"
+  },
+  "cognitive_levels": {
+    "recognition": "Nhận biết",
+    "understanding": "Thông hiểu",
+    "application": "Vận dụng",
+    "high_application": "Vận dụng cao"
+  },
+  "question_types": {
+    "multiple_choice": "Trắc nghiệm nhiều lựa chọn",
+    "true_false": "Đúng/Sai",
+    "short_answer": "Trả lời ngắn",
+    "essay": "Tự luận"
+  },
+  "exam_scopes": [
+    {
+      "exam_type": "fifteen_minutes",
+      "display_name": "Kiểm tra 15 phút",
+      "included_topic_ids": [
+        "khtn9_topic_01",
+        "khtn9_topic_02"
+      ],
+      "default_duration_minutes": 15,
+      "default_total_score": 10,
+      "suggested_distribution": {
+        "recognition": 50,
+        "understanding": 30,
+        "application": 20,
+        "high_application": 0
+      },
+      "requires_teacher_review": true
+    },
+    {
+      "exam_type": "midterm_1",
+      "display_name": "Giữa học kì I",
+      "included_topic_ids": [
+        "khtn9_topic_01",
+        "khtn9_topic_02",
+        "khtn9_topic_03",
+        "khtn9_topic_04",
+        "khtn9_topic_05"
+      ],
+      "default_duration_minutes": 45,
+      "default_total_score": 10,
+      "suggested_distribution": {
+        "recognition": 40,
+        "understanding": 30,
+        "application": 20,
+        "high_application": 10
+      },
+      "requires_teacher_review": true
+    },
+    {
+      "exam_type": "final_1",
+      "display_name": "Cuối học kì I",
+      "included_topic_ids": [
+        "khtn9_topic_01",
+        "khtn9_topic_02",
+        "khtn9_topic_03",
+        "khtn9_topic_04",
+        "khtn9_topic_05",
+        "khtn9_topic_06"
+      ],
+      "default_duration_minutes": 45,
+      "default_total_score": 10,
+      "suggested_distribution": {
+        "recognition": 35,
+        "understanding": 35,
+        "application": 20,
+        "high_application": 10
+      },
+      "requires_teacher_review": true
+    },
+    {
+      "exam_type": "midterm_2",
+      "display_name": "Giữa học kì II",
+      "included_topic_ids": [
+        "khtn9_topic_07",
+        "khtn9_topic_08",
+        "khtn9_topic_09",
+        "khtn9_topic_10"
+      ],
+      "default_duration_minutes": 45,
+      "default_total_score": 10,
+      "suggested_distribution": {
+        "recognition": 40,
+        "understanding": 30,
+        "application": 20,
+        "high_application": 10
+      },
+      "requires_teacher_review": true
+    },
+    {
+      "exam_type": "final_2",
+      "display_name": "Cuối học kì II",
+      "included_topic_ids": [
+        "khtn9_topic_07",
+        "khtn9_topic_08",
+        "khtn9_topic_09",
+        "khtn9_topic_10",
+        "khtn9_topic_11",
+        "khtn9_topic_12"
+      ],
+      "default_duration_minutes": 45,
+      "default_total_score": 10,
+      "suggested_distribution": {
+        "recognition": 35,
+        "understanding": 35,
+        "application": 20,
+        "high_application": 10
+      },
+      "requires_teacher_review": true
+    }
+  ],
+  "topics": [
+    {
+      "id": "khtn9_topic_01",
+      "name": "Năng lượng cơ học",
+      "unit": "Chủ đề 1",
+      "periods": 10,
+      "summary": "Tìm hiểu về động năng, thế năng và bảo toàn năng lượng cơ học.",
+      "learning_objectives": [
+        {
+          "id": "khtn9_obj_001",
+          "text": "Trình bày được khái niệm động năng và công thức tính.",
+          "level": "recognition",
+          "keywords": ["động năng", "công thức", "khối lượng", "vận tốc"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn9_obj_002",
+          "text": "Trình bày được khái niệm thế năng và công thức tính.",
+          "level": "recognition",
+          "keywords": ["thế năng", "trọng trường", "độ cao"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn9_obj_003",
+          "text": "Phát biểu được định luật bảo toàn năng lượng cơ học.",
+          "level": "understanding",
+          "keywords": ["bảo toàn", "năng lượng cơ học", "định luật"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn9_obj_004",
+          "text": "Tính được động năng và thế năng của vật.",
+          "level": "application",
+          "keywords": ["tính toán", "động năng", "thế năng"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn9_obj_005",
+          "text": "Áp dụng được định luật bảo toàn năng lượng vào bài toán cụ thể.",
+          "level": "application",
+          "keywords": ["áp dụng", "bảo toàn", "bài toán"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "essay"
+      ]
+    },
+    {
+      "id": "khtn9_topic_02",
+      "name": "Điện học",
+      "unit": "Chủ đề 1",
+      "periods": 15,
+      "summary": "Tìm hiểu về công suất điện, năng lượng điện, mạch điện nối tiếp và song song.",
+      "learning_objectives": [
+        {
+          "id": "khtn9_obj_006",
+          "text": "Trình bày được khái niệm công suất điện và đơn vị đo.",
+          "level": "recognition",
+          "keywords": ["công suất", "oát", "ki-lô-oát"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn9_obj_007",
+          "text": "Tính được công suất và năng lượng điện tiêu thụ.",
+          "level": "application",
+          "keywords": ["tính toán", "công suất", "năng lượng điện"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn9_obj_008",
+          "text": "So sánh được mạch điện nối tiếp và mạch điện song song.",
+          "level": "understanding",
+          "keywords": ["nối tiếp", "song song", "so sánh"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn9_obj_009",
+          "text": "Tính được điện trở tương đương trong mạch nối tiếp và song song.",
+          "level": "application",
+          "keywords": ["điện trở", "tương đương", "tính toán"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn9_obj_010",
+          "text": "An toàn khi sử dụng điện trong gia đình.",
+          "level": "application",
+          "keywords": ["an toàn", "điện", "gia đình"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "essay"
+      ]
+    },
+    {
+      "id": "khtn9_topic_03",
+      "name": "Điện từ học",
+      "unit": "Chủ đề 2",
+      "periods": 10,
+      "summary": "Tìm về hiện tượng điện từ, cảm ứng điện từ và ứng dụng.",
+      "learning_objectives": [
+        {
+          "id": "khtn9_obj_011",
+          "text": "Trình bày được hiện tượng điện từ cảm ứng.",
+          "level": "recognition",
+          "keywords": ["cảm ứng điện từ", "hiện tượng", "Faraday"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn9_obj_012",
+          "text": "Giải thích được nguyên lý hoạt động của máy phát điện.",
+          "level": "understanding",
+          "keywords": ["máy phát điện", "nguyên lý", "cảm ứng"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn9_obj_013",
+          "text": "Giải thích được nguyên lý hoạt động của động cơ điện.",
+          "level": "understanding",
+          "keywords": ["động cơ điện", "nguyên lý", "điện từ"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn9_obj_014",
+          "text": "Nêu được ứng dụng của điện từ học trong đời sống.",
+          "level": "application",
+          "keywords": ["ứng dụng", "điện từ", "đời sống"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "essay"
+      ]
+    },
+    {
+      "id": "khtn9_topic_04",
+      "name": "Ánh sáng và quang học",
+      "unit": "Chủ đề 2",
+      "periods": 10,
+      "summary": "Tìm hiểu về thấu kính, ảnh tạo bởi thấu kính và ứng dụng.",
+      "learning_objectives": [
+        {
+          "id": "khtn9_obj_015",
+          "text": "Trình bày được khái niệm thấu kính hội tụ và thấu kính phân kỳ.",
+          "level": "recognition",
+          "keywords": ["thấu kính", "hội tụ", "phân kỳ"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn9_obj_016",
+          "text": "Vẽ được tia ló qua thấu kính hội tụ.",
+          "level": "application",
+          "keywords": ["vẽ", "tia ló", "thấu kính"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn9_obj_017",
+          "text": "Xác định được ảnh tạo bởi thấu kính hội tụ.",
+          "level": "application",
+          "keywords": ["ảnh", "thấu kính", "hội tụ"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn9_obj_018",
+          "text": "Giải thích được nguyên lý hoạt động của mắt người và tật khúc xạ.",
+          "level": "understanding",
+          "keywords": ["mắt người", "tật khúc xạ", "cận thị", "viễn thị"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn9_obj_019",
+          "text": "Nêu được ứng dụng của thấu kính trong đời sống.",
+          "level": "application",
+          "keywords": ["ứng dụng", "thấu kính", "kính lúp", "kính hiển vi"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "essay"
+      ]
+    },
+    {
+      "id": "khtn9_topic_05",
+      "name": "Hóa học vô cơ cơ bản",
+      "unit": "Chủ đề 3",
+      "periods": 8,
+      "summary": "Tổng hợp kiến thức hóa học vô cơ: oxit, axit, bazo, muối.",
+      "learning_objectives": [
+        {
+          "id": "khtn9_obj_020",
+          "text": "Phân loại được các hợp chất vô cơ: oxit, axit, bazo, muối.",
+          "level": "understanding",
+          "keywords": ["phân loại", "oxit", "axit", "bazo", "muối"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn9_obj_021",
+          "text": "Nêu được tính chất chung của axit.",
+          "level": "recognition",
+          "keywords": ["axit", "tính chất", "chung"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn9_obj_022",
+          "text": "Nêu được tính chất chung của bazo.",
+          "level": "recognition",
+          "keywords": ["bazo", "tính chất", "chung"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn9_obj_023",
+          "text": "Viết được phương trình phản ứng trung hòa.",
+          "level": "application",
+          "keywords": ["phản ứng trung hòa", "phương trình", "viết"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "essay"
+      ]
+    },
+    {
+      "id": "khtn9_topic_06",
+      "name": "Kim loại và phi kim",
+      "unit": "Chủ đề 3",
+      "periods": 10,
+      "summary": "Tìm hiểu về tính chất hóa học của kim loại và phi kim.",
+      "learning_objectives": [
+        {
+          "id": "khtn9_obj_024",
+          "text": "Nêu được dãy hoạt động hóa học của kim loại.",
+          "level": "recognition",
+          "keywords": ["dãy hoạt động", "kim loại", "hóa học"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn9_obj_025",
+          "text": "So sánh được tính chất hóa học của kim loại và phi kim.",
+          "level": "understanding",
+          "keywords": ["so sánh", "kim loại", "phi kim"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn9_obj_026",
+          "text": "Viết được phương trình phản ứng của kim loại với axit, muối.",
+          "level": "application",
+          "keywords": ["phương trình", "kim loại", "axit", "muối"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn9_obj_027",
+          "text": "Giải thích được hiện tượng ăn mòn kim loại và cách phòng chống.",
+          "level": "understanding",
+          "keywords": ["ăn mòn", "kim loại", "phòng chống"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn9_obj_028",
+          "text": "Nêu được ứng dụng của một số kim loại quan trọng.",
+          "level": "application",
+          "keywords": ["ứng dụng", "kim loại", "sắt", "đồng", "nhôm"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "essay"
+      ]
+    },
+    {
+      "id": "khtn9_topic_07",
+      "name": "Hợp chất hữu cơ",
+      "unit": "Chủ đề 4",
+      "periods": 10,
+      "summary": "Tìm hiểu về hợp chất hữu cơ: hidrocacbon, ancol, axit cacboxylic.",
+      "learning_objectives": [
+        {
+          "id": "khtn9_obj_029",
+          "text": "Trình bày được khái niệm hợp chất hữu cơ và đặc điểm chung.",
+          "level": "recognition",
+          "keywords": ["hợp chất hữu cơ", "khái niệm", "đặc điểm"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn9_obj_030",
+          "text": "Nêu được công thức và tính chất của metan, etilen, etanol, axit axetic.",
+          "level": "recognition",
+          "keywords": ["metan", "etilen", "etanol", "axit axetic"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn9_obj_031",
+          "text": "Viết được phương trình phản ứng cháy của hợp chất hữu cơ.",
+          "level": "application",
+          "keywords": ["phản ứng cháy", "phương trình", "hữu cơ"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn9_obj_032",
+          "text": "Nêu được ứng dụng của hợp chất hữu cơ trong đời sống.",
+          "level": "application",
+          "keywords": ["ứng dụng", "hữu cơ", "đời sống"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "essay"
+      ]
+    },
+    {
+      "id": "khtn9_topic_08",
+      "name": "Di truyền học",
+      "unit": "Chủ đề 5",
+      "periods": 12,
+      "summary": "Tìm hiểu về di truyền học: NST, gen, quy luật Menđen.",
+      "learning_objectives": [
+        {
+          "id": "khtn9_obj_033",
+          "text": "Trình bày được khái niệm nhiễm sắc thể và gen.",
+          "level": "recognition",
+          "keywords": ["nhiễm sắc thể", "gen", "ADN"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn9_obj_034",
+          "text": "Giải thích được quy luật Menđen về sự phân li.",
+          "level": "understanding",
+          "keywords": ["quy luật Menđen", "phân li", "thế hệ"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn9_obj_035",
+          "text": "Sử dụng bảng Punnett để giải bài toán di truyền đơn giản.",
+          "level": "application",
+          "keywords": ["bảng Punnett", "di truyền", "bài toán"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn9_obj_036",
+          "text": "Giải thích được di truyền NST giới tính.",
+          "level": "understanding",
+          "keywords": ["di truyền", "NST giới tính", "X", "Y"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn9_obj_037",
+          "text": "Nêu được một số bệnh di truyền ở người.",
+          "level": "understanding",
+          "keywords": ["bệnh di truyền", "người", "gen"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "essay"
+      ]
+    },
+    {
+      "id": "khtn9_topic_09",
+      "name": "Biến dị",
+      "unit": "Chủ đề 5",
+      "periods": 8,
+      "summary": "Tìm hiểu về biến dị ở sinh vật: biến dị tổ hợp và đột biến.",
+      "learning_objectives": [
+        {
+          "id": "khtn9_obj_038",
+          "text": "Trình bày được khái niệm biến dị và phân loại biến dị.",
+          "level": "recognition",
+          "keywords": ["biến dị", "phân loại", "tổ hợp", "đột biến"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn9_obj_039",
+          "text": "Giải thích được nguyên nhân gây ra biến dị tổ hợp.",
+          "level": "understanding",
+          "keywords": ["biến dị tổ hợp", "nguyên nhân", "lai"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn9_obj_040",
+          "text": "Phân biệt được đột biến gen và đột biến NST.",
+          "level": "understanding",
+          "keywords": ["đột biến gen", "đột biến NST", "phân biệt"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn9_obj_041",
+          "text": "Nêu được vai trò của biến dị trong chọn giống.",
+          "level": "application",
+          "keywords": ["vai trò", "biến dị", "chọn giống"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "essay"
+      ]
+    },
+    {
+      "id": "khtn9_topic_10",
+      "name": "Tiến hóa",
+      "unit": "Chủ đề 5",
+      "periods": 8,
+      "summary": "Tìm hiểu về bằng chứng tiến hóa và thuyết tiến hóa của Đacuyn.",
+      "learning_objectives": [
+        {
+          "id": "khtn9_obj_042",
+          "text": "Trình bày được bằng chứng tiến hóa từ hóa thạch.",
+          "level": "recognition",
+          "keywords": ["tiến hóa", "hóa thạch", "bằng chứng"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn9_obj_043",
+          "text": "Giải thích được thuyết tiến hóa của Đacuyn.",
+          "level": "understanding",
+          "keywords": ["thuyết tiến hóa", "Đacuyn", "chọn lọc tự nhiên"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn9_obj_044",
+          "text": "Nêu được bằng chứng tiến hóa từ giải phẫu học so sánh.",
+          "level": "understanding",
+          "keywords": ["giải phẫu", "so sánh", "cơ quan tương đồng"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn9_obj_045",
+          "text": "Giải thích được quá trình chọn lọc tự nhiên.",
+          "level": "application",
+          "keywords": ["chọn lọc tự nhiên", "quá trình", "thích nghi"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "essay"
+      ]
+    },
+    {
+      "id": "khtn9_topic_11",
+      "name": "Sinh vật và môi trường",
+      "unit": "Chủ đề 6",
+      "periods": 8,
+      "summary": "Tìm hiểu về mối quan hệ giữa sinh vật và môi trường.",
+      "learning_objectives": [
+        {
+          "id": "khtn9_obj_046",
+          "text": "Trình bày được khái niệm quần thể và quần xã sinh vật.",
+          "level": "recognition",
+          "keywords": ["quần thể", "quần xã", "sinh vật"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn9_obj_047",
+          "text": "Nêu được các nhân tố sinh thái ảnh hưởng đến sinh vật.",
+          "level": "understanding",
+          "keywords": ["nhân tố sinh thái", "ảnh hưởng", "môi trường"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn9_obj_048",
+          "text": "Giải thích được mối quan hệ giữa các sinh vật trong quần xã.",
+          "level": "understanding",
+          "keywords": ["mối quan hệ", "sinh vật", "quần xã"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn9_obj_049",
+          "text": "Phân tích được ảnh hưởng của con người đến môi trường.",
+          "level": "application",
+          "keywords": ["ảnh hưởng", "con người", "môi trường"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "essay"
+      ]
+    },
+    {
+      "id": "khtn9_topic_12",
+      "name": "Hệ sinh thái và bảo vệ môi trường",
+      "unit": "Chủ đề 6",
+      "periods": 10,
+      "summary": "Tìm hiểu về hệ sinh thái, chuỗi thức ăn và bảo vệ môi trường.",
+      "learning_objectives": [
+        {
+          "id": "khtn9_obj_050",
+          "text": "Trình bày được khái niệm hệ sinh thái và các thành phần.",
+          "level": "recognition",
+          "keywords": ["hệ sinh thái", "thành phần", "sinh vật", "phi sinh vật"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn9_obj_051",
+          "text": "Vẽ được chuỗi thức ăn và lưới thức ăn.",
+          "level": "application",
+          "keywords": ["chuỗi thức ăn", "lưới thức ăn", "vẽ"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn9_obj_052",
+          "text": "Giải thích được dòng vật chất và dòng năng lượng trong hệ sinh thái.",
+          "level": "understanding",
+          "keywords": ["dòng vật chất", "dòng năng lượng", "hệ sinh thái"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn9_obj_053",
+          "text": "Nêu được các biện pháp bảo vệ môi trường và đa dạng sinh học.",
+          "level": "application",
+          "keywords": ["bảo vệ", "môi trường", "đa dạng sinh học"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        },
+        {
+          "id": "khtn9_obj_054",
+          "text": "Phân tích được vai trò của rừng và biển đối với môi trường.",
+          "level": "application",
+          "keywords": ["vai trò", "rừng", "biển", "môi trường"],
+          "source": {
+            "source_type": "local_json",
+            "source_name": "Local curriculum seed data",
+            "source_page": null,
+            "confidence_score": 0.7
+          }
+        }
+      ],
+      "suggested_question_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "essay"
+      ]
+    }
+  ]
+}

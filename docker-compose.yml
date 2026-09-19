@@ -1,0 +1,99 @@
+name: smart-exam-ai
+
+services:
+  # ── Database: PostgreSQL ───────────────────────────────────────
+  postgres:
+    image: postgres:16-alpine
+    container_name: smart_exam_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: smart_exam
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in the root .env file}
+      POSTGRES_DB: smart_exam_db
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - smart_exam_net
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U smart_exam -d smart_exam_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  # ── Vector DB: ChromaDB (cho RAG phase 2) ──────────────────────
+  chromadb:
+    image: chromadb/chroma:latest
+    container_name: smart_exam_chromadb
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8001:8000"
+    volumes:
+      - chroma_data:/chroma/chroma
+    networks:
+      - smart_exam_net
+
+  # ── Backend: FastAPI ───────────────────────────────────────────
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: smart_exam_backend
+    restart: unless-stopped
+    # Load OpenAI/Gemini/DeepSeek secrets từ backend/.env nếu có.
+    # Các biến trong `environment` bên dưới sẽ OVERRIDE env_file theo docs Docker.
+    env_file:
+      - path: ./backend/.env
+        required: false
+    environment:
+      - ENV=production
+      - USE_POSTGRES=true
+      - SECRET_KEY=${SECRET_KEY:?Set SECRET_KEY in the root .env file}
+      - DATABASE_URL=postgresql://smart_exam:${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in the root .env file}@postgres:5432/smart_exam_db
+      - MAX_UPLOAD_SIZE_BYTES=${MAX_UPLOAD_SIZE_BYTES:-20971520}
+      - CHROMA_HOST=chromadb
+      - CHROMA_PORT=8000
+      # The chromadb service is on the network, so vector caching (when enabled
+      # via RAG_USE_CHROMA in backend/.env) should talk to it rather than to a
+      # container-local embedded store that dies with the container.
+      - RAG_CHROMA_MODE=http
+      - CORS_ORIGINS=["http://localhost:8080","http://127.0.0.1:8080"]
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      # Persist file upload vào DB vector / filesystem
+      - uploads_data:/app/app/data/uploads
+    depends_on:
+      postgres:
+        condition: service_healthy
+      chromadb:
+        condition: service_started
+    networks:
+      - smart_exam_net
+
+  # ── Frontend: Vite build + nginx ───────────────────────────────
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        VITE_MAX_UPLOAD_SIZE_BYTES: ${MAX_UPLOAD_SIZE_BYTES:-20971520}
+        VITE_ENABLE_DEMO_LOGIN: ${VITE_ENABLE_DEMO_LOGIN:-false}
+    container_name: smart_exam_frontend
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8080:80"
+    depends_on:
+      - backend
+    networks:
+      - smart_exam_net
+
+volumes:
+  postgres_data:
+  chroma_data:
+  uploads_data:
+
+networks:
+  smart_exam_net:
+    driver: bridge

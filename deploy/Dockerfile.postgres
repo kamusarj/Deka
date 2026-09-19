@@ -1,0 +1,5 @@
+FROM postgres:16.15-alpine
+# The entrypoint only needs a privilege-dropping exec, not the Go runtime in gosu.
+RUN apk upgrade --no-cache && apk add --no-cache su-exec \
+    && rm /usr/local/bin/gosu \
+    && sed -i "s/exec gosu /exec su-exec /" /usr/local/bin/docker-entrypoint.sh

@@ -1,0 +1,673 @@
+{
+  "scope": "Only the constrained default backend profile; not a blanket CVE ignore list",
+  "reviews": [
+    {
+      "cve": "CVE-2026-76642",
+      "packages": {
+        "bsdutils": "1:2.41.5-0+deb13u1",
+        "libblkid1": "2.41.5-0+deb13u1",
+        "liblastlog2-2": "2.41.5-0+deb13u1",
+        "libmount1": "2.41.5-0+deb13u1",
+        "libsmartcols1": "2.41.5-0+deb13u1",
+        "libuuid1": "2.41.5-0+deb13u1",
+        "login": "1:4.16.0-2+really2.41.5-0+deb13u1",
+        "mount": "2.41.5-0+deb13u1",
+        "util-linux": "2.41.5-0+deb13u1"
+      },
+      "status": "not_affected_in_release_profile",
+      "reviewed_on": "2026-09-14",
+      "expires": "2026-10-14",
+      "rationale": "The application does not invoke mount/nsenter or privileged post-hooks. The container has no mount capability or privilege escalation path.",
+      "requires": [
+        "nonroot",
+        "no_capabilities",
+        "no_new_privileges",
+        "readonly_root"
+      ],
+      "source": "https://security-tracker.debian.org/tracker/CVE-2026-76642"
+    },
+    {
+      "cve": "CVE-2026-78408",
+      "packages": {
+        "bsdutils": "1:2.41.5-0+deb13u1",
+        "libblkid1": "2.41.5-0+deb13u1",
+        "liblastlog2-2": "2.41.5-0+deb13u1",
+        "libmount1": "2.41.5-0+deb13u1",
+        "libsmartcols1": "2.41.5-0+deb13u1",
+        "libuuid1": "2.41.5-0+deb13u1",
+        "login": "1:4.16.0-2+really2.41.5-0+deb13u1",
+        "mount": "2.41.5-0+deb13u1",
+        "util-linux": "2.41.5-0+deb13u1"
+      },
+      "status": "not_affected_in_release_profile",
+      "reviewed_on": "2026-09-14",
+      "expires": "2026-10-14",
+      "rationale": "The application does not invoke mount/nsenter or privileged post-hooks. The container has no mount capability or privilege escalation path.",
+      "requires": [
+        "nonroot",
+        "no_capabilities",
+        "no_new_privileges",
+        "readonly_root"
+      ],
+      "source": "https://security-tracker.debian.org/tracker/CVE-2026-78408"
+    },
+    {
+      "cve": "CVE-2026-78409",
+      "packages": {
+        "bsdutils": "1:2.41.5-0+deb13u1",
+        "libblkid1": "2.41.5-0+deb13u1",
+        "liblastlog2-2": "2.41.5-0+deb13u1",
+        "libmount1": "2.41.5-0+deb13u1",
+        "libsmartcols1": "2.41.5-0+deb13u1",
+        "libuuid1": "2.41.5-0+deb13u1",
+        "login": "1:4.16.0-2+really2.41.5-0+deb13u1",
+        "mount": "2.41.5-0+deb13u1",
+        "util-linux": "2.41.5-0+deb13u1"
+      },
+      "status": "not_affected_in_release_profile",
+      "reviewed_on": "2026-09-14",
+      "expires": "2026-10-14",
+      "rationale": "The application does not invoke mount/nsenter or privileged post-hooks. The container has no mount capability or privilege escalation path.",
+      "requires": [
+        "nonroot",
+        "no_capabilities",
+        "no_new_privileges",
+        "readonly_root"
+      ],
+      "source": "https://security-tracker.debian.org/tracker/CVE-2026-78409"
+    },
+    {
+      "cve": "CVE-2026-78410",
+      "packages": {
+        "bsdutils": "1:2.41.5-0+deb13u1",
+        "libblkid1": "2.41.5-0+deb13u1",
+        "liblastlog2-2": "2.41.5-0+deb13u1",
+        "libmount1": "2.41.5-0+deb13u1",
+        "libsmartcols1": "2.41.5-0+deb13u1",
+        "libuuid1": "2.41.5-0+deb13u1",
+        "login": "1:4.16.0-2+really2.41.5-0+deb13u1",
+        "mount": "2.41.5-0+deb13u1",
+        "util-linux": "2.41.5-0+deb13u1"
+      },
+      "status": "not_affected_in_release_profile",
+      "reviewed_on": "2026-09-14",
+      "expires": "2026-10-14",
+      "rationale": "The application does not invoke mount/nsenter or privileged post-hooks. The container has no mount capability or privilege escalation path.",
+      "requires": [
+        "nonroot",
+        "no_capabilities",
+        "no_new_privileges",
+        "readonly_root"
+      ],
+      "source": "https://security-tracker.debian.org/tracker/CVE-2026-78410"
+    },
+    {
+      "cve": "CVE-2026-12064",
+      "packages": {
+        "curl": "8.14.1-2+deb13u5",
+        "libcurl4t64": "8.14.1-2+deb13u5"
+      },
+      "status": "not_affected_in_release_profile",
+      "reviewed_on": "2026-09-14",
+      "expires": "2026-10-14",
+      "rationale": "Provider transports use Python HTTPX/SDKs, not libcurl. Health curl uses a constant loopback HTTP URL. Tesseract receives canonical image bytes on stdin and trusted model files; caller URLs/proxy settings never enter libcurl.",
+      "requires": [
+        "nonroot",
+        "no_capabilities",
+        "no_new_privileges",
+        "readonly_root",
+        "ocr_no_urls",
+        "trusted_ocr_models"
+      ],
+      "source": "https://security-tracker.debian.org/tracker/CVE-2026-12064"
+    },
+    {
+      "cve": "CVE-2026-8286",
+      "packages": {
+        "curl": "8.14.1-2+deb13u5",
+        "libcurl4t64": "8.14.1-2+deb13u5"
+      },
+      "status": "not_affected_in_release_profile",
+      "reviewed_on": "2026-09-14",
+      "expires": "2026-10-14",
+      "rationale": "Provider transports use Python HTTPX/SDKs, not libcurl. Health curl uses a constant loopback HTTP URL. Tesseract receives canonical image bytes on stdin and trusted model files; caller URLs/proxy settings never enter libcurl.",
+      "requires": [
+        "nonroot",
+        "no_capabilities",
+        "no_new_privileges",
+        "readonly_root",
+        "ocr_no_urls",
+        "trusted_ocr_models"
+      ],
+      "source": "https://security-tracker.debian.org/tracker/CVE-2026-8286"
+    },
+    {
+      "cve": "CVE-2026-8458",
+      "packages": {
+        "curl": "8.14.1-2+deb13u5",
+        "libcurl4t64": "8.14.1-2+deb13u5"
+      },
+      "status": "not_affected_in_release_profile",
+      "reviewed_on": "2026-09-14",
+      "expires": "2026-10-14",
+      "rationale": "Provider transports use Python HTTPX/SDKs, not libcurl. Health curl uses a constant loopback HTTP URL. Tesseract receives canonical image bytes on stdin and trusted model files; caller URLs/proxy settings never enter libcurl.",
+      "requires": [
+        "nonroot",
+        "no_capabilities",
+        "no_new_privileges",
+        "readonly_root",
+        "ocr_no_urls",
+        "trusted_ocr_models"
+      ],
+      "source": "https://security-tracker.debian.org/tracker/CVE-2026-8458"
+    },
+    {
+      "cve": "CVE-2026-8927",
+      "packages": {
+        "curl": "8.14.1-2+deb13u5",
+        "libcurl4t64": "8.14.1-2+deb13u5"
+      },
+      "status": "not_affected_in_release_profile",
+      "reviewed_on": "2026-09-14",
+      "expires": "2026-10-14",
+      "rationale": "Provider transports use Python HTTPX/SDKs, not libcurl. Health curl uses a constant loopback HTTP URL. Tesseract receives canonical image bytes on stdin and trusted model files; caller URLs/proxy settings never enter libcurl.",
+      "requires": [
+        "nonroot",
+        "no_capabilities",
+        "no_new_privileges",
+        "readonly_root",
+        "ocr_no_urls",
+        "trusted_ocr_models"
+      ],
+      "source": "https://security-tracker.debian.org/tracker/CVE-2026-8927"
+    },
+    {
+      "cve": "CVE-2026-54369",
+      "packages": {
+        "libacl1": "2.3.2-2+b1"
+      },
+      "status": "not_affected_in_release_profile",
+      "reviewed_on": "2026-09-14",
+      "expires": "2026-10-14",
+      "rationale": "No untrusted ACL manipulation is offered. Backup restore validates paths and forbids symlinks before extracting its own archive as the unprivileged owner.",
+      "requires": [
+        "nonroot",
+        "no_capabilities",
+        "no_new_privileges",
+        "readonly_root"
+      ],
+      "source": "https://security-tracker.debian.org/tracker/CVE-2026-54369"
+    },
+    {
+      "cve": "CVE-2026-76956",
+      "packages": {
+        "libexpat1": "2.8.3-1~deb13u1"
+      },
+      "status": "not_affected_in_release_profile",
+      "reviewed_on": "2026-09-14",
+      "expires": "2026-10-14",
+      "rationale": "System Expat handles trusted font/config inputs. Untrusted Office XML rejects DTD/entities and Python supplies randomized parser hashing; the application does not install custom encoding callbacks that re-enter the parser.",
+      "requires": [
+        "nonroot",
+        "no_capabilities",
+        "no_new_privileges",
+        "readonly_root",
+        "xml_guard",
+        "random_hash_seed"
+      ],
+      "source": "https://security-tracker.debian.org/tracker/CVE-2026-76956"
+    },
+    {
+      "cve": "CVE-2026-76957",
+      "packages": {
+        "libexpat1": "2.8.3-1~deb13u1"
+      },
+      "status": "not_affected_in_release_profile",
+      "reviewed_on": "2026-09-14",
+      "expires": "2026-10-14",
+      "rationale": "System Expat handles trusted font/config inputs. Untrusted Office XML rejects DTD/entities and Python supplies randomized parser hashing; the application does not install custom encoding callbacks that re-enter the parser.",
+      "requires": [
+        "nonroot",
+        "no_capabilities",
+        "no_new_privileges",
+        "readonly_root",
+        "xml_guard",
+        "random_hash_seed"
+      ],
+      "source": "https://security-tracker.debian.org/tracker/CVE-2026-76957"
+    },
+    {
+      "cve": "CVE-2025-69720",
+      "packages": {
+        "libncursesw6": "6.5+20250216-2",
+        "libtinfo6": "6.5+20250216-2",
+        "ncurses-base": "6.5+20250216-2",
+        "ncurses-bin": "6.5+20250216-2"
+      },
+      "status": "not_affected_in_release_profile",
+      "reviewed_on": "2026-09-14",
+      "expires": "2026-10-14",
+      "rationale": "Remote users cannot supply terminal databases or invoke terminal compilation; no interactive terminal parsing is exposed by HTTP routes.",
+      "requires": [
+        "nonroot",
+        "no_capabilities",
+        "no_new_privileges",
+        "readonly_root",
+        "no_tic"
+      ],
+      "source": "https://security-tracker.debian.org/tracker/CVE-2025-69720"
+    },
+    {
+      "cve": "CVE-2026-16742",
+      "packages": {
+        "libsystemd0": "257.13-1~deb13u1",
+        "libudev1": "257.13-1~deb13u1"
+      },
+      "status": "not_affected_in_release_profile",
+      "reviewed_on": "2026-09-14",
+      "expires": "2026-10-14",
+      "rationale": "The vulnerable systemd-homed service is absent and is not started in the container.",
+      "requires": [
+        "nonroot",
+        "no_capabilities",
+        "no_new_privileges",
+        "readonly_root",
+        "no_homed"
+      ],
+      "source": "https://security-tracker.debian.org/tracker/CVE-2026-16742"
+    },
+    {
+      "cve": "CVE-2026-73066",
+      "packages": {
+        "libtesseract5": "5.5.0-1+b1",
+        "tesseract-ocr": "5.5.0-1+b1"
+      },
+      "status": "not_affected_in_release_profile",
+      "reviewed_on": "2026-09-14",
+      "expires": "2026-10-14",
+      "rationale": "These advisories require crafted traineddata/model structures. Only root-owned packaged Vietnamese/English models are accepted from a fixed directory; request data is canonical PNG via stdin, never model data.",
+      "requires": [
+        "nonroot",
+        "no_capabilities",
+        "no_new_privileges",
+        "readonly_root",
+        "trusted_ocr_models",
+        "ocr_no_urls",
+        "tiff_rejected"
+      ],
+      "source": "https://security-tracker.debian.org/tracker/CVE-2026-73066"
+    },
+    {
+      "cve": "CVE-2026-88047",
+      "packages": {
+        "libtesseract5": "5.5.0-1+b1",
+        "tesseract-ocr": "5.5.0-1+b1"
+      },
+      "status": "not_affected_in_release_profile",
+      "reviewed_on": "2026-09-14",
+      "expires": "2026-10-14",
+      "rationale": "These advisories require crafted traineddata/model structures. Only root-owned packaged Vietnamese/English models are accepted from a fixed directory; request data is canonical PNG via stdin, never model data.",
+      "requires": [
+        "nonroot",
+        "no_capabilities",
+        "no_new_privileges",
+        "readonly_root",
+        "trusted_ocr_models",
+        "ocr_no_urls",
+        "tiff_rejected"
+      ],
+      "source": "https://security-tracker.debian.org/tracker/CVE-2026-88047"
+    },
+    {
+      "cve": "CVE-2026-88048",
+      "packages": {
+        "libtesseract5": "5.5.0-1+b1",
+        "tesseract-ocr": "5.5.0-1+b1"
+      },
+      "status": "not_affected_in_release_profile",
+      "reviewed_on": "2026-09-14",
+      "expires": "2026-10-14",
+      "rationale": "These advisories require crafted traineddata/model structures. Only root-owned packaged Vietnamese/English models are accepted from a fixed directory; request data is canonical PNG via stdin, never model data.",
+      "requires": [
+        "nonroot",
+        "no_capabilities",
+        "no_new_privileges",
+        "readonly_root",
+        "trusted_ocr_models",
+        "ocr_no_urls",
+        "tiff_rejected"
+      ],
+      "source": "https://security-tracker.debian.org/tracker/CVE-2026-88048"
+    },
+    {
+      "cve": "CVE-2026-88049",
+      "packages": {
+        "libtesseract5": "5.5.0-1+b1",
+        "tesseract-ocr": "5.5.0-1+b1"
+      },
+      "status": "not_affected_in_release_profile",
+      "reviewed_on": "2026-09-14",
+      "expires": "2026-10-14",
+      "rationale": "These advisories require crafted traineddata/model structures. Only root-owned packaged Vietnamese/English models are accepted from a fixed directory; request data is canonical PNG via stdin, never model data.",
+      "requires": [
+        "nonroot",
+        "no_capabilities",
+        "no_new_privileges",
+        "readonly_root",
+        "trusted_ocr_models",
+        "ocr_no_urls",
+        "tiff_rejected"
+      ],
+      "source": "https://security-tracker.debian.org/tracker/CVE-2026-88049"
+    },
+    {
+      "cve": "CVE-2026-88051",
+      "packages": {
+        "libtesseract5": "5.5.0-1+b1",
+        "tesseract-ocr": "5.5.0-1+b1"
+      },
+      "status": "not_affected_in_release_profile",
+      "reviewed_on": "2026-09-14",
+      "expires": "2026-10-14",
+      "rationale": "These advisories require crafted traineddata/model structures. Only root-owned packaged Vietnamese/English models are accepted from a fixed directory; request data is canonical PNG via stdin, never model data.",
+      "requires": [
+        "nonroot",
+        "no_capabilities",
+        "no_new_privileges",
+        "readonly_root",
+        "trusted_ocr_models",
+        "ocr_no_urls",
+        "tiff_rejected"
+      ],
+      "source": "https://security-tracker.debian.org/tracker/CVE-2026-88051"
+    },
+    {
+      "cve": "CVE-2026-88052",
+      "packages": {
+        "libtesseract5": "5.5.0-1+b1",
+        "tesseract-ocr": "5.5.0-1+b1"
+      },
+      "status": "not_affected_in_release_profile",
+      "reviewed_on": "2026-09-14",
+      "expires": "2026-10-14",
+      "rationale": "These advisories require crafted traineddata/model structures. Only root-owned packaged Vietnamese/English models are accepted from a fixed directory; request data is canonical PNG via stdin, never model data.",
+      "requires": [
+        "nonroot",
+        "no_capabilities",
+        "no_new_privileges",
+        "readonly_root",
+        "trusted_ocr_models",
+        "ocr_no_urls",
+        "tiff_rejected"
+      ],
+      "source": "https://security-tracker.debian.org/tracker/CVE-2026-88052"
+    },
+    {
+      "cve": "CVE-2026-88053",
+      "packages": {
+        "libtesseract5": "5.5.0-1+b1",
+        "tesseract-ocr": "5.5.0-1+b1"
+      },
+      "status": "not_affected_in_release_profile",
+      "reviewed_on": "2026-09-14",
+      "expires": "2026-10-14",
+      "rationale": "These advisories require crafted traineddata/model structures. Only root-owned packaged Vietnamese/English models are accepted from a fixed directory; request data is canonical PNG via stdin, never model data.",
+      "requires": [
+        "nonroot",
+        "no_capabilities",
+        "no_new_privileges",
+        "readonly_root",
+        "trusted_ocr_models",
+        "ocr_no_urls",
+        "tiff_rejected"
+      ],
+      "source": "https://security-tracker.debian.org/tracker/CVE-2026-88053"
+    },
+    {
+      "cve": "CVE-2026-36849",
+      "packages": {
+        "libtiff6": "4.7.0-3+deb13u3"
+      },
+      "status": "not_affected_in_release_profile",
+      "reviewed_on": "2026-09-14",
+      "expires": "2026-10-14",
+      "rationale": "TIFF uploads are rejected before OCR; Tesseract sees canonical PNG. The affected tiffcrop CLI is absent. PDF rendering and Python image handling use their separately packaged libraries.",
+      "requires": [
+        "nonroot",
+        "no_capabilities",
+        "no_new_privileges",
+        "readonly_root",
+        "tiff_rejected"
+      ],
+      "source": "https://security-tracker.debian.org/tracker/CVE-2026-36849"
+    },
+    {
+      "cve": "CVE-2026-52490",
+      "packages": {
+        "libtiff6": "4.7.0-3+deb13u3"
+      },
+      "status": "not_affected_in_release_profile",
+      "reviewed_on": "2026-09-14",
+      "expires": "2026-10-14",
+      "rationale": "TIFF uploads are rejected before OCR; Tesseract sees canonical PNG. The affected tiffcrop CLI is absent. PDF rendering and Python image handling use their separately packaged libraries.",
+      "requires": [
+        "nonroot",
+        "no_capabilities",
+        "no_new_privileges",
+        "readonly_root",
+        "tiff_rejected"
+      ],
+      "source": "https://security-tracker.debian.org/tracker/CVE-2026-52490"
+    },
+    {
+      "cve": "CVE-2026-6653",
+      "packages": {
+        "libxml2": "2.12.7+dfsg+really2.9.14-2.1+deb13u3"
+      },
+      "status": "not_affected_in_release_profile",
+      "reviewed_on": "2026-09-14",
+      "expires": "2026-10-14",
+      "rationale": "System libxml2 is reachable through the trusted Tesseract model/archive dependency, not the Office parser. System Python SAX bindings are absent; Office DTD/entities are denied and lxml uses a separately bundled library. No DTD validation API is exposed.",
+      "requires": [
+        "nonroot",
+        "no_capabilities",
+        "no_new_privileges",
+        "readonly_root",
+        "xml_guard",
+        "no_system_libxml_bindings",
+        "lxml_separate",
+        "trusted_ocr_models"
+      ],
+      "source": "https://security-tracker.debian.org/tracker/CVE-2026-6653"
+    },
+    {
+      "cve": "CVE-2026-74860",
+      "packages": {
+        "libxml2": "2.12.7+dfsg+really2.9.14-2.1+deb13u3"
+      },
+      "status": "not_affected_in_release_profile",
+      "reviewed_on": "2026-09-14",
+      "expires": "2026-10-14",
+      "rationale": "System libxml2 is reachable through the trusted Tesseract model/archive dependency, not the Office parser. System Python SAX bindings are absent; Office DTD/entities are denied and lxml uses a separately bundled library. No DTD validation API is exposed.",
+      "requires": [
+        "nonroot",
+        "no_capabilities",
+        "no_new_privileges",
+        "readonly_root",
+        "xml_guard",
+        "no_system_libxml_bindings",
+        "lxml_separate",
+        "trusted_ocr_models"
+      ],
+      "source": "https://security-tracker.debian.org/tracker/CVE-2026-74860"
+    },
+    {
+      "cve": "CVE-2026-86140",
+      "packages": {
+        "libxml2": "2.12.7+dfsg+really2.9.14-2.1+deb13u3"
+      },
+      "status": "not_affected_in_release_profile",
+      "reviewed_on": "2026-09-14",
+      "expires": "2026-10-14",
+      "rationale": "System libxml2 is reachable through the trusted Tesseract model/archive dependency, not the Office parser. System Python SAX bindings are absent; Office DTD/entities are denied and lxml uses a separately bundled library. No DTD validation API is exposed.",
+      "requires": [
+        "nonroot",
+        "no_capabilities",
+        "no_new_privileges",
+        "readonly_root",
+        "xml_guard",
+        "no_system_libxml_bindings",
+        "lxml_separate",
+        "trusted_ocr_models"
+      ],
+      "source": "https://security-tracker.debian.org/tracker/CVE-2026-86140"
+    },
+    {
+      "cve": "CVE-2026-9538",
+      "packages": {
+        "perl-base": "5.40.1-6+deb13u1"
+      },
+      "status": "not_affected_in_release_profile",
+      "reviewed_on": "2026-09-14",
+      "expires": "2026-10-14",
+      "rationale": "Perl Archive::Tar is absent. Backup/restore uses GNU tar with validated own archives, never Perl archive parsing.",
+      "requires": [
+        "nonroot",
+        "no_capabilities",
+        "no_new_privileges",
+        "readonly_root",
+        "no_perl_tar"
+      ],
+      "source": "https://security-tracker.debian.org/tracker/CVE-2026-9538"
+    },
+    {
+      "cve": "CVE-2026-66046",
+      "packages": {
+        "libexpat1": "2.8.3-1~deb13u1"
+      },
+      "status": "not_affected_in_release_profile",
+      "reviewed_on": "2026-09-19",
+      "expires": "2026-10-03",
+      "rationale": "System libexpat1 is only a transitive dependency of fontconfig in the release image. CPython pyexpat is not dynamically linked to the system libexpat1, and user-controlled Office XML is handled by guarded application parsing with DTD/entities rejected. The affected system Expat parsing path is therefore not exposed in this release profile.",
+      "source": "https://security-tracker.debian.org/tracker/source-package/expat",
+      "requires": [
+        "nonroot",
+        "no_capabilities",
+        "no_new_privileges",
+        "readonly_root",
+        "xml_guard",
+        "random_hash_seed"
+      ]
+    },
+    {
+      "cve": "CVE-2026-86138",
+      "packages": {
+        "libxml2": "2.12.7+dfsg+really2.9.14-2.1+deb13u3"
+      },
+      "status": "not_affected_in_release_profile",
+      "reviewed_on": "2026-09-19",
+      "expires": "2026-10-03",
+      "rationale": "System libxml2 is present only through the release image's system dependency chain and is not exposed through Python system libxml2 bindings. The runtime has no application lxml module using this system library, and the application exposes no XInclude, XPointer, URI-escape, output-callback, or DTD validation API to user-controlled input. Untrusted Office XML uses the guarded application parsing path instead. The affected system libxml2 entry points are therefore not reachable in this release profile.",
+      "source": "https://security-tracker.debian.org/tracker/CVE-2026-86138",
+      "requires": [
+        "nonroot",
+        "no_capabilities",
+        "no_new_privileges",
+        "readonly_root",
+        "xml_guard",
+        "no_system_libxml_bindings",
+        "lxml_separate",
+        "trusted_ocr_models",
+        "ocr_no_urls"
+      ]
+    },
+    {
+      "cve": "CVE-2026-86139",
+      "packages": {
+        "libxml2": "2.12.7+dfsg+really2.9.14-2.1+deb13u3"
+      },
+      "status": "not_affected_in_release_profile",
+      "reviewed_on": "2026-09-19",
+      "expires": "2026-10-03",
+      "rationale": "System libxml2 is present only through the release image's system dependency chain and is not exposed through Python system libxml2 bindings. The runtime has no application lxml module using this system library, and the application exposes no XInclude, XPointer, URI-escape, output-callback, or DTD validation API to user-controlled input. Untrusted Office XML uses the guarded application parsing path instead. The affected system libxml2 entry points are therefore not reachable in this release profile.",
+      "source": "https://security-tracker.debian.org/tracker/CVE-2026-86139",
+      "requires": [
+        "nonroot",
+        "no_capabilities",
+        "no_new_privileges",
+        "readonly_root",
+        "xml_guard",
+        "no_system_libxml_bindings",
+        "lxml_separate",
+        "trusted_ocr_models",
+        "ocr_no_urls"
+      ]
+    },
+    {
+      "cve": "CVE-2026-86142",
+      "packages": {
+        "libxml2": "2.12.7+dfsg+really2.9.14-2.1+deb13u3"
+      },
+      "status": "not_affected_in_release_profile",
+      "reviewed_on": "2026-09-19",
+      "expires": "2026-10-03",
+      "rationale": "System libxml2 is present only through the release image's system dependency chain and is not exposed through Python system libxml2 bindings. The runtime has no application lxml module using this system library, and the application exposes no XInclude, XPointer, URI-escape, output-callback, or DTD validation API to user-controlled input. Untrusted Office XML uses the guarded application parsing path instead. The affected system libxml2 entry points are therefore not reachable in this release profile.",
+      "source": "https://security-tracker.debian.org/tracker/CVE-2026-86142",
+      "requires": [
+        "nonroot",
+        "no_capabilities",
+        "no_new_privileges",
+        "readonly_root",
+        "xml_guard",
+        "no_system_libxml_bindings",
+        "lxml_separate",
+        "trusted_ocr_models",
+        "ocr_no_urls"
+      ]
+    },
+    {
+      "cve": "CVE-2026-86143",
+      "packages": {
+        "libxml2": "2.12.7+dfsg+really2.9.14-2.1+deb13u3"
+      },
+      "status": "not_affected_in_release_profile",
+      "reviewed_on": "2026-09-19",
+      "expires": "2026-10-03",
+      "rationale": "System libxml2 is present only through the release image's system dependency chain and is not exposed through Python system libxml2 bindings. The runtime has no application lxml module using this system library, and the application exposes no XInclude, XPointer, URI-escape, output-callback, or DTD validation API to user-controlled input. Untrusted Office XML uses the guarded application parsing path instead. The affected system libxml2 entry points are therefore not reachable in this release profile.",
+      "source": "https://security-tracker.debian.org/tracker/CVE-2026-86143",
+      "requires": [
+        "nonroot",
+        "no_capabilities",
+        "no_new_privileges",
+        "readonly_root",
+        "xml_guard",
+        "no_system_libxml_bindings",
+        "lxml_separate",
+        "trusted_ocr_models",
+        "ocr_no_urls"
+      ]
+    },
+    {
+      "cve": "CVE-2026-86144",
+      "packages": {
+        "libxml2": "2.12.7+dfsg+really2.9.14-2.1+deb13u3"
+      },
+      "status": "not_affected_in_release_profile",
+      "reviewed_on": "2026-09-19",
+      "expires": "2026-10-03",
+      "rationale": "System libxml2 is present only through the release image's system dependency chain and is not exposed through Python system libxml2 bindings. The runtime has no application lxml module using this system library, and the application exposes no XInclude, XPointer, URI-escape, output-callback, or DTD validation API to user-controlled input. Untrusted Office XML uses the guarded application parsing path instead. The affected system libxml2 entry points are therefore not reachable in this release profile.",
+      "source": "https://security-tracker.debian.org/tracker/CVE-2026-86144",
+      "requires": [
+        "nonroot",
+        "no_capabilities",
+        "no_new_privileges",
+        "readonly_root",
+        "xml_guard",
+        "no_system_libxml_bindings",
+        "lxml_separate",
+        "trusted_ocr_models",
+        "ocr_no_urls"
+      ]
+    }
+  ]
+}
