@@ -29,7 +29,7 @@ from app.services.dual_verification_service import (
     MandatoryReviewUnavailable,
 )
 
-logger = logging.getLogger("smart-exam-ai")
+logger = logging.getLogger("deka")
 
 
 class VerificationAgent(BaseAgent):

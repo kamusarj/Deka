@@ -10,8 +10,8 @@ from pathlib import Path
 parser = argparse.ArgumentParser()
 parser.add_argument('--backend-image', required=True)
 parser.add_argument('--frontend-image', required=True)
-parser.add_argument('--proxy-image', default='smart-exam-proxy:ready-184')
-parser.add_argument('--postgres-image', default='smart-exam-postgres:ready-184')
+parser.add_argument('--proxy-image', default='deka-proxy:ready-184')
+parser.add_argument('--postgres-image', default='deka-postgres:ready-184')
 args = parser.parse_args()
 def run(*command): return subprocess.check_output(command,text=True).strip()
 def hashes(paths): return {str(path):hashlib.sha256(path.read_bytes()).hexdigest() for path in sorted(set(paths)) if path.is_file()}

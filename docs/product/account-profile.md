@@ -116,7 +116,7 @@ account transaction leaves the link available for a legitimate retry.
   fits below the header and scrolls on short screens. Route highlighting and
   existing role-based visibility apply to both navigation layouts.
 
-- The Smart Exam mark is one reusable, code-native SVG representing a verified
+- The Deka mark is one reusable, code-native SVG representing a verified
   exam sheet.
 - Landing, application navigation, authentication, and footer surfaces use the
   same mark and inherit the active light/dark theme.

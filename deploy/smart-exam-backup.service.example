@@ -1,9 +1,0 @@
-[Unit]
-Description=Smart Exam consistent backup
-After=docker.service
-[Service]
-Type=oneshot
-WorkingDirectory=/srv/smart-exam-ai
-UMask=0077
-# Operator must choose encrypted off-host destination and retention before enabling.
-ExecStart=/bin/bash -c 'scripts/operations/backup.sh deploy/production.env /srv/smart-exam-backups/$(date -u +%%Y%%m%%dT%%H%%M%%SZ) --apply'

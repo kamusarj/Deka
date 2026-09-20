@@ -1,16 +1,16 @@
 # Product Requirement Document (PRD)
-# Smart Exam Matrix AI
+# Deka
 
 ## 1. Tổng quan sản phẩm
 
 ### 1.1 Tên sản phẩm
-Smart Exam Matrix AI
+Deka
 
 ### 1.2 Phiên bản
 MVP 2.0
 
 ### 1.3 Mô tả sản phẩm
-Smart Exam Matrix AI là hệ thống hỗ trợ giáo viên THCS môn Khoa học tự nhiên tạo đề kiểm tra định kì. Hệ thống tự động sinh hồ sơ đề kiểm tra hoàn chỉnh bao gồm: Ma trận đề kiểm tra, Bản đặc tả, Đề kiểm tra, Đáp án và Hướng dẫn chấm - tuân thủ đúng format theo Thông tư 22/2021/TT-BGDĐT và Công văn 7991/BGDĐT-GDTrH.
+Deka là hệ thống hỗ trợ giáo viên THCS môn Khoa học tự nhiên tạo đề kiểm tra định kì. Hệ thống tự động sinh hồ sơ đề kiểm tra hoàn chỉnh bao gồm: Ma trận đề kiểm tra, Bản đặc tả, Đề kiểm tra, Đáp án và Hướng dẫn chấm - tuân thủ đúng format theo Thông tư 22/2021/TT-BGDĐT và Công văn 7991/BGDĐT-GDTrH.
 
 **Nguyên tắc cốt lõi:** Hệ thống **không dùng AI như nguồn kiến thức chính**. Hệ thống ưu tiên lấy dữ liệu theo thứ tự:
 
@@ -23,7 +23,7 @@ Smart Exam Matrix AI là hệ thống hỗ trợ giáo viên THCS môn Khoa họ
 > **Lưu ý quan trọng:** AI không phải nguồn kiến thức tuyệt đối. AI chỉ là công cụ xử lý, chuẩn hóa, sinh đề và format hóa dựa trên dữ liệu đã được kiểm soát. Giáo viên luôn là người xác nhận cuối cùng.
 
 ### 1.4 Điểm khác biệt so với ChatGPT
-| ChatGPT thường | Smart Exam Matrix AI |
+| ChatGPT thường | Deka |
 |-----------------|---------------------|
 | Chỉ sinh câu hỏi | Sinh hồ sơ đề kiểm tra hoàn chỉnh |
 | Không có ma trận | Ma trận đúng format quy định |

@@ -1,10 +1,11 @@
-name: smart-exam-ai
+# Preserve existing volume names when upgrading an installation without an explicit project name.
+name: ${COMPOSE_PROJECT_NAME:-smart-exam-ai}
 
 services:
   # ── Database: PostgreSQL ───────────────────────────────────────
   postgres:
     image: postgres:16-alpine
-    container_name: smart_exam_postgres
+    container_name: deka_postgres
     restart: unless-stopped
     environment:
       POSTGRES_USER: smart_exam
@@ -15,7 +16,7 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
     networks:
-      - smart_exam_net
+      - deka_net
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U smart_exam -d smart_exam_db"]
       interval: 5s
@@ -25,21 +26,21 @@ services:
   # ── Vector DB: ChromaDB (cho RAG phase 2) ──────────────────────
   chromadb:
     image: chromadb/chroma:latest
-    container_name: smart_exam_chromadb
+    container_name: deka_chromadb
     restart: unless-stopped
     ports:
       - "127.0.0.1:8001:8000"
     volumes:
       - chroma_data:/chroma/chroma
     networks:
-      - smart_exam_net
+      - deka_net
 
   # ── Backend: FastAPI ───────────────────────────────────────────
   backend:
     build:
       context: ./backend
       dockerfile: Dockerfile
-    container_name: smart_exam_backend
+    container_name: deka_backend
     restart: unless-stopped
     # Load OpenAI/Gemini/DeepSeek secrets từ backend/.env nếu có.
     # Các biến trong `environment` bên dưới sẽ OVERRIDE env_file theo docs Docker.
@@ -70,7 +71,7 @@ services:
       chromadb:
         condition: service_started
     networks:
-      - smart_exam_net
+      - deka_net
 
   # ── Frontend: Vite build + nginx ───────────────────────────────
   frontend:
@@ -80,14 +81,14 @@ services:
       args:
         VITE_MAX_UPLOAD_SIZE_BYTES: ${MAX_UPLOAD_SIZE_BYTES:-20971520}
         VITE_ENABLE_DEMO_LOGIN: ${VITE_ENABLE_DEMO_LOGIN:-false}
-    container_name: smart_exam_frontend
+    container_name: deka_frontend
     restart: unless-stopped
     ports:
       - "127.0.0.1:8080:80"
     depends_on:
       - backend
     networks:
-      - smart_exam_net
+      - deka_net
 
 volumes:
   postgres_data:
@@ -95,5 +96,5 @@ volumes:
   uploads_data:
 
 networks:
-  smart_exam_net:
+  deka_net:
     driver: bridge

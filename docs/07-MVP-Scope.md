@@ -1,5 +1,5 @@
 # MVP Scope
-# Smart Exam Matrix AI
+# Deka
 
 ## 1. MVP Definition
 

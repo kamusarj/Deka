@@ -13,10 +13,10 @@ from app.services.auth_service import hash_password, verify_password
 DEMO_PASSWORD = "Demo@123456"
 DEMO_SCHOOL_NAME = "Trường THCS Demo"
 DEMO_ACCOUNTS = (
-    ("super_admin", "superadmin@demo.smart-exam.test", "Demo · Quản trị hệ thống"),
-    ("school_admin", "schooladmin@demo.smart-exam.test", "Demo · Quản trị trường"),
-    ("teacher", "teacher@demo.smart-exam.test", "Demo · Giáo viên"),
-    ("viewer", "viewer@demo.smart-exam.test", "Demo · Người xem"),
+    ("super_admin", "superadmin@demo.deka.test", "Demo · Quản trị hệ thống"),
+    ("school_admin", "schooladmin@demo.deka.test", "Demo · Quản trị trường"),
+    ("teacher", "teacher@demo.deka.test", "Demo · Giáo viên"),
+    ("viewer", "viewer@demo.deka.test", "Demo · Người xem"),
 )
 
 

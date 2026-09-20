@@ -1,11 +1,11 @@
 # AI Agents Architecture
-# Smart Exam Matrix AI
+# Deka
 
 ## 1. Tổng quan kiến trúc
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
-│                        SMART EXAM MATRIX AI                             │
+│                        DEKA                             │
 │                      AI Agents Architecture                             │
 │                      (Flow mới: Nạp dữ liệu + RAG)                      │
 └─────────────────────────────────────────────────────────────────────────┘

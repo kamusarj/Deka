@@ -1,4 +1,4 @@
-# Smart Exam AI - Backend (FastAPI)
+# Deka - Backend (FastAPI)
 FROM ghcr.io/astral-sh/uv:0.12.6 AS uv
 FROM python:3.13-slim
 COPY --from=uv /uv /usr/local/bin/uv

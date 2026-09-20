@@ -13,8 +13,8 @@ for name in backend frontend proxy postgres; do
   case $name in
     backend) candidate=$backend;;
     frontend) candidate=$frontend;;
-    proxy) candidate=${PROXY_IMAGE:-smart-exam-proxy:ready-184};;
-    postgres) candidate=${POSTGRES_IMAGE:-smart-exam-postgres:ready-184};;
+    proxy) candidate=${PROXY_IMAGE:-deka-proxy:ready-184};;
+    postgres) candidate=${POSTGRES_IMAGE:-deka-postgres:ready-184};;
   esac
   docker run --rm -v /var/run/docker.sock:/var/run/docker.sock:ro -v "$cache:/root/.cache" \
     aquasec/trivy:0.65.0 image --scanners vuln --severity HIGH,CRITICAL --format json "$candidate" > "$output/$name-vulnerabilities.json"

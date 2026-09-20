@@ -1,0 +1,9 @@
+[Unit]
+Description=Deka consistent backup
+After=docker.service
+[Service]
+Type=oneshot
+WorkingDirectory=/srv/deka
+UMask=0077
+# Operator must choose encrypted off-host destination and retention before enabling.
+ExecStart=/bin/bash -c 'scripts/operations/backup.sh deploy/production.env /srv/deka-backups/$(date -u +%%Y%%m%%dT%%H%%M%%SZ) --apply'

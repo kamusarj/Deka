@@ -35,10 +35,10 @@ describe("Login OAuth providers", () => {
   });
 
   it.each([
-    ["Quản trị hệ thống", "superadmin@demo.smart-exam.test"],
-    ["Quản trị trường", "schooladmin@demo.smart-exam.test"],
-    ["Giáo viên", "teacher@demo.smart-exam.test"],
-    ["Người xem", "viewer@demo.smart-exam.test"],
+    ["Quản trị hệ thống", "superadmin@demo.deka.test"],
+    ["Quản trị trường", "schooladmin@demo.deka.test"],
+    ["Giáo viên", "teacher@demo.deka.test"],
+    ["Người xem", "viewer@demo.deka.test"],
   ])("logs in as %s with ordinary credentials and preserves the destination", async (label, email) => {
     vi.stubEnv("VITE_ENABLE_DEMO_LOGIN", "true");
     getOAuthConfigMock.mockResolvedValue({ google: false, facebook: false });
@@ -75,7 +75,7 @@ describe("Login OAuth providers", () => {
     rejectLogin(new Error("Không thể kết nối máy chủ"));
     expect(await screen.findByRole("alert")).toHaveTextContent("Không thể kết nối máy chủ");
     expect(screen.getByRole("button", { name: "Đăng nhập thử: Người xem" })).toBeEnabled();
-    expect(screen.getByLabelText("Email")).toHaveValue("teacher@demo.smart-exam.test");
+    expect(screen.getByLabelText("Email")).toHaveValue("teacher@demo.deka.test");
   });
 
   it("returns an already authenticated visitor to the saved destination", () => {

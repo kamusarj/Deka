@@ -48,7 +48,7 @@ jobs:
       - name: Run tests
         # No provider keys in CI: every agent must fall back deterministically.
         env:
-          DATABASE_URL: sqlite:////tmp/smart-exam-ci.sqlite
+          DATABASE_URL: sqlite:////tmp/deka-ci.sqlite
           USE_POSTGRES: "false"
           ENV: test
           SECRET_KEY: ci-only-not-a-real-secret-${{ github.run_id }}
@@ -138,19 +138,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: docker build -t smart-exam-backend:ci backend
-      - run: docker build --build-arg VITE_ENABLE_DEMO_LOGIN=false -t smart-exam-frontend:ci frontend
+      - run: docker build -t deka-backend:ci backend
+      - run: docker build --build-arg VITE_ENABLE_DEMO_LOGIN=false -t deka-frontend:ci frontend
       - name: Smoke image with isolated SQLite and no provider credentials
         run: >-
           docker run --rm --network none -e ENV=test -e DATABASE_URL=sqlite:////tmp/smoke.sqlite
-          smart-exam-backend:ci python -c
+          deka-backend:ci python -c
           'from fastapi.testclient import TestClient; from app.main import app; c=TestClient(app); assert c.get("/health").status_code == 200; assert c.get("/ready").status_code == 200'
       - name: Build patched infrastructure images
         run: |
-          docker build -f deploy/Dockerfile.proxy -t smart-exam-proxy:ready-184 deploy
-          docker build -f deploy/Dockerfile.postgres -t smart-exam-postgres:ready-184 deploy
+          docker build -f deploy/Dockerfile.proxy -t deka-proxy:ready-184 deploy
+          docker build -f deploy/Dockerfile.postgres -t deka-postgres:ready-184 deploy
       - name: Scan every release image and verify conditional advisory review
-        run: scripts/operations/scan-images.sh smart-exam-backend:ci smart-exam-frontend:ci /tmp/release-security
+        run: scripts/operations/scan-images.sh deka-backend:ci deka-frontend:ci /tmp/release-security
       - name: Check negative release gates
         run: python3 -m unittest discover -s scripts/operations -p 'test_*.py' -v
       - uses: actions/setup-node@v4
@@ -158,22 +158,22 @@ jobs:
           node-version: "24.21.0"
       - name: Browser HTTPS SMTP and MFA rehearsal
         env:
-          AUDIT_BACKEND_IMAGE: smart-exam-backend:ci
-          AUDIT_FRONTEND_IMAGE: smart-exam-frontend:ci
+          AUDIT_BACKEND_IMAGE: deka-backend:ci
+          AUDIT_FRONTEND_IMAGE: deka-frontend:ci
         run: |
           npm install --prefix /tmp/audit-184-browser --no-audit --no-fund playwright-core@1.63.0
           scripts/operations/browser-rehearsal.sh --apply
       - name: Backup and restore rehearsal
         env:
-          AUDIT_BACKEND_IMAGE: smart-exam-backend:ci
-          AUDIT_FRONTEND_IMAGE: smart-exam-frontend:ci
+          AUDIT_BACKEND_IMAGE: deka-backend:ci
+          AUDIT_FRONTEND_IMAGE: deka-frontend:ci
         run: scripts/operations/rehearse.sh --apply
       - name: Scan image layers for secrets
         run: |
-          python3 scripts/operations/scan-image-secrets.py --image smart-exam-backend:ci --output /tmp/release-security/secrets-backend
-          python3 scripts/operations/scan-image-secrets.py --image smart-exam-frontend:ci --output /tmp/release-security/secrets-frontend
-          python3 scripts/operations/scan-image-secrets.py --image smart-exam-proxy:ready-184 --output /tmp/release-security/secrets-proxy
-          python3 scripts/operations/scan-image-secrets.py --image smart-exam-postgres:ready-184 --output /tmp/release-security/secrets-postgres
+          python3 scripts/operations/scan-image-secrets.py --image deka-backend:ci --output /tmp/release-security/secrets-backend
+          python3 scripts/operations/scan-image-secrets.py --image deka-frontend:ci --output /tmp/release-security/secrets-frontend
+          python3 scripts/operations/scan-image-secrets.py --image deka-proxy:ready-184 --output /tmp/release-security/secrets-proxy
+          python3 scripts/operations/scan-image-secrets.py --image deka-postgres:ready-184 --output /tmp/release-security/secrets-postgres
       - name: Retain raw security evidence
         if: always()
         uses: actions/upload-artifact@v4

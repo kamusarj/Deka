@@ -1,4 +1,4 @@
-# User Flow — Smart Exam Matrix AI
+# User Flow — Deka
 
 Cập nhật theo implementation US-168, ngày 09/09/2026. Phạm vi giữ nguyên
 **Khoa học tự nhiên lớp 6–9** và curriculum/schema hiện có.

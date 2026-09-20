@@ -1,5 +1,5 @@
 # Data Schema
-# Smart Exam Matrix AI
+# Deka
 
 ## 1. Tổng quan Schema
 

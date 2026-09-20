@@ -22,7 +22,7 @@ Export the latest deletion journal regularly with `python -m app.services.deleti
 
 ## Backup and restore
 
-From the repository root, preview `scripts/operations/backup.sh deploy/staging.env /restricted/backups/NEW_DIRECTORY`. Add `--apply` for a consistent pilot backup: the script stops backend writers, exports PostgreSQL, uploads and deletion evidence, writes checksums, then restarts the backend. All other writer processes must also be stopped. Chroma is a derived cache, rebuilt from authorized documents rather than restored as authoritative data. Copy backups and the continuously refreshed deletion journal to restricted encrypted off-host storage. The example `deploy/smart-exam-backup.timer.example` timer is a starting point; select retention and verify the schedule/notifications before installing it.
+From the repository root, preview `scripts/operations/backup.sh deploy/staging.env /restricted/backups/NEW_DIRECTORY`. Add `--apply` for a consistent pilot backup: the script stops backend writers, exports PostgreSQL, uploads and deletion evidence, writes checksums, then restarts the backend. All other writer processes must also be stopped. Chroma is a derived cache, rebuilt from authorized documents rather than restored as authoritative data. Copy backups and the continuously refreshed deletion journal to restricted encrypted off-host storage. The example `deploy/deka-backup.timer.example` timer is a starting point; select retention and verify the schedule/notifications before installing it.
 
 Restore only into a fresh project, empty database and empty uploads volume. Supply current deletion evidence outside the old backup directory:
 

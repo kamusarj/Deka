@@ -10,7 +10,7 @@ parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--directory', required=True)
 parser.add_argument('--domain', required=True)
 parser.add_argument('--email', required=True)
-parser.add_argument('--project', default='smart-exam-production')
+parser.add_argument('--project', default='deka-production')
 args = parser.parse_args()
 if not re.fullmatch(r'[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}', args.domain) or not re.fullmatch(r'[a-z][a-z0-9-]+', args.project):
     parser.error('Valid domain and lowercase project name required')
@@ -24,8 +24,8 @@ backend.write_text(Path('deploy/backend.staging.env.example').read_text())
 values = {'COMPOSE_PROJECT_NAME':args.project,'PUBLIC_DOMAIN':args.domain,'ACME_EMAIL':args.email,
           'POSTGRES_PASSWORD':secrets.token_hex(32),'SECRET_KEY':secrets.token_hex(32),
           'MFA_ENCRYPTION_KEY':secrets.token_hex(32),'BACKEND_ENV_FILE':str(backend),
-          'BACKEND_IMAGE':'smart-exam-backend:ready-184','FRONTEND_IMAGE':'smart-exam-frontend:ready-184',
-          'PROXY_IMAGE':'smart-exam-proxy:ready-184','POSTGRES_IMAGE':'smart-exam-postgres:ready-184',
+          'BACKEND_IMAGE':'deka-backend:ready-184','FRONTEND_IMAGE':'deka-frontend:ready-184',
+          'PROXY_IMAGE':'deka-proxy:ready-184','POSTGRES_IMAGE':'deka-postgres:ready-184',
           'INTERNAL_SUBNET':'172.30.184.0/24','PROXY_INTERNAL_IP':'172.30.184.10'}
 (root / 'deployment.env').write_text(''.join(f'{key}={value}\n' for key,value in values.items()))
 (root / 'acceptance.json').write_text(Path('deploy/acceptance.example.json').read_text())

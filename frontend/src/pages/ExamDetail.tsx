@@ -141,7 +141,7 @@ function ExamWorkspace({ id }: { id: string | undefined }) {
       const blob = format === "pdf"
         ? await onExportPdf(exam.id, audience, options)
         : await onExportDocx(exam.id, audience, options);
-      downloadBlob(blob, `smart-exam-${exam.id}-${document}-${selectedVariantCode || "original"}.${format}`);
+      downloadBlob(blob, `deka-${exam.id}-${document}-${selectedVariantCode || "original"}.${format}`);
       notify(`Đã xuất file ${format.toUpperCase()}`, "success");
     } catch {
       notify(`Không xuất được file ${format.toUpperCase()}`, "error");

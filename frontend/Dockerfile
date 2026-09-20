@@ -1,4 +1,4 @@
-# Smart Exam AI - Frontend (Vite + React)
+# Deka - Frontend (Vite + React)
 # Stage 1: build static assets
 FROM node:24.21.0-alpine AS build
 

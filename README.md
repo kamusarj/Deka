@@ -1,19 +1,22 @@
-# Smart Exam Matrix AI
+# Deka
 
-[![GitHub Repo](https://img.shields.io/badge/GitHub-Smart--Exam--AI-blue?style=flat-square&logo=github)](https://github.com/kamusarj/Smart-Exam-AI-Public)
+Đang nâng cấp từ phiên bản trước? Xem [hướng dẫn đổi tên sang Deka](docs/branding-upgrade.md)
+để giữ đúng database, volume và cấu hình hiện có.
+
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Deka-blue?style=flat-square&logo=github)](https://github.com/kamusarj/Deka)
 [![Python](https://img.shields.io/badge/Python-3.11+-yellow?style=flat-square&logo=python)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-green?style=flat-square&logo=fastapi)](https://fastapi.tiangolo.com/)
 [![React](https://img.shields.io/badge/React-18+-blue?style=flat-square&logo=react)](https://reactjs.org/)
 
-Smart Exam Matrix AI là hệ thống hỗ trợ giáo viên tạo đề kiểm tra Khoa học tự nhiên theo ma trận, bản đặc tả, đáp án và rubric. **Hệ thống ưu tiên dùng dữ liệu chương trình đã kiểm soát, tài liệu giáo viên upload và RAG thay vì để AI tự crawl dữ liệu từ web.**
+Deka là hệ thống hỗ trợ giáo viên tạo đề kiểm tra Khoa học tự nhiên theo ma trận, bản đặc tả, đáp án và rubric. **Hệ thống ưu tiên dùng dữ liệu chương trình đã kiểm soát, tài liệu giáo viên upload và RAG thay vì để AI tự crawl dữ liệu từ web.**
 
-🔗 **GitHub Repository:** [https://github.com/kamusarj/Smart-Exam-AI-Public](https://github.com/kamusarj/Smart-Exam-AI-Public)
+🔗 **GitHub Repository:** [https://github.com/kamusarj/Deka](https://github.com/kamusarj/Deka)
 
 ---
 
 ## 1. Giới thiệu
 
-Smart Exam Matrix AI giúp giáo viên THCS tạo bộ đề kiểm tra Khoa học tự nhiên hoàn chỉnh trong vài phút thay vì 2-3 giờ. Hệ thống không chỉ sinh câu hỏi mà tạo đầy đủ hồ sơ: ma trận đề, bản đặc tả, đề kiểm tra, đáp án, hướng dẫn chấm — sẵn sàng in và sử dụng.
+Deka giúp giáo viên THCS tạo bộ đề kiểm tra Khoa học tự nhiên hoàn chỉnh trong vài phút thay vì 2-3 giờ. Hệ thống không chỉ sinh câu hỏi mà tạo đầy đủ hồ sơ: ma trận đề, bản đặc tả, đề kiểm tra, đáp án, hướng dẫn chấm — sẵn sàng in và sử dụng.
 
 **Nguyên tắc cốt lõi:**
 - 📚 **Dữ liệu đã kiểm soát** - Local JSON curriculum, giáo viên upload, question bank
@@ -23,7 +26,7 @@ Smart Exam Matrix AI giúp giáo viên THCS tạo bộ đề kiểm tra Khoa h�
 
 **Điểm khác biệt so với ChatGPT:**
 
-| ChatGPT thường | Smart Exam Matrix AI |
+| ChatGPT thường | Deka |
 |---|---|
 | Chỉ sinh câu hỏi | Sinh hồ sơ đề kiểm tra hoàn chỉnh |
 | Không có ma trận | Ma trận đúng format quy định |
@@ -69,7 +72,7 @@ Smart Exam Matrix AI giúp giáo viên THCS tạo bộ đề kiểm tra Khoa h�
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
-│                        SMART EXAM MATRIX AI                             │
+│                        DEKA                             │
 │                      System Architecture                                │
 │                    (Flow mới: Nạp dữ liệu + RAG)                        │
 └─────────────────────────────────────────────────────────────────────────┘
@@ -168,7 +171,7 @@ flowchart TD
 ## 7. Cấu trúc thư mục
 
 ```
-smart-exam-ai/
+deka/
 ├── backend/
 │   ├── app/
 │   │   ├── api/              # API routes
@@ -229,8 +232,8 @@ smart-exam-ai/
 ### Bước 1: Clone project
 
 ```bash
-git clone https://github.com/kamusarj/Smart-Exam-AI-Public.git smart-exam-ai
-cd smart-exam-ai
+git clone https://github.com/kamusarj/Deka.git deka
+cd deka
 ```
 
 ### Bước 2: Cấu hình biến môi trường
@@ -261,10 +264,10 @@ Lần đầu chạy sẽ mất ~2-3 phút để build images (cài deps Python +
 
 | Service | Container | Port máy host | Mô tả |
 |---|---|---|---|
-| Frontend | `smart_exam_frontend` | **http://localhost:8080** ⭐ | React build + nginx serve |
-| Backend | `smart_exam_backend` | http://localhost:8000 | FastAPI (Swagger: `/docs`) |
-| PostgreSQL | `smart_exam_postgres` | localhost:5432 | Database chính |
-| ChromaDB | `smart_exam_chromadb` | localhost:8001 | Vector DB cho RAG (Phase 2) |
+| Frontend | `deka_frontend` | **http://localhost:8080** ⭐ | React build + nginx serve |
+| Backend | `deka_backend` | http://localhost:8000 | FastAPI (Swagger: `/docs`) |
+| PostgreSQL | `deka_postgres` | localhost:5432 | Database chính |
+| ChromaDB | `deka_chromadb` | localhost:8001 | Vector DB cho RAG (Phase 2) |
 
 > ⭐ **Mở trình duyệt tại http://localhost:8080** — nginx sẽ tự proxy mọi request `/api/*` tới backend, nên frontend gọi API cùng origin, không lo CORS.
 
@@ -278,7 +281,7 @@ thay vì trả HTML của ứng dụng.
 browser ──:8080──▶ nginx (frontend) ──┬─ static (React build)
                                       └─ /api/* ──▶ backend:8000 ──┬─ postgres:5432
                                                                   └─ chromadb:8000
-                                                          (cùng network: smart_exam_net)
+                                                          (cùng network: deka_net)
 ```
 
 **Các lệnh Docker thường dùng:**
@@ -406,10 +409,10 @@ cd backend && uv run python -m app.services.demo_accounts --allow-demo-accounts
 
 | Role | Email |
 | --- | --- |
-| Quản trị hệ thống (`super_admin`) | `superadmin@demo.smart-exam.test` |
-| Quản trị trường (`school_admin`) | `schooladmin@demo.smart-exam.test` |
-| Giáo viên (`teacher`) | `teacher@demo.smart-exam.test` |
-| Người xem (`viewer`) | `viewer@demo.smart-exam.test` |
+| Quản trị hệ thống (`super_admin`) | `superadmin@demo.deka.test` |
+| Quản trị trường (`school_admin`) | `schooladmin@demo.deka.test` |
+| Giáo viên (`teacher`) | `teacher@demo.deka.test` |
+| Người xem (`viewer`) | `viewer@demo.deka.test` |
 
 Mật khẩu chung: `Demo@123456`. Ba tài khoản cấp trường thuộc **Trường THCS Demo**.
 Lệnh chạy lại sẽ dùng tài khoản đã có; nếu thông tin xung đột, lệnh dừng và không
@@ -427,7 +430,7 @@ build lại để ẩn nút; thao tác đó không thu hồi quyền của tài 
 
 ```env
 # App Configuration
-APP_NAME=Smart Exam Matrix AI
+APP_NAME=Deka
 ENV=development
 
 # Database (PostgreSQL) — để trống để dùng SQLite
@@ -678,8 +681,8 @@ Xem thư mục [`docs/`](./docs/) để biết thêm chi tiết:
 
 ## 16. Liên hệ
 
-- **GitHub:** [https://github.com/kamusarj/Smart-Exam-AI-Public](https://github.com/kamusarj/Smart-Exam-AI-Public)
-- **Issues:** [https://github.com/kamusarj/Smart-Exam-AI-Public/issues](https://github.com/kamusarj/Smart-Exam-AI-Public/issues)
+- **GitHub:** [https://github.com/kamusarj/Deka](https://github.com/kamusarj/Deka)
+- **Issues:** [https://github.com/kamusarj/Deka/issues](https://github.com/kamusarj/Deka/issues)
 
 
 

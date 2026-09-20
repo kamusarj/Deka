@@ -175,7 +175,7 @@ export default function Layout({ children }: LayoutProps) {
 
         <Link to="/dashboard" className="topbar-brand">
           <BrandMark />
-          <span className="brand-name">Smart Exam</span>
+          <span className="brand-name">Deka</span>
         </Link>
 
         <div className="topbar-actions">
@@ -302,7 +302,7 @@ export default function Layout({ children }: LayoutProps) {
       {/* ── Main Content ─────────────────────────────── */}
       <div className="main" ref={mainRef}>
         <main className="page" id="main-content" tabIndex={-1}>{children ?? <Outlet />}</main>
-        <footer className="workspace-footer">© 2026 Smart Exam AI.</footer>
+        <footer className="workspace-footer">© 2026 Deka.</footer>
       </div>
     </div>
   );

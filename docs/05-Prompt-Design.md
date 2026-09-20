@@ -1,5 +1,5 @@
 # Prompt Design
-# Smart Exam Matrix AI
+# Deka
 
 ## 1. Tổng quan Prompt Strategy
 

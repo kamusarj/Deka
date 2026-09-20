@@ -33,7 +33,7 @@ export default function ResetPassword() {
   }
 
   return <div className="auth-page"><div className="auth-card">
-    <Link to="/" className="auth-brand"><BrandMark /><span className="brand-name">Smart Exam</span></Link>
+    <Link to="/" className="auth-brand"><BrandMark /><span className="brand-name">Deka</span></Link>
     <h1>Đặt lại mật khẩu</h1>
     {error && <div className="auth-error">{error}</div>}
     {message && <div className="account-success" role="status">{message}</div>}

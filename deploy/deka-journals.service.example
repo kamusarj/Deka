@@ -1,0 +1,11 @@
+[Unit]
+Description=Export current Deka authority and deletion evidence
+After=docker.service
+Requires=docker.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/deka
+UMask=0077
+ExecStart=/opt/deka/scripts/operations/export-journals.sh /etc/deka/deployment.env /var/lib/deka/journals --apply
+# Connect unit failure alerts and encrypted off-host copying before pilot.

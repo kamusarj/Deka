@@ -1,11 +1,18 @@
 # Interface Design
 
+## Brand
+
+The public product name is **Deka**, including navigation, page metadata, emails,
+MFA enrollment labels and exported filenames. The repository is
+https://github.com/kamusarj/Deka. Existing persistence identifiers remain stable
+for upgrade compatibility; see [branding upgrades](../branding-upgrade.md).
+
 ## Visual Direction
 
-Smart Exam uses a paper and olive palette, reading-oriented headings and a
+Deka uses a paper and olive palette, reading-oriented headings and a
 compact workspace for Khoa học tự nhiên teachers in grades 6–9. The public
 PaperPulse reference informed palette, whitespace and interaction restraint;
-Smart Exam retains its own verified-sheet mark, teaching content and workflows.
+Deka retains its own verified-sheet mark, teaching content and workflows.
 
 ## Source Files
 

@@ -1,5 +1,5 @@
 # Validation Checklist
-# Smart Exam Matrix AI
+# Deka
 
 ## 1. Tổng quan
 

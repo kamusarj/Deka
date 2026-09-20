@@ -26,7 +26,7 @@ export default function ForgotPassword() {
   }
 
   return <div className="auth-page"><div className="auth-card">
-    <Link to="/" className="auth-brand"><BrandMark /><span className="brand-name">Smart Exam</span></Link>
+    <Link to="/" className="auth-brand"><BrandMark /><span className="brand-name">Deka</span></Link>
     <h1>Quên mật khẩu</h1>
     <p>Nhập email đăng nhập để nhận liên kết đặt lại mật khẩu.</p>
     {error && <div className="auth-error">{error}</div>}

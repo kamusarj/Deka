@@ -1,6 +1,6 @@
 # Phase 1 Completion Report
 
-## Smart Exam Matrix AI
+## Deka
 
 Ngày cập nhật: 2026-06-09
 

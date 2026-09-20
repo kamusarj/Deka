@@ -61,7 +61,7 @@ export default function Register() {
       <div className="auth-card">
         <Link to="/" className="auth-brand">
           <BrandMark />
-          <span className="brand-name">Smart Exam</span>
+          <span className="brand-name">Deka</span>
         </Link>
 
         <h1>Tạo tài khoản</h1>

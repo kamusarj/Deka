@@ -1,4 +1,4 @@
-// ── Shared TypeScript types for Smart Exam Matrix AI ──
+// ── Shared TypeScript types for Deka ──
 // Maps to backend schemas defined in backend/app/schemas/exam.py
 
 // ── Difficulty & Question Types ──────────────────────

@@ -18,7 +18,7 @@ from app.services.exam.generation_planning import (
 from app.services.exam.semantic_validation import blocking_issues, validate_generated_item
 from app.services.ai_provider_chain import provider_operation_timeout_seconds
 
-logger = logging.getLogger("smart-exam-ai")
+logger = logging.getLogger("deka")
 
 
 class QuestionAgent(BaseAgent):

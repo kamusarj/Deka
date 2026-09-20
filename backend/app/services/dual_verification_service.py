@@ -15,7 +15,7 @@ from app.services.gemini_service import GeminiService
 from app.services.openai_compatible_service import OpenAICompatibleService
 from app.services.ai.gateway import AIGateway
 
-logger = logging.getLogger("smart-exam-ai")
+logger = logging.getLogger("deka")
 
 
 class MandatoryReviewUnavailable(RuntimeError):

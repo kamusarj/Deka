@@ -1,5 +1,5 @@
 # Future Features
-# Smart Exam Matrix AI
+# Deka
 
 Trạng thái tính năng hiện tại được mô tả ở [authoring capabilities](product/authoring-capabilities.md).
 Các roadmap mở rộng môn/khối trong tài liệu lịch sử này không thuộc phạm vi triển khai hiện tại.

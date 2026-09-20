@@ -20,7 +20,7 @@ logging.basicConfig(
     format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S",
 )
-logger = logging.getLogger("smart-exam-ai")
+logger = logging.getLogger("deka")
 
 
 @asynccontextmanager
@@ -35,7 +35,7 @@ async def lifespan(app: FastAPI):
 app = FastAPI(
     title=settings.APP_NAME,
     version="0.1.0",
-    description="Smart Exam Matrix AI - API hỗ trợ giáo viên tạo đề kiểm tra KHTN",
+    description="Deka - API hỗ trợ giáo viên tạo đề kiểm tra KHTN",
     lifespan=lifespan,
 )
 

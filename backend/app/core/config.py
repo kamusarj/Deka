@@ -7,7 +7,7 @@ INSECURE_DEFAULT_SECRET_KEY = "smart-exam-secret-key-change-in-production-2026"
 
 
 class Settings(BaseSettings):
-    APP_NAME: str = "Smart Exam Matrix AI"
+    APP_NAME: str = "Deka"
     ENV: str = "development"
 
     # Auth / JWT
@@ -197,7 +197,7 @@ class Settings(BaseSettings):
     SMTP_PORT: int = Field(default=587, ge=1, le=65535)
     SMTP_USERNAME: str = ""
     SMTP_PASSWORD: str = ""
-    SMTP_FROM_EMAIL: str = "no-reply@smart-exam.local"
+    SMTP_FROM_EMAIL: str = "no-reply@deka.local"
     SMTP_USE_TLS: bool = True
 
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")

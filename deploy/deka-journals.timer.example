@@ -1,5 +1,5 @@
 [Unit]
-Description=Refresh Smart Exam restore evidence every five minutes
+Description=Refresh Deka restore evidence every five minutes
 
 [Timer]
 OnBootSec=2min

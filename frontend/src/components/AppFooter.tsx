@@ -8,7 +8,7 @@ export default function AppFooter() {
         <div className="landing-footer-brand">
           <Link to="/" className="landing-brand">
             <BrandMark />
-            <span className="brand-name">Smart Exam</span>
+            <span className="brand-name">Deka</span>
           </Link>
         </div>
         <div className="landing-footer-links">
@@ -20,12 +20,12 @@ export default function AppFooter() {
           </div>
           <div>
             <strong>Dự án</strong>
-            <a href="https://github.com/kamusarj/Smart-Exam-AI-Public" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://github.com/kamusarj/Deka" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
         </div>
       </div>
       <div className="landing-footer-bottom">
-        <span>© 2026 Smart Exam AI.</span>
+        <span>© 2026 Deka.</span>
       </div>
     </footer>
   );

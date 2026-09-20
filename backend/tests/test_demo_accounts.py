@@ -69,7 +69,7 @@ def test_all_roles_use_real_password_login_and_server_authorization(demo_db):
             if role == "school_admin":
                 teachers = client.get("/api/admin/teachers", headers=headers)
                 assert teachers.status_code == 200
-                assert "teacher@demo.smart-exam.test" in teachers.text
+                assert "teacher@demo.deka.test" in teachers.text
         bad_password = client.post("/api/auth/login", json={
             "email": demo_accounts.DEMO_ACCOUNTS[0][1], "password": "wrong-password",
         })
@@ -116,7 +116,7 @@ def test_conflicting_account_is_never_overwritten_or_partially_seeded(demo_db, c
     demo_db.add(school)
     demo_db.flush()
     values = dict(
-        email="viewer@demo.smart-exam.test", name="Existing account", role="viewer",
+        email="viewer@demo.deka.test", name="Existing account", role="viewer",
         password_hash=hash_password(demo_accounts.DEMO_PASSWORD), school_id=school.id,
         is_active=True, email_verified=True, must_change_password=False,
     )

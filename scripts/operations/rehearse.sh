@@ -6,7 +6,7 @@ if [[ ${1:-} != --apply ]]; then
   exit 0
 fi
 cd "$(dirname "$0")/../.."
-root=$(mktemp -d /tmp/smart-exam-audit-184.XXXXXX)
+root=$(mktemp -d /tmp/deka-audit-184.XXXXXX)
 chmod 700 "$root"
 suffix=${root##*.}
 suffix=${suffix,,}
@@ -21,8 +21,8 @@ ACME_EMAIL=operator@example.com
 POSTGRES_PASSWORD=audit-only-password
 SECRET_KEY=audit-only-secret-at-least-32-characters-184
 MFA_ENCRYPTION_KEY=audit-only-independent-mfa-secret-184-32-characters
-BACKEND_IMAGE=${AUDIT_BACKEND_IMAGE:-smart-exam-backend:ready-184}
-FRONTEND_IMAGE=${AUDIT_FRONTEND_IMAGE:-smart-exam-frontend:ready-184}
+BACKEND_IMAGE=${AUDIT_BACKEND_IMAGE:-deka-backend:ready-184}
+FRONTEND_IMAGE=${AUDIT_FRONTEND_IMAGE:-deka-frontend:ready-184}
 BACKEND_ENV_FILE=$root/backend.env
 INTERNAL_SUBNET=172.30.$subnet.0/24
 PROXY_INTERNAL_IP=172.30.$subnet.10

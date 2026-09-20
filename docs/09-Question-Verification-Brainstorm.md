@@ -1,5 +1,5 @@
 # Brainstorm: Kiểm tra Câu hỏi KHTN do AI sinh ra
-# Smart Exam Matrix AI
+# Deka
 
 ## 1. Bài toán cốt lõi
 

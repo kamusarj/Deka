@@ -36,7 +36,7 @@ from app.services.document_access import (
 
 
 PREVIEW_LENGTH = 500
-logger = logging.getLogger("smart-exam-ai")
+logger = logging.getLogger("deka")
 
 
 class DocumentService:

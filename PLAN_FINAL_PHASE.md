@@ -38,7 +38,7 @@ Hiện tại dùng `HashRouter` (React Router). Các route hiện tại:
 
 Chuyển từ `<aside className="sidebar">` sang `<header className="topbar">` dọc ngang:
 
-- **Brand** (trái): logo ✦ + "Smart Exam / AI workspace".
+- **Brand** (trái): logo ✦ + "Deka / AI workspace".
 - **Nav ngang** (giữa): các nút có icon + label:
   - Tổng quan → `/dashboard` (exact match)
   - Tạo đề → `/create`

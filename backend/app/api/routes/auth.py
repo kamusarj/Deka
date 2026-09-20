@@ -74,7 +74,7 @@ def register(request: Request, body: RegisterRequest, db: Session = Depends(get_
     try:
         send_account_email(
             recipient=user.email,
-            subject="Xác minh tài khoản Smart Exam AI",
+            subject="Xác minh tài khoản Deka",
             text="Mở liên kết sau để xác minh email của bạn:",
             action_url=f"{settings.FRONTEND_URL}/#/verify-email?token={raw_token}",
         )
@@ -109,7 +109,7 @@ def resend_verification(request: Request, body: EmailRequest, db: Session = Depe
         db.commit()
         send_account_email(
             recipient=user.email,
-            subject="Xác minh tài khoản Smart Exam AI",
+            subject="Xác minh tài khoản Deka",
             text="Mở liên kết sau để xác minh email của bạn:",
             action_url=f"{settings.FRONTEND_URL}/#/verify-email?token={raw_token}",
         )
@@ -128,7 +128,7 @@ def forgot_password(request: Request, body: EmailRequest, db: Session = Depends(
         db.commit()
         send_account_email(
             recipient=user.email,
-            subject="Đặt lại mật khẩu Smart Exam AI",
+            subject="Đặt lại mật khẩu Deka",
             text="Mở liên kết sau để đặt lại mật khẩu:",
             action_url=f"{settings.FRONTEND_URL}/#/reset-password?token={raw_token}",
         )

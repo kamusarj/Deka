@@ -1,7 +1,7 @@
 [project]
-name = "smart-exam-ai"
+name = "deka"
 version = "0.1.0"
-description = "Smart Exam Matrix AI - Backend"
+description = "Deka - Backend"
 requires-python = ">=3.11,<3.14"
 dependencies = [
     "fastapi>=0.115.0",

@@ -70,7 +70,7 @@ export default function Login() {
     <div className="auth-page auth-login-page">
       <div className="auth-layout">
       <aside className="auth-intro">
-        <Link to="/" className="auth-brand"><BrandMark /><span className="brand-name">Smart Exam</span></Link>
+        <Link to="/" className="auth-brand"><BrandMark /><span className="brand-name">Deka</span></Link>
         <h2>Từ bài giảng,<br />đến đề kiểm tra.</h2>
         <p className="auth-intro-description">Một không gian để soạn đề, lưu học liệu và chia sẻ cùng đồng nghiệp.</p>
         {isDemoLoginEnabled() && (
@@ -103,11 +103,11 @@ export default function Login() {
       <div className="auth-card">
         <Link to="/" className="auth-brand">
           <BrandMark />
-          <span className="brand-name">Smart Exam</span>
+          <span className="brand-name">Deka</span>
         </Link>
 
         <h1>Đăng nhập</h1>
-        <p className="auth-welcome">Tiếp tục công việc của bạn tại Smart Exam.</p>
+        <p className="auth-welcome">Tiếp tục công việc của bạn tại Deka.</p>
 
 
 

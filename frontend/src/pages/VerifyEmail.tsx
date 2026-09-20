@@ -20,7 +20,7 @@ export default function VerifyEmail() {
   }, [token]);
 
   return <div className="auth-page"><div className="auth-card">
-    <Link to="/" className="auth-brand"><BrandMark /><span className="brand-name">Smart Exam</span></Link>
+    <Link to="/" className="auth-brand"><BrandMark /><span className="brand-name">Deka</span></Link>
     <h1>Xác minh email</h1>
     {!message && !error && <p>Đang xác minh…</p>}
     {error && <div className="auth-error">{error}</div>}

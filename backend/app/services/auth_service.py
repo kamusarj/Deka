@@ -27,7 +27,7 @@ pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 @lru_cache(maxsize=1)
 def _dummy_password_hash() -> str:
-    return pwd_context.hash("smart-exam-dummy-password")
+    return pwd_context.hash("deka-dummy-password")
 
 # HTTP Bearer scheme
 security = HTTPBearer(auto_error=False)

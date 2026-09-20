@@ -1511,7 +1511,7 @@ class ExamService:
         content = await asyncio.to_thread(
             self._render_docx, exam_id, actor, audience, document, variant_code
         )
-        filename = f"smart-exam-{exam_id}-{document}-{variant_code or 'original'}.docx"
+        filename = f"deka-{exam_id}-{document}-{variant_code or 'original'}.docx"
         return StreamingResponse(
             BytesIO(content),
             media_type="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
@@ -1536,7 +1536,7 @@ class ExamService:
         pdf_bytes = await asyncio.to_thread(
             self._render_pdf, exam_id, actor, audience, document, variant_code
         )
-        filename = f"smart-exam-{exam_id}-{document}-{variant_code or 'original'}.pdf"
+        filename = f"deka-{exam_id}-{document}-{variant_code or 'original'}.pdf"
         return StreamingResponse(
             BytesIO(pdf_bytes),
             media_type="application/pdf",

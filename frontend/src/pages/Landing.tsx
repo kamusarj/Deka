@@ -17,7 +17,7 @@ export default function Landing() {
   const { isAuthenticated } = useAuth();
   return <div className="landing paper-landing">
     <header className="paper-nav">
-      <Link to="/" className="landing-brand"><BrandMark /><span className="brand-name">Smart Exam</span></Link>
+      <Link to="/" className="landing-brand"><BrandMark /><span className="brand-name">Deka</span></Link>
       <nav aria-label="Điều hướng landing"><Link to="/#tinh-nang">Tính năng</Link><Link to="/#quy-trinh">Quy trình</Link><Link to="/#goi-su-dung">Gói sử dụng</Link><Link to="/community">Cộng đồng</Link></nav>
       <div className="paper-nav-actions"><ThemeToggle /><Link to={isAuthenticated ? "/dashboard" : "/login"} className="paper-button paper-button-quiet">{isAuthenticated ? "Vào ứng dụng" : "Đăng nhập"}</Link>{!isAuthenticated && <Link to="/register" className="paper-button paper-nav-register">Bắt đầu</Link>}</div>
     </header>

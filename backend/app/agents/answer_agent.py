@@ -10,7 +10,7 @@ from app.schemas.ai_outputs import AnswerGenerationOutput
 from app.services.exam.answer_content import normalize_answer
 from app.services.ai_provider_chain import provider_operation_timeout_seconds
 
-logger = logging.getLogger("smart-exam-ai")
+logger = logging.getLogger("deka")
 
 
 class AnswerAgent(BaseAgent):

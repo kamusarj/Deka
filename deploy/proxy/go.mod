@@ -1,4 +1,4 @@
-module smart-exam-release-proxy
+module deka-release-proxy
 
 go 1.26.6
 

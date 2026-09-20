@@ -2623,7 +2623,7 @@ wheels = [
 ]
 
 [[package]]
-name = "smart-exam-ai"
+name = "deka"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [

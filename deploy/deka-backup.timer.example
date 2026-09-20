@@ -1,5 +1,5 @@
 [Unit]
-Description=Daily Smart Exam backup (pilot RPO target)
+Description=Daily Deka backup (pilot RPO target)
 [Timer]
 OnCalendar=daily
 Persistent=true

@@ -39,7 +39,7 @@ def setup(db, actor):
         db.add(AdminMFA(user_id=actor.id, encrypted_secret=cipher().encrypt(secret.encode()).decode(), recovery_hashes=[]))
     record_audit(db, actor=actor, action='account.mfa_setup', target_type='user', target_id=actor.id)
     db.commit()
-    return {'secret': secret, 'uri': f'otpauth://totp/{quote("Smart Exam:" + actor.email)}?secret={secret}&issuer=Smart%20Exam&algorithm=SHA1&digits=6&period=30'}
+    return {'secret': secret, 'uri': f'otpauth://totp/{quote("Deka:" + actor.email)}?secret={secret}&issuer=Deka&algorithm=SHA1&digits=6&period=30'}
 
 
 def verify(db, actor, code):

@@ -7,7 +7,7 @@ fi
 name=audit-184-pg-$RANDOM-$RANDOM
 cleanup() { docker rm -fv "$name" >/dev/null 2>&1 || true; }
 trap cleanup EXIT
-docker run -d --name "$name" -e POSTGRES_PASSWORD=synthetic-postgres-184 -e POSTGRES_DB=audit_test -p 127.0.0.1::5432 smart-exam-postgres:ready-184 >/dev/null
+docker run -d --name "$name" -e POSTGRES_PASSWORD=synthetic-postgres-184 -e POSTGRES_DB=audit_test -p 127.0.0.1::5432 deka-postgres:ready-184 >/dev/null
 for i in {1..30}; do
   if docker exec "$name" pg_isready -U postgres -d audit_test >/dev/null; then break;fi
   sleep 1

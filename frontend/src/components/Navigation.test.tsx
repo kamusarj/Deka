@@ -50,7 +50,7 @@ describe("HashRouter section links", () => {
   it("shows only the compact copyright footer in the workspace", () => {
     renderNavigation();
     const footer = screen.getByRole("contentinfo");
-    expect(footer).toHaveTextContent("© 2026 Smart Exam AI.");
+    expect(footer).toHaveTextContent("© 2026 Deka.");
     expect(within(footer).queryByRole("link")).not.toBeInTheDocument();
   });
 
