@@ -1,5 +1,32 @@
 # Deka
 
+## Bản demo công khai
+
+Frontend của repo này chạy **bản trải nghiệm với dữ liệu giả**: trang giới thiệu,
+bàn làm việc, tạo đề KHTN lớp 6–9, ma trận, bản đặc tả, duyệt câu hỏi,
+ngân hàng câu hỏi và tài liệu minh hoạ. Không cần backend, database, tài khoản
+hay API key. Dữ liệu demo được lưu trong `localStorage` của từng trình duyệt.
+Sử dụng Node.js 24.x để khớp phiên bản build của Vercel.
+
+```bash
+cd frontend
+npm ci
+npm run dev
+```
+
+Để deploy lên Vercel, import repo và giữ **Root Directory là thư mục gốc (`.`)**.
+File `vercel.json` đã cấu hình cài dependencies trong `frontend`, build và xuất
+`frontend/dist`. Không cần thiết lập environment variables.
+Xem [hướng dẫn deploy](docs/deploy-vercel.md).
+
+Chạy `npm run check` từ thư mục gốc để kiểm tra lint, toàn bộ test, build và
+luồng demo từ các file production đã build.
+
+Entry point của bản public là `frontend/src/demo/DemoApp.tsx`. Code ứng dụng đầy
+đủ vẫn có trong repo để tham khảo; các tài liệu bên dưới mô tả sản phẩm đầy đủ.
+
+---
+
 Đang nâng cấp từ phiên bản trước? Xem [hướng dẫn đổi tên sang Deka](docs/branding-upgrade.md)
 để giữ đúng database, volume và cấu hình hiện có.
 

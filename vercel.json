@@ -1,0 +1,15 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
+  "installCommand": "npm ci --prefix frontend",
+  "buildCommand": "npm run build --prefix frontend",
+  "outputDirectory": "frontend/dist",
+  "rewrites": [{ "source": "/((?!assets/|fonts/).*)", "destination": "/index.html" }],
+  "headers": [{
+    "source": "/(.*)",
+    "headers": [
+      { "key": "Content-Security-Policy", "value": "connect-src 'none'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'" },
+      { "key": "X-Content-Type-Options", "value": "nosniff" }
+    ]
+  }]
+}

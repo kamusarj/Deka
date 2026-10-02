@@ -1,0 +1,11 @@
+{
+  "name": "deka-public-demo",
+  "private": true,
+  "version": "0.1.0",
+  "engines": { "node": "24.x" },
+  "scripts": {
+    "dev": "npm run dev --prefix frontend",
+    "build": "npm run build --prefix frontend",
+    "check": "npm run lint --prefix frontend && npm run test:run --prefix frontend && npm run build --prefix frontend && npm run test:demo-production --prefix frontend"
+  }
+}

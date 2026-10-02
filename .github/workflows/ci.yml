@@ -81,6 +81,9 @@ jobs:
       - name: Type-check and build
         run: npm run build
 
+      - name: Smoke-test public demo production bundle
+        run: npm run test:demo-production
+
       - name: Audit runtime and development dependencies
         run: npm audit --audit-level=moderate
 

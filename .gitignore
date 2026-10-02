@@ -1,4 +1,5 @@
 .codex/
+.vercel/
 .opencode/
 opencode.json
 /.env
