@@ -86,10 +86,3 @@ npm run check
 npm run audit
 npm run build
 ```
-
-## Deploy
-
-Repo đã có cấu hình Vercel trong `vercel.json`. Import repo với Root Directory
-ở thư mục gốc (`./`); kết quả build nằm trong `frontend/dist`.
-
-Xem [hướng dẫn deploy Vercel](docs/deploy-vercel.md).
