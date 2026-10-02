@@ -1,33 +1,23 @@
 <!doctype html>
-<html lang="vi">
+<html lang="vi" data-theme="system">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Trải nghiệm Deka với dữ liệu mẫu: tạo đề KHTN, xem ma trận, bản đặc tả và duyệt câu hỏi. Không cần tài khoản hay API AI." />
-    <meta name="theme-color" content="#f8f5eb" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#181b16" media="(prefers-color-scheme: dark)" />
+    <meta
+      name="description"
+      content="Trải nghiệm Deka với dữ liệu mẫu: tạo đề KHTN, xem ma trận, bản đặc tả và duyệt câu hỏi. Không cần tài khoản hay API AI."
+    />
+    <meta
+      name="theme-color"
+      content="#f8f5eb"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#181b16"
+      media="(prefers-color-scheme: dark)"
+    />
     <title>Deka — Trải nghiệm tạo đề kiểm tra</title>
-    <script>
-      /* Paint the stored theme before first render so the page never flashes
-         the wrong palette. Mirrors contexts/themeStorage.ts. */
-      (function () {
-        try {
-          var stored = localStorage.getItem("smart-exam-theme");
-          var pref =
-            stored === "light" || stored === "dark" || stored === "system"
-              ? stored
-              : "system";
-          var dark =
-            pref === "dark" ||
-            (pref === "system" &&
-              window.matchMedia("(prefers-color-scheme: dark)").matches);
-          document.documentElement.setAttribute("data-theme", pref);
-          document.documentElement.style.colorScheme = dark ? "dark" : "light";
-        } catch (e) {
-          document.documentElement.setAttribute("data-theme", "system");
-        }
-      })();
-    </script>
   </head>
   <body>
     <div id="root"></div>
